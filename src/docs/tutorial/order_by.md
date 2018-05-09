@@ -15,19 +15,17 @@ Select * from Table\_Name Order by column\_name sort_type;
 #### JsStore
 
 ```
-Connection.select({
-    From: "Table_Name",
-    Order: {
-        By: column_name,
-        Type: sort_type //supprted sort type is - asc,desc
-    },
-    OnSuccess: function(results) {
-        //results will be array of objects.
-        console.log(results);
-    },
-    OnError: function(error) {
-        alert(error.value);
+connection.select({
+    from: "Table_Name",
+    order: {
+        by: column_name,
+        type: sort_type //supprted sort type is - asc,desc
     }
+}).then(function(results) {
+    //results will be array of objects.
+    console.log(results);
+}).catch(function(error) {
+    alert(error.message);
 });
 ```
 

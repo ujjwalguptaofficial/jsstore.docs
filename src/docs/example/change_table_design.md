@@ -5,7 +5,7 @@ Last Updated : "09/05/2018"
 ---
 
 ```
-var Connection = new JsStore.Instance(),
+var connection = new JsStore.Instance(),
 dbName="TutorDb";
 //we are changing design of Teachers Table.
 var teachers = {

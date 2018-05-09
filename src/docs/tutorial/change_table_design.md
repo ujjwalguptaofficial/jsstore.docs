@@ -25,23 +25,23 @@ If you want to save your data.You can select all data and save it in a variable 
 Step - 1 : Define your table
 
 ```
-var Table1 = {
-    Name: "table_name",
-    Columns: [{
-            Name: "column1",
-            DataType: 'datatype'
-            PrimaryKey: true
+var table1 = {
+    name: "table_name",
+    columns: [{
+            name: "column1",
+            dataType: 'datatype'
+            primaryKey: true
         },
         {
-            Name: "column2",
-            DataType: 'datatype'
+            name: "column2",
+            dataType: 'datatype'
         },
         ..... {
-            Name: "columnN",
-            DataType: 'datatype'
+            name: "columnN",
+            dataType: 'datatype'
         }
     ],
-    Version: 2 //Default version is 1.
+    version: 2 //Default version is 1.
 }
 ```
 
@@ -49,18 +49,19 @@ Step - 2 : call api 'isDbExit' supplying table details
 
 ```
 // You can also change multiple table at a time. Just change version no and specify only one table in isDbExist and JsStore will take care of everything.
-var Connection == new JsStore.Instance();
-JsStore.isDbExist({
-    DbName: db_name,
-    Table: {
-        Name: table_name,
-        Version: 2
+
+var connection == new JsStore.Instance(new Worker('jsstore.js'));
+connection.isDbExist({
+    dbName: "db_name",
+    table: {
+        name: table_name,
+        version: 2
     }
-}, function(isExist) {
+}).then(function(isExist) {
     if (isExist) {
-        Connection.openDb(db_name);
+        connection.openDb("db_name");
     } else {
-        Connection.createDb(Database);
+        connection.createDb(Database);
     }
 });
 ```

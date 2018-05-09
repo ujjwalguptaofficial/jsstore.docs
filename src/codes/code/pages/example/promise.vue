@@ -1,12 +1,12 @@
 <template>
-<Example v-bind:innerHtml="exampleContent" v-bind:pageTitle="title"></Example>
+<IdbStudioAppender v-bind:innerHtml="exampleContent" v-bind:pageTitle="title"></IdbStudioAppender>
 </template>
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
-import Example from "../../components/example.vue";
+import IdbStudioAppender from "../../components/idbstudio_appender.vue";
 @Component({
   components: {
-    Example
+    IdbStudioAppender
   }
 })
 export default class extends Vue {

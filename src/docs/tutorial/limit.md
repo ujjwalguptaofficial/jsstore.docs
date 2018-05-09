@@ -15,16 +15,14 @@ Select * from Table_Name Limit number;
 #### JsStore
 
 ```
-Connection.select({
-    From: "Table_Name",
-    Limit: number,
-    OnSuccess: function(results) {
-        //results will be array of objects.
-        console.log(results);
-    },
-    OnError: function(error) {
-        alert(error.value);
-    }
+connection.select({
+    from: "Table_Name",
+    limit: number
+}).then(function(results) {
+    //results will be array of objects.
+    console.log(results);
+}).catch(function(error) {
+    alert(error.message);
 });
 ```
 

@@ -1,7 +1,6 @@
 ---
 Title: "Distinct"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Last Updated : "09/05/2018"
 ---
 
 Distinct is used to return the unique set of result. Distinct filters the result for all columns together except Primary column, since Primary column will make the result always unique.
@@ -17,17 +16,16 @@ Select Distinct * From Table_Name;
 #### JsStore
 
 ```
-Connection.select({
-    From: "Table_Name",
-    Distinct: true,
+connection.select({
+    from: "Table_Name",
+    distinct: true,
     // it is optional value which takes boolean value- true or false.
-    OnSuccess: function(results) {
-        //results will be array of objects.
-        console.log(results);
-    },
-    OnError: function(error) {
-        alert(error.value);
-    }
+}).then(function(results) {
+    //results will be array of objects.
+    console.log(results);
+}).catch(function(error) {
+    alert(error.value);
+
 });
 ```
 

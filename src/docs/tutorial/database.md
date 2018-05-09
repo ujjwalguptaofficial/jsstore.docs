@@ -1,83 +1,64 @@
 ---
 Title: "DataBase"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Last Updated : "09/05/2018"
 ---
 
 A database in JsStore is array of tables.
 
 ```
-var Database = {
-    Name: "database name",
-    Tables: [Table1, Table2, Table3]
+var database = {
+    name: "database name",
+    tables: [table1, table2, table3]
 }
 ```
 
-Now you have successfully created instance of Database. Lets create the database in browser and fetch the db connection.
+Now you have successfully defined Database. Lets create the database in browser and fetch the db connection.
+
+JsStore executes everything in worker. So we need to supply worker instance for initiating the jsstore.
 
 ```
-var Connection = new JsStore.Instance();
-Connection.createDb(Database);
+var connection = new JsStore.Instance(new Worker('jsstore worker location'));
+connection.createDb(Database);
 ```
 
-You can also perform the above steps in one line.
+When Db is already created. You can open the connection using **openDb**.
+
+**Note :-** 'createDb' api is time consuming, so when you have already created database - it is recommended to use 'openDb'.
 
 ```
-var Connection = new JsStore.Instance().createDb(Database);
+var connection = new JsStore.Instance(new Worker('jsstore worker location'));
+connection.openDb(Database_Name);
 ```
 
-When Db is already created. You can use below code to get Connection.
+JsStore provides **isDbExist** api to check whether database is created or not.
 
 ```
-var Connection = new JsStore.Instance().openDb('db_name');
+connection.isDbExist(db_name).then(function(isExist) {
+    console.log(isExist);
+});
 ```
 
-Or
+So if we will wrap above concept, we can use below code to initiate database.
 
 ```
-var Connection = new JsStore.Instance('db_name');
-```  
-
-Below code is recommended to get db connection -
-
-```
-var Connection = new JsStore.Instance();
-JsStore.isDbExist(db_name, function(isExist) {
-        if (isExist) {
-            Connection.openDb(db_name);
-        } else {
-            Connection.createDb(Database);
-        }
-    },
-    function(err) {
-        //this will be fired when indexedDB is not supported.
-        alert(err._message);
-    }
-);
-```
-
-Or using promise
-
-For more information about promise in jsstore - [Promise in JsStore](#)
-
-```
-var Connection = new JsStore.Instance();
-JsStore.isDbExist(db_name).then(function(isExist) {
+var connection = new JsStore.Instance(new Worker('jsstore.worker.js'));
+connection.isDbExist(db_name).then(function(isExist) {
     if (isExist) {
         Connection.openDb(db_name);
     } else {
         Connection.createDb(Database);
     }
-}.catch(err) {
+}).catch(function(err) {
     //this will be fired when indexedDB is not supported.
-    alert(err._message);
+    alert(err.message);
 });
 ```
 
 **Note :-**  
 
 *   The connection variable will be used to execute the further query.
-*   you dont need to open the db multiple times. Declare it one time at page load and use it always.
+*   You dont need to open the db multiple times. Declare it one time at page load and use it always.
+*   At a time one db can be handled by one jsstore instance. So if you want to open multiple db, create multiple instance.
 
 <p class="margin-top-40px center-align">
       <a class="btn info" target="_blank" href="/example/create_db">Example</a>

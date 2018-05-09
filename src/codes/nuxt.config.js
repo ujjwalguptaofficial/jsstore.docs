@@ -24,6 +24,9 @@ module.exports = {
     baseUrl: process.env.BASE_URL ||
       `http://${host}:${port}`
   },
+  generate: {
+    dir: '../../docs/'
+  },
   head: {
     title: "JsStore - Think in SQL and do in JS",
     meta: [{

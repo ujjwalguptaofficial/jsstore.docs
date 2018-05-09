@@ -1,18 +1,17 @@
 ---
 Title: "Drop Database"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Created Date: "09/05/2018"
+Last Updated : "09/05/2018"
 ---
 
-dropDb is used to remove a database from browser storage.
+dropDb is used to remove the current database from browser storage.
 
 ```
-Connection.dropDb(function (){
-	console.log('Db deleted successfully');
-},
-function (error) {
-	alert(error.value);
-});
+connection.dropDb().then(function() {
+    console.log('Db deleted successfully');
+}).catch(function(error) {
+    console.log(error);
+});;
 ```
 
 <p class="margin-top-40px center-align">

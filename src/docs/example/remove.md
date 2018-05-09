@@ -1,21 +1,14 @@
 ---
-Title: "Delete"
+Title: "Remove"
 Created Date: "09/05/2018"
 Last Updated : "09/05/2018"
 ---
 
 ```
-var Connection = new JsStore.Instance('Demo');
-Connection.remove({
-    From: "Customers",
-    Where:{
+remove({
+    from: "Customers",
+    where:{
         customerName:'Alfreds Futterkiste'
-    },
-    OnSuccess:function (results){
-        log(results);
-    },
-    OnError:function (error) {
-        log(error);
     }
 });
 

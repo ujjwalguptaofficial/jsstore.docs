@@ -5,20 +5,13 @@ Last Updated : "09/05/2018"
 ---
 
 ```
-var Connection = new JsStore.Instance();
-Connection.openDb("Demo").select({
-    From: "Customers",
-    Where:{
+select({
+    from: "Customers",
+    where:{
         country:'Mexico',
-        Or:{
+        or:{
             city:'London'
         }
-    },
-    OnSuccess:function (results){
-        log(results);
-    },
-    OnError:function (error) {
-        log(error);
     }
 });
 

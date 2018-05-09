@@ -6,43 +6,36 @@ Last Updated : "09/05/2018"
 
 ```
 //first join between two tables
-var Join1={
-    Table1:{
-        Table:'Orders',
-        Column:'customerId'
+var join1={
+    table1:{
+        table:'Orders',
+        column:'customerId'
     },
-    Join:'inner',
-    Table2:{
-        Table:'Customers',
-        Column:'customerId'
+    join:'inner',
+    table2:{
+        table:'Customers',
+        column:'customerId'
     },
-    NextJoin:{ // Provide details for next join 
-        Table: 'Orders',  // which table will be used from above two tables.,  
-        Column: 'shipperId' // which column will be used from Table
+    nextJoin:{ // Provide details for next join 
+        table: 'Orders',  // which table will be used from above two tables.,  
+        column: 'shipperId' // which column will be used from Table
     }
     // we have defined that table Orders will be used for next join on column ShippersID
 }
 
 //join with third tables
-var Join2={
-    Table1:Join1,
-    Join:'inner',
-    Table2:
+var join2={
+    table1:join1,
+    join:'inner',
+    table2:
     {
-        Table:'Shippers',
-        Column:'shipperId'
+        table:'Shippers',
+        column:'shipperId'
     }
 }
 
-var Connection = new JsStore.Instance();
-Connection.openDb("Demo").select({
-    From: Join2, // provide last join query
-    OnSuccess:function (results){
-        log(results);
-    },
-    OnError:function (error) {
-        log(error);
-    }
+select({
+    from: Join2 // provide last join query
 });
 
 ```

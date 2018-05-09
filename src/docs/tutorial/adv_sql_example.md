@@ -6,14 +6,14 @@ Last Updated : "08/05/2018"
 
 These are some examples of common use cases -
 
-*   **SQL** \- Select * From Table_Name Where Column1=value1 or Column2=value2 or Column3=value3;
+*   **SQL** \- Select * from Table_Name where Column1=value1 or Column2=value2 or Column3=value3;
 
 ```
 Connection.select({
-    From: "Table_Name",
-    Where: {
+    from: "Table_Name",
+    where: {
         Column1: value1,
-        Or: {
+        or: {
             Column2: value2,
             Column3: value3
         }
@@ -21,17 +21,17 @@ Connection.select({
 });
 ```
     
-*   **SQL** \- Select * From Table_Name Where Column1=value1 and (Column2=value2 or Column3=value3);
+*   **SQL** \- Select * from Table_Name where Column1=value1 and (Column2=value2 or Column3=value3);
 
 ```
 Connection.select({
-    From: "Table_Name",
-    Where: [{
+    from: "Table_Name",
+    where: [{
             Column1: value1
         },
         {
             Column2: value2,
-            Or: {
+            or: {
                 Column3: value3
             }
         }
@@ -39,16 +39,16 @@ Connection.select({
 });
 ```
     
-*   **SQL** \- Select * From Table_Name Where Column1=value1 or (Column2=value2 and Column3=value3);
+*   **SQL** \- Select * from Table_Name where Column1=value1 or (Column2=value2 and Column3=value3);
 
 ```
 Connection.select({
-    From: "Table_Name",
-    Where: [{
+    from: "Table_Name",
+    where: [{
             Column1: value1
         },
         {
-            Or: {
+            or: {
                 Column2: value2,
                 Column3: value3
             }
@@ -58,4 +58,4 @@ Connection.select({
 ```
     
 
-Hope these examples will help you to write more complex queries. If you are not able to understand or write some complex queries - ask at stackoverflow, or fire an issue.
+Hope these examples will help you to write more complex queries. If you are not able to understand or write some complex queries - ask at stackoverflow mentioning jsstore and indexeddb.

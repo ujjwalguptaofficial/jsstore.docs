@@ -1,7 +1,7 @@
 ---
 Title: "Insert"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Created Date: "09/05/2018"
+Last Updated : "09/05/2018"
 ---
 
 Lets compare sql query with JsStore. It will help you to think in Sql and do in Js.
@@ -18,25 +18,24 @@ VALUES
 #### JsStore
 
 ```
-var Value = {
-    column1: value1
-    column2: value2
-    column3: value3
-        ...
+var value = {
+    column1: value1,
+    column2: value2,
+    column3: value3,
+    ...
     columnN: valueN
 };
 
-Connection.insert({
-    Into: "TABLE_NAME",
-    Values: [Value], //you can insert multiple values at a time
-    OnSuccess: function(rowsAffected) {
-        if (rowsAffected > 0) {
-            alert('Successfully Added');
-        }
-    },
-    OnError: function(error) {
-        alert(error.value);
+connection.insert({
+    into: "TABLE_NAME",
+    values: [Value], //you can insert multiple values at a time
+
+}).then(function(rowsAffected) {
+    if (rowsAffected > 0) {
+        alert('Successfully Added');
     }
+}).catch(function(error) {
+    alert(error.message);
 });
 ```
 
@@ -44,9 +43,9 @@ Insert api has following options -
 
 ```
 {
-    Values: Array // values to insert
-    Return: Boolean // Return the inserted record. Default value is false.This is useful in case - you want the autoincrement column value.
-    SkipDataCheck: Boolean // Whether to check or not supplied data. Default value is false. If supplied true, this will directly insert data without checking any thing like datatype, auto increment etc. This is useful in case - where you want to insert huge record at a time.
+    values: Array // values to insert
+    return: Boolean // Return the inserted record. Default value is false.This is useful in case - you want the autoincrement column value.
+    skipDataCheck: Boolean // Whether to check or not supplied data. Default value is false. If supplied true, this will directly insert data without checking any thing like datatype, auto increment etc. This is useful in case - where you want to insert huge record at a time.
 }
 ```
 

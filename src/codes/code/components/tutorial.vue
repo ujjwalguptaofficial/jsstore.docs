@@ -24,7 +24,6 @@
 
 </template>
 <script lang="ts">
-declare var hljs;
 import { Component, Vue } from "nuxt-property-decorator";
 import * as axios from "axios";
 
@@ -35,13 +34,15 @@ export interface ITutorialLink {
 @Component({
   props: {
     innerHtml: String,
-    pageTitle: String
+    pageTitle: String,
+    version: Number
   }
 })
 export default class Tutorial extends Vue {
   // props
-  innerHtml;
-  pageTitle;
+  innerHtml: string;
+  pageTitle: string;
+  version: number;
 
   //property
   activeUrl = "";
@@ -72,6 +73,20 @@ export default class Tutorial extends Vue {
   }
 
   get links() {
+    const links = this.allLinks;
+    switch (this.version) {
+      case 1:
+        break;
+      case 2:
+        const linksToRemove = ["promise", "helpers"];
+        return links.filter(
+          value => linksToRemove.findIndex(qry => qry === value.url) < 0
+        );
+    }
+    return links;
+  }
+
+  get allLinks() {
     return [
       {
         text: "Get Started",

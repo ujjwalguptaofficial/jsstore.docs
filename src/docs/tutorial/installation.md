@@ -1,7 +1,7 @@
 ---
 Title: "Installation"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Created Date: "09/05/2018"
+Last Updated : "09/05/2018"
 ---
 
 JsStore can be installed by multiple ways -
@@ -10,13 +10,13 @@ JsStore can be installed by multiple ways -
 
 *   **Latest** \- https://cdn.jsdelivr.net/npm/jsstore
 *   **Version** \- https://cdn.jsdelivr.net/npm/jsstore@version  
-    e.g - https://cdn.jsdelivr.net/npm/jsstore@1.2.5
+    e.g - https://cdn.jsdelivr.net/npm/jsstore@2.0.0
 
 #### Npm -
 
 *   **Latest** \- npm install jsstore
 *   **Version** \- npm install jsstore@version  
-    e.g - npm install jsstore@version@1.2.5
+    e.g - npm install jsstore@version@2.0.0
 
 #### Raw file -
 

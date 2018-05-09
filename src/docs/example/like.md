@@ -5,18 +5,10 @@ Last Updated : "09/05/2018"
 ---
 
 ```
-var Connection = new JsStore.Instance();
-Connection.openDb("Demo").
 select({
-    From: "Customers",
-    Where: {
+    from: "Customers",
+    where: {
         customerName:{ Like:'%or%'}
-    },
-    OnSuccess:function (results){
-        log(results);
-    },
-    OnError:function (error) {
-        log(error);
     }
 });
 

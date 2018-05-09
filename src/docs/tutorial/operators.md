@@ -24,20 +24,18 @@ Column_Name > some_value
 #### JsStore
 
 ```
-Connection.select({
-    From: "Table_Name",
-    Where: {
+connection.select({
+    from: "Table_Name",
+    where: {
         Column_Name: {
             '>': some_value
         },
-    },
-    OnSuccess: function(results) {
-        //results will be array of objects.
-        console.log(results);
-    },
-    OnError: function(error) {
-        alert(error.value);
     }
+}).then(function(results) {
+    //results will be array of objects.
+    console.log(results);
+}).catch(function(error) {
+    alert(error.message);
 });
 ```
 

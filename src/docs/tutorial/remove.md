@@ -19,19 +19,17 @@ and
 #### JsStore
 
 ```
-Connection.remove({
-    From: "Table_Name",
-    Where: {
-        Column1: some_value,
-        Column2: some_another_value
-    },
-    OnSuccess: function(rowsDeleted) {
-        //results will contains no of rows deleted.
-        console.log(results);
-    },
-    OnError: function(error) {
-        alert(error.value);
+connection.remove({
+    from: "Table_Name",
+    where: {
+        column1: some_value,
+        column2: some_another_value
     }
+}).then(function(rowsDeleted) {
+    //results will contains no of rows deleted.
+    console.log(rowsDeleted);
+}).catch(function(error) {
+    alert(error.message);
 });
 ```
 

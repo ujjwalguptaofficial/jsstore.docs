@@ -19,22 +19,20 @@ Column2=some_another_value;
 #### JsStore
 
 ```
-Connection.select({
-    From: "Table_Name",
-    Where: {
+connection.select({
+    from: "Table_Name",
+    where: {
         Column1: some_value,
-        Or: {
+        or: {
             Column2: some_another_value
         }
-    },
-    OnSuccess: function(results) {
-        //results will be array of objects.
-        console.log(results);
-    },
-    OnError: function(error) {
-        alert(error.value);
     }
-});
+}).then(function(results) {
+    //results will be array of objects.
+    console.log(results);
+}).catch(function(error) {
+    alert(error.message);
+});;
 ```
 
 

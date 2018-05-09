@@ -9,26 +9,23 @@ JsStore provides you a way to update data with arithmetic operators.
 e.g - you want to add 5 to current stored data.
 
 ```
-Connection.update({
-    In: "Table_Name",
-    Set: {
+connection.update({
+    in: "Table_Name",
+    set: {
         Column1: {
             '+': value1
         },
         //Supported operators are - +, -, *, /
         Column2: value2
     },
-    Where: {
+    where: {
         Column3: some_value,
         Column4: some_another_value
-    },
-    OnSuccess: function(rowUpdated) {
-        //results will contains no of rows updated.
-        console.log(results);
-    },
-    OnError: function(error) {
-        alert(error.value);
     }
+}).then(function(rowsUpdated) {
+    alert(rowsUpdated + ' rows updated');
+}).catch(function(err) {
+    console.log(err);
 });
 ```
 

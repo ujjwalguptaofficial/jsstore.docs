@@ -17,23 +17,21 @@ Column_Name Between value1 and value2
 #### JsStore
 
 ```
-Connection.select({
-    From: "Table_Name",
-    Where: {
+connection.select({
+    from: "Table_Name",
+    where: {
         Column_Name: {
             '-': {
                 Low: value1
                 High: value2
             }
         },
-    },
-    OnSuccess: function(results) {
-        //results will be array of objects.
-        console.log(results);
-    },
-    OnError: function(error) {
-        alert(error.value);
     }
+}).then(function(results) {
+    //results will be array of objects.
+    console.log(results);
+}).catch(function(error) {
+     console.log(error);
 });
 ```
 

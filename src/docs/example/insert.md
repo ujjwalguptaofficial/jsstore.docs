@@ -5,10 +5,7 @@ Last Updated : "09/05/2018"
 ---
 
 ```
-var Connection = new JsStore.Instance();
-Connection.openDb('Demo');
-
-var Value={
+var value={
     customerName:'ujjwal gupta', 
     contactName:'ujjwal', 
     address:'bhubaneswar odisha', 
@@ -17,15 +14,9 @@ var Value={
     country:'India'
 }
 
-Connection.insert({
-    Into: "Customers",
-    Values: [Value],
-    OnSuccess:function (rowAffected){
-        log(rowAffected + " records added");
-    },
-    OnError:function (error) {
-        log(error);
-    }
+insert({
+    into: "Customers",
+    values: [value]
 });
 
 ```

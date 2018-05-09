@@ -5,20 +5,13 @@ Last Updated : "09/05/2018"
 ---
 
 ```
-var Connection = new JsStore.Instance().openDb("Demo");
-Connection.update({
-    In: "Products",
-    Set: {
+update({
+    in: "Products",
+    set: {
         price: {'+':5}
     },
-    Where: {
+    where: {
         productId: 1
-    },
-    OnSuccess:function (rowsAffected){
-        log(rowsAffected);
-    },
-    OnError:function (error) {
-        log(error);
     }
 });
 

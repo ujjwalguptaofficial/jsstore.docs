@@ -22,23 +22,20 @@ and
 #### JsStore
 
 ```
-Connection.update({
-    In: "Table_Name",
-    Set: {
+connection.update({ 
+  	in: "Table_Name",
+    set: {
         Column1: value1,
         Column2: value2
     },
-    Where: {
+    where: {
         Column3: some_value,
         Column4: some_another_value
-    },
-    OnSuccess: function(rowUpdated) {
-        //results will contains no of rows updated.
-        console.log(results);
-    },
-    OnError: function(error) {
-        alert(error.value);
     }
+}).then(function(rowsUpdated) {
+    alert(rowsUpdated + ' rows updated');
+}).catch(function(err) {
+    console.log(err);
 });
 ```
 

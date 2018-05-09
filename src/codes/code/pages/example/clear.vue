@@ -1,16 +1,16 @@
 <template>
-<Example v-bind:innerHtml="exampleContent" v-bind:pageTitle="title"></Example>
+<IdbStudioAppender v-bind:innerHtml="exampleContent" v-bind:pageTitle="title"></IdbStudioAppender>
 </template>
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
-import Example from "../../components/example.vue";
+import IdbStudioAppender from "../../components/idbstudio_appender.vue";
 @Component({
   components: {
-    Example
+    IdbStudioAppender
   }
 })
 export default class extends Vue {
-  exampleContent = `%3Cpre%3E%3Ccode%3Evar%20Connection%20=%20new%20JsStore.Instance();%0AConnection.openDb(%22Demo%22).%0Aclear(%22Customers%22,function%20()%7B%0A%20%20%20%20log(%22Table%20cleared%20successfully%22);%0A%7D,%0Afunction%20(error)%20%7B%0A%20%20%20%20log(error);%0A%7D);%0A%3C/code%3E%3C/pre%3E`;
+  exampleContent = `%3Cpre%3E%3Ccode%3Eclear(%22Customers%22);%0A%3C/code%3E%3C/pre%3E`;
   title="Clear";
 }
 </script>

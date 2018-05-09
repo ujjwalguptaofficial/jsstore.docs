@@ -17,20 +17,18 @@ Column_Name In (value1, value2, ...)
 #### JsStore
 
 ```
-Connection.select({
-    From: "Table_Name",
-    Where: {
-        Column_Name: {
-            In: [value1, value2, ...]
+connection.select({
+    from: "Table_Name",
+    where: {
+        Column_Name: { 
+            in: [value1, value2, ...]
         }
-    },
-    OnSuccess: function(results) {
-        //results will be array of objects.
-        console.log(results);
-    },
-    OnError: function(error) {
-        alert(error.value);
     }
+}).then(function(results) {
+    //results will be array of objects.
+    console.log(results);
+}).catch(function(error) {
+    alert(error.message);
 });
 ```
 

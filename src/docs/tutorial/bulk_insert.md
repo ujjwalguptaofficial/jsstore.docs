@@ -14,7 +14,7 @@ Bulk insert is a special type of api for inserting large amount of data. It is m
 *   If you want to guarantee for successful of data insertion - then you should use insert with SkipDataCheck 'true'.
 
 ```
-var Value = {
+var value = {
     column1: value1
     column2: value2
     column3: value3
@@ -22,15 +22,13 @@ var Value = {
     columnN: valueN
 };
 
-Connection.bulkInsert({
-    Into: "TABLE_NAME",
-    Values: [Value], //you can insert multiple values at a time
-    OnSuccess: function() {
-        alert('Successfully Added');
-    },
-    OnError: function(error) {
-        alert(error.value);
-    }
+connection.bulkInsert({
+    into: "TABLE_NAME",
+    values: [value] //you can insert multiple values at a time
+}).then(function() {
+    alert('Successfully Added');
+}).catch(function(error) {
+    console.log(error);
 });
 ```
 
