@@ -1,0 +1,30 @@
+{
+  "name": "jsstore_docs",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
+    "axios": "^0.18.0",
+    "nuxt": "^1.3.0",
+    "nuxt-property-decorator": "^1.2.0",
+    "vuetify": "^1.0.17",
+    "vuex-class": "^0.3.0"
+  },
+  "scripts": {
+    "dev": "node build.js && nuxt",
+    "build": "node build.js && nuxt build",
+    "start": "node build.js && nuxt start",
+    "generate": "node build.js && nuxt generate"
+  },
+  "devDependencies": {
+    "@types/node": "^9.4.6",
+    "expose-loader": "^0.7.5",
+    "front-matter": "^2.3.0",
+    "imports-loader": "^0.8.0",
+    "showdown": "^1.8.6",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "ts-loader": "^3.5.0",
+    "typescript": "^2.7.2"
+  }
+}

@@ -1,0 +1,16 @@
+<template>
+<Example v-bind:innerHtml="exampleContent" v-bind:pageTitle="title"></Example>
+</template>
+<script lang="ts">
+import { Component, Vue } from "nuxt-property-decorator";
+import Example from "../../components/example.vue";
+@Component({
+  components: {
+    Example
+  }
+})
+export default class extends Vue {
+  exampleContent = ``;
+  title="";
+}
+</script>
