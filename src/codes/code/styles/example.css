@@ -29,6 +29,10 @@
     vertical-align: bottom;
 }
 
+#divExampleCode #divResult table {
+    width: 100%;
+}
+
 #divExampleCode #divResult table tr th {
     text-align: center;
 }

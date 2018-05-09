@@ -18,4 +18,7 @@ Connection.select({
 });
 ```
 
-[Example](/example/promise) [Next](#)
+<p class="margin-top-40px center-align">
+    <a class="btn info" target="_blank" href="/example/promise">Example</a>
+    <button class="btn info btnNext">Next</button>
+</p>

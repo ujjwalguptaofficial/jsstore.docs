@@ -146,8 +146,8 @@ export default class Tutorial extends Vue {
         url: "update_with_operators"
       },
       {
-        text: "Delete",
-        url: "delete"
+        text: "Remove",
+        url: "remove"
       },
       {
         text: "Count",

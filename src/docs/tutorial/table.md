@@ -46,6 +46,5 @@ var Table1 = {
 Note :- We strongly recommend to create a primary key for every table.
 
 <p class="margin-top-40px center-align">
-    <a class="btn info" target="_blank" href="/example/create_db">Example</a>
     <button class="btn info btnNext">Next</button>
 </p>

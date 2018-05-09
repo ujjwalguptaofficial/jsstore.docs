@@ -9,7 +9,7 @@ var Connection = new JsStore.Instance().openDb("Demo");
 Connection.select({
     From: "Customers",
     Where:{
-        Country:'Mexico'
+        country:'Mexico'
     },
     OnSuccess:function (results){
         log(results);

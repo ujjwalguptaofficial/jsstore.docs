@@ -65,4 +65,7 @@ JsStore.isDbExist({
 });
 ```
 
-[Example](/example/change_table_design) [Next](#)
+<p class="margin-top-40px center-align">
+    <a class="btn info" target="_blank" href="/example/change_table_design">Example</a>
+    <button class="btn info btnNext">Next</button>
+</p>

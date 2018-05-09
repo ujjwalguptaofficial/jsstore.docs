@@ -53,7 +53,10 @@ Connection.select({
 
 **Note :-** you can also use - WhereIn, Skip, Order By and limit just like where has been used in the above example.
 
-[Example](/example/simple_join)
+<p class="margin-top-40px center-align">
+    <a class="btn info" target="_blank" href="/example/simple_join">Example</a>
+    <button class="btn info btnNext">Next</button>
+</p>
 
 #### Sql (inner join between three tables)
 
@@ -103,4 +106,7 @@ Connection.select({
 });
 ```
 
-[Example](/example/multiple_table_join) [Next](#)
+<p class="margin-top-40px center-align">
+    <a class="btn info" target="_blank" href="/example/multiple_table_join">Example</a>
+    <button class="btn info btnNext">Next</button>
+</p>

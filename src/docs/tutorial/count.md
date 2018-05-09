@@ -35,4 +35,7 @@ Connection.count({
 });
 ```
 
-[Example](/example/count) [Next](#)
+<p class="margin-top-40px center-align">
+    <a class="btn info" target="_blank" href="/example/count">Example</a>
+    <button class="btn info btnNext">Next</button>
+</p>

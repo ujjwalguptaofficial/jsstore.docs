@@ -34,4 +34,7 @@ Connection.select({
 });
 ```
 
-[Example](/example/in) [Next](#)
+<p class="margin-top-40px center-align">
+    <a class="btn info" target="_blank" href="/example/in">Example</a>
+    <button class="btn info btnNext">Next</button>
+</p>

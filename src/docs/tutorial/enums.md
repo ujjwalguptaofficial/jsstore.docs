@@ -12,4 +12,6 @@ Note :- enums are javascript object, so you can use **" . "** symbol to get valu
 
 e.g. - To access datatype 'string' using jsstore Data\_type - JsStore.Data\_Type.String
 
-[Next](#)
+<p class="margin-top-40px center-align">
+    <button class="btn info btnNext">Next</button>
+</p>

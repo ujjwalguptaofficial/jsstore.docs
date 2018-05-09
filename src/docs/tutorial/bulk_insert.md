@@ -35,6 +35,5 @@ Connection.bulkInsert({
 ```
 
 <p class="margin-top-40px center-align">
-    <a class="btn info" target="_blank" href="/example/bulk_insert">Example</a>
     <button class="btn info btnNext">Next</button>
 </p>
