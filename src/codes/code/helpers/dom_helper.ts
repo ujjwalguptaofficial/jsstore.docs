@@ -15,7 +15,7 @@ class DomHelper {
     }
 
     get window() {
-        return window;
+        return window as any;
     }
 
     get document() {

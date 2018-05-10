@@ -238,7 +238,7 @@ export function log(results) {
   }
 }
 try {
-  (window as any).log = log;
+  new DomHelper().window.log = log;
 } catch (ex) {
   console.log(ex);
 }
