@@ -13,7 +13,7 @@
        
     </li>
     <li v-for="link in links" :key="link.text" v-bind:class="{'link-active': link.url=== activeUrl}">
-        <a :href="link.url">{{relativeUrl}}{{link.text}}</a>
+        <a :href="relativeUrl+link.url">{{link.text}}</a>
     </li>
 </ul>
     </v-flex>
