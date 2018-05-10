@@ -13,7 +13,7 @@
        
     </li>
     <li v-for="link in links" :key="link.text" v-bind:class="{'link-active': link.url=== activeUrl}">
-        <a :href="link.url">{{link.text}}</a>
+        <a :href="link.url">{{getRelativeUrl_}}{{link.text}}</a>
     </li>
 </ul>
     </v-flex>
@@ -117,7 +117,7 @@ export default class Tutorial extends Vue {
     return [
       {
         text: "Get Started",
-        url: "get_started"
+        url: "getstarted"
       },
       {
         text: "Installation",
@@ -137,7 +137,7 @@ export default class Tutorial extends Vue {
       },
       {
         text: "Bulk Insert",
-        url: "bulk_insert"
+        url: "bulkinsert"
       },
       {
         text: "Select",
@@ -149,7 +149,7 @@ export default class Tutorial extends Vue {
       },
       {
         text: "Ignore Case",
-        url: "ignore_case"
+        url: "ignorecase"
       },
       {
         text: "Or",
@@ -165,7 +165,7 @@ export default class Tutorial extends Vue {
       },
       {
         text: "Order By",
-        url: "order_by"
+        url: "orderby"
       },
       {
         text: "Aggregate",
@@ -173,7 +173,7 @@ export default class Tutorial extends Vue {
       },
       {
         text: "Group By",
-        url: "group_by"
+        url: "groupby"
       },
       {
         text: "Distinct",
@@ -185,7 +185,7 @@ export default class Tutorial extends Vue {
       },
       {
         text: "Update with operators",
-        url: "update_with_operators"
+        url: "updatewithoperators"
       },
       {
         text: "Remove",
@@ -221,15 +221,15 @@ export default class Tutorial extends Vue {
       },
       {
         text: "Drop Database",
-        url: "drop_database"
+        url: "dropdatabase"
       },
       {
         text: "Change Table Design",
-        url: "change_table_design"
+        url: "changetabledesign"
       },
       {
         text: "Export Json",
-        url: "export_json"
+        url: "exportjson"
       },
       {
         text: "Helpers",
@@ -241,7 +241,7 @@ export default class Tutorial extends Vue {
       },
       {
         text: "Adv. Sql Example",
-        url: "adv_sql_example"
+        url: "advsqlexample"
       },
       {
         text: "Enums",
