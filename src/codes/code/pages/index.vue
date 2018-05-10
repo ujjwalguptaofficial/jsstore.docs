@@ -16,7 +16,7 @@
                         <br>JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy with its SQL like apis.
                     </div>
                     <div id="divLinkGroup">
-                        <v-btn href="tutorial/get_started">Get Started</v-btn>
+                        <v-btn href="tutorial/getstarted">Get Started</v-btn>
                         <v-btn href="https://github.com/ujjwalguptaofficial/JsStore" target="_blank">Download v2.0.0</v-btn>
                     </div>
                     <div class="margin-top-50px top-border">
