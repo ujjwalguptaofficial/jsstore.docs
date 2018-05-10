@@ -9,6 +9,7 @@
 import { Component, Vue } from "nuxt-property-decorator";
 declare var document;
 import DomHelper from "../helpers/dom_helper";
+import { vueEvent } from "../common_var";
 
 @Component({
   props: {
@@ -23,6 +24,11 @@ export default class IdbStudioAppender extends Vue {
 
   //member
   iframeUrl = "http://localhost:8080";
+  version = 2;
+
+  constructor() {
+    super();
+  }
 
   head() {
     return {

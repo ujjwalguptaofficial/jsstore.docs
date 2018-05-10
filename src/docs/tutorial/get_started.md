@@ -169,12 +169,12 @@ connection.update({
 });
 ```
 
-#### Delete data
+#### Remove data
 
 Lets say I want to delete the product which contains the id - 10.
 
 ```
-connection.delete({
+connection.remove({
     from: 'Product',
     where: {
         id: 10

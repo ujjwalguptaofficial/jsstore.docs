@@ -21,7 +21,11 @@
                     </svg>
                     Fork</a>
             </li>
-
+            <li>
+               <select id="selectVersions" v-model="activeVersion" @change="onVersionChange">
+                   <option v-bind:value="i" v-for="i in 2" :key="i">V {{i}}</option>
+               </select>
+            </li>
             </ul>
         </v-toolbar>
          <v-container fluid>
@@ -54,3 +58,38 @@
   </v-app>
 </template>
 
+<script lang="ts">
+import { Component, Vue } from "nuxt-property-decorator";
+import { vueEvent } from "../common_var";
+
+@Component
+export default class extends Vue {
+  activeVersion = 2;
+
+  mounted() {
+    this.activeVersion = this.getVersion();
+  }
+
+  onVersionChange() {
+    vueEvent.$emit("version_change", this.activeVersion);
+  }
+
+  getVersion() {
+    const currentUrl = (this.$route as any).path;
+    if (currentUrl.indexOf("v1") >= 0) {
+      return 1;
+    } else {
+      return 2;
+    }
+  }
+}
+</script>
+<style>
+#selectVersions {
+  -webkit-appearance: menulist;
+  background-color: white;
+  margin-top: -3px;
+  margin-left: 10px;
+  padding: 3px;
+}
+</style>

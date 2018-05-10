@@ -34,12 +34,16 @@ class DomHelper {
         try {
             var el = this.createElement('div');
             el.innerHTML = html;
-            return el.innerText;   
+            return el.innerText;
         }
         catch (ex) {
             console.log(ex);
         }
         return "";
+    }
+
+    val() {
+        return (this.el as HTMLInputElement).value
     }
 
 }

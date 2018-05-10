@@ -1,1 +1,2 @@
-export declare var hljs;
+import { Vue } from "nuxt-property-decorator";
+export const vueEvent = new Vue();

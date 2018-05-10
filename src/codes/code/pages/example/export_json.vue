@@ -10,7 +10,7 @@ import IdbStudioAppender from "../../components/idbstudio_appender.vue";
   }
 })
 export default class extends Vue {
-  exampleContent = `%3Cpre%3E%3Ccode%3EexportJson(%7B%0A%20%20%20%20from:%20%22Customers%22,%0A%7D);%0A%3C/code%3E%3C/pre%3E`;
+  exampleContent = `%3Cpre%3E%3Ccode%3EexportJson(%7B%0A%20%20%20%20from:%20%22Customers%22%0A%7D);%0A%3C/code%3E%3C/pre%3E`;
   title="Export Json";
 }
 </script>

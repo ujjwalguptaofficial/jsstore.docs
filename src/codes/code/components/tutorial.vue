@@ -26,6 +26,8 @@
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
 import * as axios from "axios";
+import DomHelper from "../helpers/dom_helper";
+import { vueEvent } from "../common_var";
 
 export interface ITutorialLink {
   text: string;
@@ -34,24 +36,29 @@ export interface ITutorialLink {
 @Component({
   props: {
     innerHtml: String,
-    pageTitle: String,
-    version: Number
+    pageTitle: String
   }
 })
 export default class Tutorial extends Vue {
   // props
   innerHtml: string;
   pageTitle: string;
-  version: number;
+  version: number = 2;
 
   //property
   activeUrl = "";
 
   constructor() {
     super();
+    this.catchEvents();
+  }
+
+  catchEvents() {
+    vueEvent.$on("version_change", this.onVersionChange);
   }
 
   mounted() {
+    this.version = Number(this.getVersion());
     var currentUrl: string = (this.$route as any).path;
     this.links.every(value => {
       if (currentUrl.toLowerCase() === `/tutorial/${value.url.toLowerCase()}`) {
@@ -60,6 +67,14 @@ export default class Tutorial extends Vue {
       }
       return true;
     });
+    this.registerNextBtnEvents();
+  }
+
+  registerNextBtnEvents() {
+    var $ = new DomHelper(".btnNext");
+    if ($.el) {
+      $.el.onclick = this.onNextBtnClick.bind(this);
+    }
   }
 
   head() {
@@ -68,12 +83,24 @@ export default class Tutorial extends Vue {
     };
   }
 
+  getVersion(): string {
+    const $ = new DomHelper("#selectVersions");
+    return $.val();
+  }
+
+  onVersionChange(value: number) {
+    this.version = value;
+    const currentUrl: string = (this.$route as any).path;
+    const nextUrl = this.getRelativeUrl_() + currentUrl.split("/").reverse()[0];
+    this.$router.push(nextUrl);
+  }
+
   get tutorialHtml() {
     return decodeURI(this.innerHtml);
   }
 
   get links() {
-    const links = this.allLinks;
+    const links = this.allLinks_;
     switch (this.version) {
       case 1:
         break;
@@ -86,7 +113,7 @@ export default class Tutorial extends Vue {
     return links;
   }
 
-  get allLinks() {
+  get allLinks_() {
     return [
       {
         text: "Get Started",
@@ -223,17 +250,29 @@ export default class Tutorial extends Vue {
     ] as ITutorialLink[];
   }
 
+  private getRelativeUrl_() {
+    switch (this.version) {
+      case 1:
+        return "/v1/tutorial/";
+      case 2:
+        return "/tutorial/";
+    }
+  }
+
   onNextBtnClick() {
     const currentUrl = (this.$route as any).path;
     var nextUrl;
+    const relativeUrl = this.getRelativeUrl_();
     this.links.every((value, index) => {
-      if (currentUrl === value.url) {
-        nextUrl = this.links[index + 1].url;
+      if (currentUrl === relativeUrl + value.url) {
+        nextUrl = relativeUrl + this.links[index + 1].url;
         return false;
       }
       return true;
     });
-    this.$router.push(nextUrl);
+    if (nextUrl) {
+      this.$router.push(nextUrl);
+    }
   }
 }
 </script>

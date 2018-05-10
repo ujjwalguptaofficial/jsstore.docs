@@ -71,6 +71,8 @@ import { Component, Vue } from "nuxt-property-decorator";
 import * as axios from "axios";
 import { DemoDbService } from "../service/demo_db_service";
 import { IDbInfo } from "../interfaces";
+import DomHelper from "../helpers/dom_helper";
+import { vueEvent } from "../common_var";
 
 var codeInitTime;
 var isJoin = false;
@@ -89,12 +91,15 @@ export default class Example extends Vue {
   //member
   isEditorLoading = true;
   dbInfo: IDbInfo[] = [];
+  version = 2;
 
   constructor() {
     super();
+    this.catchEvents();
   }
 
   mounted() {
+    this.version = this.getVersion();
     JsStore.enableLog();
     var demoServiceInstance = new DemoDbService();
     demoServiceInstance
@@ -109,6 +114,35 @@ export default class Example extends Vue {
       .catch(err => {
         console.log(err);
       });
+  }
+
+  catchEvents() {
+    vueEvent.$on("version_change", this.onVersionChange);
+  }
+
+  getVersion() {
+    const currentUrl = (this.$route as any).path;
+    if (currentUrl.indexOf("v1") >= 0) {
+      return 1;
+    } else {
+      return 2;
+    }
+  }
+
+  onVersionChange(value: number) {
+    this.version = value;
+    const currentUrl: string = (this.$route as any).path;
+    const nextUrl = this.getRelativeUrl_() + currentUrl.split("/").reverse()[0];
+    this.$router.push(nextUrl);
+  }
+
+  private getRelativeUrl_() {
+    switch (this.version) {
+      case 1:
+        return "/v1/example/";
+      case 2:
+        return "/example/";
+    }
   }
 
   head() {
