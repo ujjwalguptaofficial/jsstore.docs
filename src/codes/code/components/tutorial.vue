@@ -13,7 +13,7 @@
        
     </li>
     <li v-for="link in links" :key="link.text" v-bind:class="{'link-active': link.url=== activeUrl}">
-        <a :href="link.url">{{getRelativeUrl_}}{{link.text}}</a>
+        <a :href="link.url">{{relativeUrl}}{{link.text}}</a>
     </li>
 </ul>
     </v-flex>
@@ -91,7 +91,7 @@ export default class Tutorial extends Vue {
   onVersionChange(value: number) {
     this.version = value;
     const currentUrl: string = (this.$route as any).path;
-    const nextUrl = this.getRelativeUrl_() + currentUrl.split("/").reverse()[0];
+    const nextUrl = this.relativeUrl + currentUrl.split("/").reverse()[0];
     this.$router.push(nextUrl);
   }
 
@@ -250,19 +250,21 @@ export default class Tutorial extends Vue {
     ] as ITutorialLink[];
   }
 
-  private getRelativeUrl_() {
+  get relativeUrl() {
     switch (this.version) {
       case 1:
         return "/v1/tutorial/";
       case 2:
         return "/tutorial/";
+      default:
+        return "/";
     }
   }
 
   onNextBtnClick() {
     const currentUrl = (this.$route as any).path;
     var nextUrl;
-    const relativeUrl = this.getRelativeUrl_();
+    const relativeUrl = this.relativeUrl;
     this.links.every((value, index) => {
       if (currentUrl === relativeUrl + value.url) {
         nextUrl = relativeUrl + this.links[index + 1].url;
