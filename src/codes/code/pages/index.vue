@@ -17,7 +17,7 @@
                     </div>
                     <div id="divLinkGroup">
                         <v-btn href="tutorial/getstarted">Get Started</v-btn>
-                        <v-btn href="https://github.com/ujjwalguptaofficial/JsStore" target="_blank">Download v2.0.0</v-btn>
+                        <v-btn href="https://github.com/ujjwalguptaofficial/JsStore" target="_blank">Download v2.0.2</v-btn>
                     </div>
                     <div class="margin-top-50px top-border">
                         <h4></h4>

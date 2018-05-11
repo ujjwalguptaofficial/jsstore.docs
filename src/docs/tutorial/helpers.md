@@ -45,9 +45,9 @@ connection.getDbList().then(function(result) {
 
 #### set
 
-It stores the value in a special table. You can think of it is similar to localStorage but you can store every type of data using 'set' which is not the case with localStorage (can be stored only string).
+It stores data in form of key and value in a special table. You can think of it is similar to localStorage but you can store every type of data using 'set' which is not the case with localStorage (can be stored only string).
 
-Lets say you want to store user profile picture or may be some basic information.
+Lets say you want to store user profile picture or may be some basic information, so that you can load it on page load.
 
 ```
 var userInfo = {

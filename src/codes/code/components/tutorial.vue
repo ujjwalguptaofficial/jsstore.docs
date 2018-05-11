@@ -105,7 +105,7 @@ export default class Tutorial extends Vue {
       case 1:
         break;
       case 2:
-        const linksToRemove = ["promise", "helpers"];
+        const linksToRemove = ["promise"];
         return links.filter(
           value => linksToRemove.findIndex(qry => qry === value.url) < 0
         );

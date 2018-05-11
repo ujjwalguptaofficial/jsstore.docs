@@ -23,7 +23,7 @@ export default class IdbStudioAppender extends Vue {
   pageTitle;
 
   //member
-  iframeUrl = "http://localhost:8080";
+  iframeUrl = "https://ujjwalguptaofficial.github.io/idbstudio";
   version = 2;
 
   constructor() {
