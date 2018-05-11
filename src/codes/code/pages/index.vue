@@ -53,7 +53,7 @@
                         <a target="_blank" title="github" href="https://github.com/ujjwalguptaofficial/JsStore">
                             <img class="responsive-img" src="/img/github.svg" alt="github logo" />
                         </a>
-                        <a target="_blank" class="margin-left-20px" title="twitter handle" href="https://twitter.com/jsstoreofficial">
+                        <a target="_blank" class="margin-left-20px" title="twitter handle" href="https://twitter.com/idbwrapper">
                             <img class="responsive-img" src="/img/twitter.svg" alt="twitter logo" />
                         </a>
                         <a target="_blank" class="margin-left-20px" title="gitter" href="https://gitter.im/JsStore">

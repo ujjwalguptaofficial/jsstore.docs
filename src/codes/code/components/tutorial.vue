@@ -10,7 +10,6 @@
             <div class="search-results"></div>
          </v-card-text>
        </v-card>
-       
     </li>
     <li v-for="link in links" :key="link.text" v-bind:class="{'link-active': link.url=== activeUrl}">
         <a :href="relativeUrl+link.url">{{link.text}}</a>
@@ -60,13 +59,14 @@ export default class Tutorial extends Vue {
   mounted() {
     this.version = Number(this.getVersion());
     var currentUrl: string = (this.$route as any).path;
-    this.links.every(value => {
-      if (currentUrl.toLowerCase() === `/tutorial/${value.url.toLowerCase()}`) {
-        this.activeUrl = value.url;
-        return false;
-      }
-      return true;
-    });
+    const activeUrl = this.links.find(
+      value =>
+        currentUrl.toLowerCase() ===
+        `${this.relativeUrl}${value.url.toLowerCase()}`
+    );
+    if (activeUrl && activeUrl.url.length > 0) {
+      this.activeUrl = activeUrl.url;
+    }
     this.registerNextBtnEvents();
   }
 

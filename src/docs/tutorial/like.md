@@ -1,7 +1,7 @@
 ---
 Title: "Like"
 Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Last Updated : "10/05/2018"
 ---
 
 Like is used with Where to search for a specified pattern in a column. Currently We support only '%' character.
@@ -23,20 +23,18 @@ Column_Name Like 'a%'
 #### JsStore
 
 ```
-Connection.select({
-    From: "Table_Name",
-    Where: {
+connection.select({
+    from: "Table_Name",
+    where: {
         Column_Name: {
-            Like: 'a%'
+            like: 'a%'
         },
-    },
-    OnSuccess: function(results) {
-        //results will be array of objects.
-        console.log(results);
-    },
-    OnError: function(error) {
-        alert(error.value);
     }
+}).then(function(results) {
+    //results will be array of objects.
+    console.log(results);
+}).catch(function(error) {
+    alert(error.message);
 });
 ```
 

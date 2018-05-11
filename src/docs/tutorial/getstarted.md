@@ -77,8 +77,8 @@ As written in the code, you can define the constraints like autoincrement, datat
 Now we need to create the database in indexeddb. So, lets create the database.
 
 ```
-var connection = new JsStore.Instance(new Worker('jsstore.worker.js'));
 
+var connection = new JsStore.Instance(new Worker('jsstore.worker.js'));
 function initJsStore() {
     connection.isDbExist(DbName).then(function(isExist) {
         if (isExist) {
@@ -91,6 +91,7 @@ function initJsStore() {
         console.error(err);
     })
 }
+
 ```
 
 In the above code -
@@ -113,7 +114,7 @@ var value = {
 }
 
 //since Id is autoincrement column, so the value will be automatically generated.
-Connection.insert({
+connection.insert({
     into: 'Product',
     values: [value]
 }).then(function(rowsInserted) {
@@ -122,7 +123,7 @@ Connection.insert({
     }
 }).catch(function(err) {
     console.log(err);
-    alert(err.Message);
+    alert(err.message);
 });
 
 ```
@@ -141,7 +142,7 @@ connection.select({
     alert(results.length + 'record found');
 }).catch(function(err) {
     console.log(err);
-    alert(err.Message);
+    alert(err.message);
 });
 ```
 
@@ -188,9 +189,12 @@ connection.remove({
     
 We hope - you have understood the above article. Now lets make something awesome.
 
-#### * Check it out some other examples and articles -
+#### * Check it out some examples for more understanding -
 
-* [Using JsStore in Angular5](http://http://ujjwalguptaofficial.blogspot.in/2017/10/angular4-crud-operation-in-indexeddb.html)
+* [crud implementation](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/Simple%20Example)
+* [Using jsstore in typescript](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/TypeScript%20Example)
+* [building with webpack](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/webpack)
+* [Using react and webpack](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/react)
 
 <style>
     iframe {

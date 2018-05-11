@@ -1,7 +1,7 @@
 ---
 Title: "Table"
 Created Date: "09/05/2018"
-Last Updated : "09/05/2018"
+Last Updated : "10/05/2018"
 ---
 
 Before creating Table, lets see how to create a column. A column in JsStore is a JSON object. It has following properties -
@@ -60,7 +60,7 @@ var table1 = {
 ```
 In the above code - we are creating instance of class - "Column" and calling its methods with supplying parameter.
 
-For more information about column - please check [column](/column) doc.
+For more information about column - please check [column](/tutorial/column) doc.
 
 <p class="margin-top-40px center-align">
     <button class="btn info btnNext">Next</button>
