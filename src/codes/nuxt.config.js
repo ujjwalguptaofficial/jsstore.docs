@@ -30,22 +30,86 @@ module.exports = {
   head: {
     title: "JsStore - Think in SQL and do in JS",
     meta: [{
+        name: "theme-color",
+        content: "#42a5f5"
+      }, {
+        name: "keywords",
+        content: "jsstore, indexeddb, sql, like, wrapper, library"
+      },
+      {
+        name: "description",
+        content: "JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy with its SQL like apis."
+      }, {
+        name: "robots",
+        content: "index, follow"
+      }, {
+        name: "author",
+        content: "Ujjwal Gupta"
+      }, {
+        name: "Rating",
+        content: "General"
+      }, {
+        name: "Revisit-After",
+        content: "1 days"
+      }, {
         charset: "utf-8"
       },
       {
         name: "viewport",
-        content: "width=device-width, initial-scale=1"
-      },
-      {
-        hid: "description",
-        name: "description",
+        content: "width=device-width, initial-scale=1.0"
+      }, {
+        property: "og:title",
+        content: "JsStore - Think in SQL and do in JS"
+      }, {
+        property: "og:type",
+        content: "IndexedDB wrapper"
+      }, {
+        property: "og:url",
+        content: "http://jsstore.net/"
+      }, {
+        property: "og:site_name",
+        content: "JsStore"
+      }, {
+        property: "og:description",
         content: "JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy with its SQL like apis."
+      }, {
+        property: "og:image",
+        content: "/img/JsStore_1200_630.png"
+      }, {
+        name = "twitter:creator",
+        content: "@ujjwal_kr_gupta"
+      }, {
+        name: "twitter:title",
+        content: "JsStore - Think in SQL and do in JS"
+      }, {
+        name: "twitter:description",
+        content: "JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy with its SQL like apis."
+      }, {
+        name: "twitter:image",
+        content: "http://jsstore.net/img/JsStore_1200_630.png"
       }
     ],
     link: [{
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      href: "/apple-touch-icon.png"
+    }, {
       rel: "icon",
-      type: "image/x-icon",
-      href: "/favicon.ico"
+      type: "image/png",
+      sizes: "32x32",
+      href: "/favicon-32x32.png"
+    }, {
+      rel: "icon",
+      type: "image/png",
+      sizes: "16x16",
+      href: "/favicon-16x16.png"
+    }, {
+      rel: "manifest",
+      href: "/manifest.json"
+    }, {
+      rel: "mask-icon",
+      href: "/safari-pinned-tab.svg",
+      color: "#5bbad5"
     }]
   },
   /*
