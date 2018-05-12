@@ -76,7 +76,7 @@ module.exports = {
         property: "og:image",
         content: "/img/JsStore_1200_630.png"
       }, {
-        name = "twitter:creator",
+        name: "twitter:creator",
         content: "@ujjwal_kr_gupta"
       }, {
         name: "twitter:title",
