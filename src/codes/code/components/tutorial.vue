@@ -64,6 +64,14 @@ export default class Tutorial extends Vue {
         currentUrl.toLowerCase() ===
         `${this.relativeUrl}${value.url.toLowerCase()}`
     );
+    console.log(
+      "version:" +
+        this.version +
+        "currentUrl:" +
+        currentUrl +
+        "activeUrl:" +
+        activeUrl
+    );
     if (activeUrl && activeUrl.url.length > 0) {
       this.activeUrl = activeUrl.url;
     }
@@ -93,6 +101,14 @@ export default class Tutorial extends Vue {
     const currentUrl: string = (this.$route as any).path;
     const nextUrl = this.relativeUrl + currentUrl.split("/").reverse()[0];
     this.$router.push(nextUrl);
+    console.log(
+      "version:" +
+        this.version +
+        "currentUrl:" +
+        currentUrl +
+        "activeUrl:" +
+        nextUrl
+    );
   }
 
   get tutorialHtml() {
@@ -117,7 +133,7 @@ export default class Tutorial extends Vue {
     return [
       {
         text: "Get Started",
-        url: "getstarted"
+        url: "get-started"
       },
       {
         text: "Installation",
@@ -137,7 +153,7 @@ export default class Tutorial extends Vue {
       },
       {
         text: "Bulk Insert",
-        url: "bulkinsert"
+        url: "bulk-insert"
       },
       {
         text: "Select",
@@ -149,7 +165,7 @@ export default class Tutorial extends Vue {
       },
       {
         text: "Ignore Case",
-        url: "ignorecase"
+        url: "ignore-case"
       },
       {
         text: "Or",
@@ -165,7 +181,7 @@ export default class Tutorial extends Vue {
       },
       {
         text: "Order By",
-        url: "orderby"
+        url: "order-by"
       },
       {
         text: "Aggregate",
@@ -185,7 +201,7 @@ export default class Tutorial extends Vue {
       },
       {
         text: "Update with operators",
-        url: "updatewithoperators"
+        url: "update-with-operators"
       },
       {
         text: "Remove",
@@ -221,15 +237,15 @@ export default class Tutorial extends Vue {
       },
       {
         text: "Drop Database",
-        url: "dropdatabase"
+        url: "drop-db"
       },
       {
         text: "Change Table Design",
-        url: "changetabledesign"
+        url: "change-table-design"
       },
       {
         text: "Export Json",
-        url: "exportjson"
+        url: "export-json"
       },
       {
         text: "Helpers",
@@ -241,7 +257,7 @@ export default class Tutorial extends Vue {
       },
       {
         text: "Adv. Sql Example",
-        url: "advsqlexample"
+        url: "adv-sql-example"
       },
       {
         text: "Enums",

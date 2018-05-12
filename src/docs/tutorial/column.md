@@ -25,19 +25,19 @@ Column in jsstore can be created by two way -
 
 1. JSON object - 
 
-        ```
-        var column={
-            name:'column_name',
-            autoIncrement:true,
-            dataType:'data_type'
-        }
-        ```
+```
+var column={
+    name:'column_name',
+    autoIncrement:true,
+    dataType:'data_type'
+}
+```
         
 2. Class Instance - This is way to create column in less amount of code.
 
-        ```
-        var column=new JsStore.Column("column_name").options([COL_OPTION.AutoIncrement]).setDataType('datatype')
-        ```
+```
+var column=new JsStore.Column("column_name").options([COL_OPTION.AutoIncrement]).setDataType('datatype')
+```
 
     * 'options' - It takes array of column options : PrimaryKey, AutoIncrement, Unique, NotNull, MultiEntry and set the specified options as true.
 
