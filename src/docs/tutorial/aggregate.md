@@ -1,7 +1,7 @@
 ---
 Title: "Aggregate Functions"
 Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Last Updated : "11/05/2018"
 ---
 
 JsStore supports following aggregate functions : -
@@ -15,7 +15,7 @@ JsStore supports following aggregate functions : -
 #### Sql
 
 ```
-Select min(Column\_Name) From Table\_Name;
+Select min(Column_Name) From Table_Name;
 ```
 
 #### JsStore
@@ -24,9 +24,9 @@ Select min(Column\_Name) From Table\_Name;
 connection.select({
     from: "Table_Name",
     aggregate: {
-        Min: Column_Name,
+        min: Column_Name,
         // You can specify multiple columns at a time by giving the columns name in an array.
-        // Count:['column1','column2']
+        // count:['column1','column2']
     }
 }).then(function(results) {
     //aggregate result will be in the first index only.

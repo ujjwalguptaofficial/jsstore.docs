@@ -4,69 +4,70 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const _876d0d50 = () => import('..\\code\\pages\\tutorial\\drop-db.vue' /* webpackChunkName: "pages_tutorial_drop-db" */).then(m => m.default || m)
-const _4367fb78 = () => import('..\\code\\pages\\example\\update-with-operators.vue' /* webpackChunkName: "pages_example_update-with-operators" */).then(m => m.default || m)
-const _b7bf5d5a = () => import('..\\code\\pages\\example\\where.vue' /* webpackChunkName: "pages_example_where" */).then(m => m.default || m)
-const _01f6da6f = () => import('..\\code\\pages\\tutorial\\database.vue' /* webpackChunkName: "pages_tutorial_database" */).then(m => m.default || m)
-const _7ca76930 = () => import('..\\code\\pages\\example\\operator.vue' /* webpackChunkName: "pages_example_operator" */).then(m => m.default || m)
-const _5eaf5908 = () => import('..\\code\\pages\\example\\drop-db.vue' /* webpackChunkName: "pages_example_drop-db" */).then(m => m.default || m)
-const _1c3df3ce = () => import('..\\code\\pages\\tutorial\\in.vue' /* webpackChunkName: "pages_tutorial_in" */).then(m => m.default || m)
-const _dbfdb08e = () => import('..\\code\\pages\\example\\clear.vue' /* webpackChunkName: "pages_example_clear" */).then(m => m.default || m)
-const _16086dfd = () => import('..\\code\\pages\\example\\insert.vue' /* webpackChunkName: "pages_example_insert" */).then(m => m.default || m)
-const _5beb4b1a = () => import('..\\code\\pages\\tutorial\\skip.vue' /* webpackChunkName: "pages_tutorial_skip" */).then(m => m.default || m)
-const _66c73480 = () => import('..\\code\\pages\\example\\distinct.vue' /* webpackChunkName: "pages_example_distinct" */).then(m => m.default || m)
-const _1e6482f4 = () => import('..\\code\\pages\\example\\between.vue' /* webpackChunkName: "pages_example_between" */).then(m => m.default || m)
-const _60cbbde6 = () => import('..\\code\\pages\\tutorial\\adv-sql-example.vue' /* webpackChunkName: "pages_tutorial_adv-sql-example" */).then(m => m.default || m)
-const _45ba5627 = () => import('..\\code\\pages\\example\\limit.vue' /* webpackChunkName: "pages_example_limit" */).then(m => m.default || m)
-const _4d4f8a27 = () => import('..\\code\\pages\\example\\or.vue' /* webpackChunkName: "pages_example_or" */).then(m => m.default || m)
-const _1decc648 = () => import('..\\code\\pages\\example\\remove.vue' /* webpackChunkName: "pages_example_remove" */).then(m => m.default || m)
-const _c7721c86 = () => import('..\\code\\pages\\tutorial\\update.vue' /* webpackChunkName: "pages_tutorial_update" */).then(m => m.default || m)
-const _3f28a63e = () => import('..\\code\\pages\\example\\createdb.vue' /* webpackChunkName: "pages_example_createdb" */).then(m => m.default || m)
-const _4627a3cd = () => import('..\\code\\pages\\example\\export-json.vue' /* webpackChunkName: "pages_example_export-json" */).then(m => m.default || m)
-const _d800660c = () => import('..\\code\\pages\\example\\order-by.vue' /* webpackChunkName: "pages_example_order-by" */).then(m => m.default || m)
-const _306b7dca = () => import('..\\code\\pages\\tutorial\\column.vue' /* webpackChunkName: "pages_tutorial_column" */).then(m => m.default || m)
-const _893374ba = () => import('..\\code\\pages\\tutorial\\where.vue' /* webpackChunkName: "pages_tutorial_where" */).then(m => m.default || m)
-const _6a6347e6 = () => import('..\\code\\pages\\example\\update.vue' /* webpackChunkName: "pages_example_update" */).then(m => m.default || m)
-const _811643f2 = () => import('..\\code\\pages\\tutorial\\ignore-case.vue' /* webpackChunkName: "pages_tutorial_ignore-case" */).then(m => m.default || m)
-const _047e46ce = () => import('..\\code\\pages\\tutorial\\enums.vue' /* webpackChunkName: "pages_tutorial_enums" */).then(m => m.default || m)
-const _d8374eea = () => import('..\\code\\pages\\tutorial\\like.vue' /* webpackChunkName: "pages_tutorial_like" */).then(m => m.default || m)
-const _6defce7a = () => import('..\\code\\pages\\example\\skip.vue' /* webpackChunkName: "pages_example_skip" */).then(m => m.default || m)
-const _e7304e3e = () => import('..\\code\\pages\\tutorial\\orderby.vue' /* webpackChunkName: "pages_tutorial_orderby" */).then(m => m.default || m)
-const _4da82f0a = () => import('..\\code\\pages\\tutorial\\aggregate.vue' /* webpackChunkName: "pages_tutorial_aggregate" */).then(m => m.default || m)
-const _79989c2b = () => import('..\\code\\pages\\example\\aggregate.vue' /* webpackChunkName: "pages_example_aggregate" */).then(m => m.default || m)
-const _2e53917b = () => import('..\\code\\pages\\example\\count.vue' /* webpackChunkName: "pages_example_count" */).then(m => m.default || m)
-const _c06e034e = () => import('..\\code\\pages\\tutorial\\group-by.vue' /* webpackChunkName: "pages_tutorial_group-by" */).then(m => m.default || m)
-const _10f93492 = () => import('..\\code\\pages\\example\\ignore-case.vue' /* webpackChunkName: "pages_example_ignore-case" */).then(m => m.default || m)
-const _51c7e1ea = () => import('..\\code\\pages\\tutorial\\operators.vue' /* webpackChunkName: "pages_tutorial_operators" */).then(m => m.default || m)
-const _22464f70 = () => import('..\\code\\pages\\tutorial\\distinct.vue' /* webpackChunkName: "pages_tutorial_distinct" */).then(m => m.default || m)
 const _4e756310 = () => import('..\\code\\pages\\tutorial\\bulk-insert.vue' /* webpackChunkName: "pages_tutorial_bulk-insert" */).then(m => m.default || m)
-const _7bfea344 = () => import('..\\code\\pages\\tutorial\\between.vue' /* webpackChunkName: "pages_tutorial_between" */).then(m => m.default || m)
+const _7e80f90a = () => import('..\\code\\pages\\tutorial\\table.vue' /* webpackChunkName: "pages_tutorial_table" */).then(m => m.default || m)
+const _ad71c7ee = () => import('..\\code\\pages\\tutorial\\clear.vue' /* webpackChunkName: "pages_tutorial_clear" */).then(m => m.default || m)
+const _c06e034e = () => import('..\\code\\pages\\tutorial\\group-by.vue' /* webpackChunkName: "pages_tutorial_group-by" */).then(m => m.default || m)
+const _79989c2b = () => import('..\\code\\pages\\example\\aggregate.vue' /* webpackChunkName: "pages_example_aggregate" */).then(m => m.default || m)
+const _21354810 = () => import('..\\code\\pages\\tutorial\\remove.vue' /* webpackChunkName: "pages_tutorial_remove" */).then(m => m.default || m)
+const _5eaf5908 = () => import('..\\code\\pages\\example\\drop-db.vue' /* webpackChunkName: "pages_example_drop-db" */).then(m => m.default || m)
+const _7ca76930 = () => import('..\\code\\pages\\example\\operator.vue' /* webpackChunkName: "pages_example_operator" */).then(m => m.default || m)
 const _4b369c70 = () => import('..\\code\\pages\\tutorial\\select.vue' /* webpackChunkName: "pages_tutorial_select" */).then(m => m.default || m)
+const _66c73480 = () => import('..\\code\\pages\\example\\distinct.vue' /* webpackChunkName: "pages_example_distinct" */).then(m => m.default || m)
+const _6defce7a = () => import('..\\code\\pages\\example\\skip.vue' /* webpackChunkName: "pages_example_skip" */).then(m => m.default || m)
+const _ea3bd24a = () => import('..\\code\\pages\\example\\like.vue' /* webpackChunkName: "pages_example_like" */).then(m => m.default || m)
+const _d800660c = () => import('..\\code\\pages\\example\\order-by.vue' /* webpackChunkName: "pages_example_order-by" */).then(m => m.default || m)
+const _2e53917b = () => import('..\\code\\pages\\example\\count.vue' /* webpackChunkName: "pages_example_count" */).then(m => m.default || m)
+const _4da82f0a = () => import('..\\code\\pages\\tutorial\\aggregate.vue' /* webpackChunkName: "pages_tutorial_aggregate" */).then(m => m.default || m)
+const _60cbbde6 = () => import('..\\code\\pages\\tutorial\\adv-sql-example.vue' /* webpackChunkName: "pages_tutorial_adv-sql-example" */).then(m => m.default || m)
+const _655483d6 = () => import('..\\code\\pages\\tutorial\\change-table-design.vue' /* webpackChunkName: "pages_tutorial_change-table-design" */).then(m => m.default || m)
 const _42da1869 = () => import('..\\code\\pages\\example\\in.vue' /* webpackChunkName: "pages_example_in" */).then(m => m.default || m)
+const _10f93492 = () => import('..\\code\\pages\\example\\ignore-case.vue' /* webpackChunkName: "pages_example_ignore-case" */).then(m => m.default || m)
+const _d8374eea = () => import('..\\code\\pages\\tutorial\\like.vue' /* webpackChunkName: "pages_tutorial_like" */).then(m => m.default || m)
+const _459985cb = () => import('..\\code\\pages\\tutorial\\count.vue' /* webpackChunkName: "pages_tutorial_count" */).then(m => m.default || m)
+const _1decc648 = () => import('..\\code\\pages\\example\\remove.vue' /* webpackChunkName: "pages_example_remove" */).then(m => m.default || m)
+const _1e6482f4 = () => import('..\\code\\pages\\example\\between.vue' /* webpackChunkName: "pages_example_between" */).then(m => m.default || m)
+const _7bfea344 = () => import('..\\code\\pages\\tutorial\\between.vue' /* webpackChunkName: "pages_tutorial_between" */).then(m => m.default || m)
+const _4a1f14a9 = () => import('..\\code\\pages\\example\\group-by.vue' /* webpackChunkName: "pages_example_group-by" */).then(m => m.default || m)
+const _893374ba = () => import('..\\code\\pages\\tutorial\\where.vue' /* webpackChunkName: "pages_tutorial_where" */).then(m => m.default || m)
+const _4627a3cd = () => import('..\\code\\pages\\example\\export-json.vue' /* webpackChunkName: "pages_example_export-json" */).then(m => m.default || m)
+const _5c921d74 = () => import('..\\code\\pages\\tutorial\\get-started.vue' /* webpackChunkName: "pages_tutorial_get-started" */).then(m => m.default || m)
+const _0e191c1d = () => import('..\\code\\pages\\tutorial\\export-json.vue' /* webpackChunkName: "pages_tutorial_export-json" */).then(m => m.default || m)
+const _1c3df3ce = () => import('..\\code\\pages\\tutorial\\in.vue' /* webpackChunkName: "pages_tutorial_in" */).then(m => m.default || m)
+const _3f28a63e = () => import('..\\code\\pages\\example\\createdb.vue' /* webpackChunkName: "pages_example_createdb" */).then(m => m.default || m)
+const _51c7e1ea = () => import('..\\code\\pages\\tutorial\\operators.vue' /* webpackChunkName: "pages_tutorial_operators" */).then(m => m.default || m)
+const _e7304e3e = () => import('..\\code\\pages\\tutorial\\orderby.vue' /* webpackChunkName: "pages_tutorial_orderby" */).then(m => m.default || m)
+const _75fd68bb = () => import('..\\code\\pages\\tutorial\\update-with-operator.vue' /* webpackChunkName: "pages_tutorial_update-with-operator" */).then(m => m.default || m)
+const _02c6f6c4 = () => import('..\\code\\pages\\tutorial\\join.vue' /* webpackChunkName: "pages_tutorial_join" */).then(m => m.default || m)
+const _22464f70 = () => import('..\\code\\pages\\tutorial\\distinct.vue' /* webpackChunkName: "pages_tutorial_distinct" */).then(m => m.default || m)
+const _5d004a77 = () => import('..\\code\\pages\\tutorial\\limit.vue' /* webpackChunkName: "pages_tutorial_limit" */).then(m => m.default || m)
+const _6a6347e6 = () => import('..\\code\\pages\\example\\update.vue' /* webpackChunkName: "pages_example_update" */).then(m => m.default || m)
+const _45ba5627 = () => import('..\\code\\pages\\example\\limit.vue' /* webpackChunkName: "pages_example_limit" */).then(m => m.default || m)
+const _306b7dca = () => import('..\\code\\pages\\tutorial\\column.vue' /* webpackChunkName: "pages_tutorial_column" */).then(m => m.default || m)
+const _4d4f8a27 = () => import('..\\code\\pages\\example\\or.vue' /* webpackChunkName: "pages_example_or" */).then(m => m.default || m)
+const _25b98992 = () => import('..\\code\\pages\\example\\multiple-table-join.vue' /* webpackChunkName: "pages_example_multiple-table-join" */).then(m => m.default || m)
+const _17913ca4 = () => import('..\\code\\pages\\tutorial\\installation.vue' /* webpackChunkName: "pages_tutorial_installation" */).then(m => m.default || m)
+const _047e46ce = () => import('..\\code\\pages\\tutorial\\enums.vue' /* webpackChunkName: "pages_tutorial_enums" */).then(m => m.default || m)
+const _960f48f4 = () => import('..\\code\\pages\\example\\change-table-design.vue' /* webpackChunkName: "pages_example_change-table-design" */).then(m => m.default || m)
+const _811643f2 = () => import('..\\code\\pages\\tutorial\\ignore-case.vue' /* webpackChunkName: "pages_tutorial_ignore-case" */).then(m => m.default || m)
+const _4367fb78 = () => import('..\\code\\pages\\example\\update-with-operators.vue' /* webpackChunkName: "pages_example_update-with-operators" */).then(m => m.default || m)
+const _01f6da6f = () => import('..\\code\\pages\\tutorial\\database.vue' /* webpackChunkName: "pages_tutorial_database" */).then(m => m.default || m)
 const _f65d3a5e = () => import('..\\code\\pages\\example\\simple-join.vue' /* webpackChunkName: "pages_example_simple-join" */).then(m => m.default || m)
+const _16086dfd = () => import('..\\code\\pages\\example\\insert.vue' /* webpackChunkName: "pages_example_insert" */).then(m => m.default || m)
+const _b7bf5d5a = () => import('..\\code\\pages\\example\\where.vue' /* webpackChunkName: "pages_example_where" */).then(m => m.default || m)
+const _5beb4b1a = () => import('..\\code\\pages\\tutorial\\skip.vue' /* webpackChunkName: "pages_tutorial_skip" */).then(m => m.default || m)
+const _4d5b4fc8 = () => import('..\\code\\pages\\tutorial\\update-with-operators.vue' /* webpackChunkName: "pages_tutorial_update-with-operators" */).then(m => m.default || m)
+const _d2f6d17e = () => import('..\\code\\pages\\tutorial\\helpers.vue' /* webpackChunkName: "pages_tutorial_helpers" */).then(m => m.default || m)
+const _dbfdb08e = () => import('..\\code\\pages\\example\\clear.vue' /* webpackChunkName: "pages_example_clear" */).then(m => m.default || m)
+const _30fdf8a6 = () => import('..\\code\\pages\\tutorial\\insert.vue' /* webpackChunkName: "pages_tutorial_insert" */).then(m => m.default || m)
+const _c7721c86 = () => import('..\\code\\pages\\tutorial\\update.vue' /* webpackChunkName: "pages_tutorial_update" */).then(m => m.default || m)
 const _79be06c0 = () => import('..\\code\\pages\\example\\select.vue' /* webpackChunkName: "pages_example_select" */).then(m => m.default || m)
 const _07531052 = () => import('..\\code\\pages\\tutorial\\or.vue' /* webpackChunkName: "pages_tutorial_or" */).then(m => m.default || m)
-const _5d004a77 = () => import('..\\code\\pages\\tutorial\\limit.vue' /* webpackChunkName: "pages_tutorial_limit" */).then(m => m.default || m)
-const _655483d6 = () => import('..\\code\\pages\\tutorial\\change-table-design.vue' /* webpackChunkName: "pages_tutorial_change-table-design" */).then(m => m.default || m)
-const _0e191c1d = () => import('..\\code\\pages\\tutorial\\export-json.vue' /* webpackChunkName: "pages_tutorial_export-json" */).then(m => m.default || m)
-const _5c921d74 = () => import('..\\code\\pages\\tutorial\\get-started.vue' /* webpackChunkName: "pages_tutorial_get-started" */).then(m => m.default || m)
-const _7e80f90a = () => import('..\\code\\pages\\tutorial\\table.vue' /* webpackChunkName: "pages_tutorial_table" */).then(m => m.default || m)
-const _75fd68bb = () => import('..\\code\\pages\\tutorial\\update-with-operator.vue' /* webpackChunkName: "pages_tutorial_update-with-operator" */).then(m => m.default || m)
-const _459985cb = () => import('..\\code\\pages\\tutorial\\count.vue' /* webpackChunkName: "pages_tutorial_count" */).then(m => m.default || m)
-const _30fdf8a6 = () => import('..\\code\\pages\\tutorial\\insert.vue' /* webpackChunkName: "pages_tutorial_insert" */).then(m => m.default || m)
-const _02c6f6c4 = () => import('..\\code\\pages\\tutorial\\join.vue' /* webpackChunkName: "pages_tutorial_join" */).then(m => m.default || m)
-const _25b98992 = () => import('..\\code\\pages\\example\\multiple-table-join.vue' /* webpackChunkName: "pages_example_multiple-table-join" */).then(m => m.default || m)
-const _d2f6d17e = () => import('..\\code\\pages\\tutorial\\helpers.vue' /* webpackChunkName: "pages_tutorial_helpers" */).then(m => m.default || m)
-const _ad71c7ee = () => import('..\\code\\pages\\tutorial\\clear.vue' /* webpackChunkName: "pages_tutorial_clear" */).then(m => m.default || m)
-const _21354810 = () => import('..\\code\\pages\\tutorial\\remove.vue' /* webpackChunkName: "pages_tutorial_remove" */).then(m => m.default || m)
-const _960f48f4 = () => import('..\\code\\pages\\example\\change-table-design.vue' /* webpackChunkName: "pages_example_change-table-design" */).then(m => m.default || m)
-const _4a1f14a9 = () => import('..\\code\\pages\\example\\group-by.vue' /* webpackChunkName: "pages_example_group-by" */).then(m => m.default || m)
-const _ea3bd24a = () => import('..\\code\\pages\\example\\like.vue' /* webpackChunkName: "pages_example_like" */).then(m => m.default || m)
-const _17913ca4 = () => import('..\\code\\pages\\tutorial\\installation.vue' /* webpackChunkName: "pages_tutorial_installation" */).then(m => m.default || m)
-const _84e9242e = () => import('..\\code\\pages\\v1\\tutorial\\between.vue' /* webpackChunkName: "pages_v1_tutorial_between" */).then(m => m.default || m)
+const _f2803198 = () => import('..\\code\\pages\\v1\\example\\clear.vue' /* webpackChunkName: "pages_v1_example_clear" */).then(m => m.default || m)
 const _a11bae9a = () => import('..\\code\\pages\\v1\\tutorial\\remove.vue' /* webpackChunkName: "pages_v1_tutorial_remove" */).then(m => m.default || m)
 const _5e7f7588 = () => import('..\\code\\pages\\v1\\tutorial\\where.vue' /* webpackChunkName: "pages_v1_tutorial_where" */).then(m => m.default || m)
 const _194977ce = () => import('..\\code\\pages\\v1\\tutorial\\join.vue' /* webpackChunkName: "pages_v1_tutorial_join" */).then(m => m.default || m)
-const _f2803198 = () => import('..\\code\\pages\\v1\\example\\clear.vue' /* webpackChunkName: "pages_v1_example_clear" */).then(m => m.default || m)
+const _84e9242e = () => import('..\\code\\pages\\v1\\tutorial\\between.vue' /* webpackChunkName: "pages_v1_tutorial_between" */).then(m => m.default || m)
 const _4fdd3c34 = () => import('..\\code\\pages\\v1\\tutorial\\helpers.vue' /* webpackChunkName: "pages_v1_tutorial_helpers" */).then(m => m.default || m)
 const _0339160d = () => import('..\\code\\pages\\v1\\example\\operator.vue' /* webpackChunkName: "pages_v1_example_operator" */).then(m => m.default || m)
 const _726dcc24 = () => import('..\\code\\pages\\v1\\tutorial\\skip.vue' /* webpackChunkName: "pages_v1_tutorial_skip" */).then(m => m.default || m)
@@ -188,154 +189,19 @@ export function createRouter () {
 			name: "tutorial-drop-db"
 		},
 		{
-			path: "/example/update-with-operators",
-			component: _4367fb78,
-			name: "example-update-with-operators"
+			path: "/tutorial/bulk-insert",
+			component: _4e756310,
+			name: "tutorial-bulk-insert"
 		},
 		{
-			path: "/example/where",
-			component: _b7bf5d5a,
-			name: "example-where"
+			path: "/tutorial/table",
+			component: _7e80f90a,
+			name: "tutorial-table"
 		},
 		{
-			path: "/tutorial/database",
-			component: _01f6da6f,
-			name: "tutorial-database"
-		},
-		{
-			path: "/example/operator",
-			component: _7ca76930,
-			name: "example-operator"
-		},
-		{
-			path: "/example/drop-db",
-			component: _5eaf5908,
-			name: "example-drop-db"
-		},
-		{
-			path: "/tutorial/in",
-			component: _1c3df3ce,
-			name: "tutorial-in"
-		},
-		{
-			path: "/example/clear",
-			component: _dbfdb08e,
-			name: "example-clear"
-		},
-		{
-			path: "/example/insert",
-			component: _16086dfd,
-			name: "example-insert"
-		},
-		{
-			path: "/tutorial/skip",
-			component: _5beb4b1a,
-			name: "tutorial-skip"
-		},
-		{
-			path: "/example/distinct",
-			component: _66c73480,
-			name: "example-distinct"
-		},
-		{
-			path: "/example/between",
-			component: _1e6482f4,
-			name: "example-between"
-		},
-		{
-			path: "/tutorial/adv-sql-example",
-			component: _60cbbde6,
-			name: "tutorial-adv-sql-example"
-		},
-		{
-			path: "/example/limit",
-			component: _45ba5627,
-			name: "example-limit"
-		},
-		{
-			path: "/example/or",
-			component: _4d4f8a27,
-			name: "example-or"
-		},
-		{
-			path: "/example/remove",
-			component: _1decc648,
-			name: "example-remove"
-		},
-		{
-			path: "/tutorial/update",
-			component: _c7721c86,
-			name: "tutorial-update"
-		},
-		{
-			path: "/example/createdb",
-			component: _3f28a63e,
-			name: "example-createdb"
-		},
-		{
-			path: "/example/export-json",
-			component: _4627a3cd,
-			name: "example-export-json"
-		},
-		{
-			path: "/example/order-by",
-			component: _d800660c,
-			name: "example-order-by"
-		},
-		{
-			path: "/tutorial/column",
-			component: _306b7dca,
-			name: "tutorial-column"
-		},
-		{
-			path: "/tutorial/where",
-			component: _893374ba,
-			name: "tutorial-where"
-		},
-		{
-			path: "/example/update",
-			component: _6a6347e6,
-			name: "example-update"
-		},
-		{
-			path: "/tutorial/ignore-case",
-			component: _811643f2,
-			name: "tutorial-ignore-case"
-		},
-		{
-			path: "/tutorial/enums",
-			component: _047e46ce,
-			name: "tutorial-enums"
-		},
-		{
-			path: "/tutorial/like",
-			component: _d8374eea,
-			name: "tutorial-like"
-		},
-		{
-			path: "/example/skip",
-			component: _6defce7a,
-			name: "example-skip"
-		},
-		{
-			path: "/tutorial/orderby",
-			component: _e7304e3e,
-			name: "tutorial-orderby"
-		},
-		{
-			path: "/tutorial/aggregate",
-			component: _4da82f0a,
-			name: "tutorial-aggregate"
-		},
-		{
-			path: "/example/aggregate",
-			component: _79989c2b,
-			name: "example-aggregate"
-		},
-		{
-			path: "/example/count",
-			component: _2e53917b,
-			name: "example-count"
+			path: "/tutorial/clear",
+			component: _ad71c7ee,
+			name: "tutorial-clear"
 		},
 		{
 			path: "/tutorial/group-by",
@@ -343,29 +209,24 @@ export function createRouter () {
 			name: "tutorial-group-by"
 		},
 		{
-			path: "/example/ignore-case",
-			component: _10f93492,
-			name: "example-ignore-case"
+			path: "/example/aggregate",
+			component: _79989c2b,
+			name: "example-aggregate"
 		},
 		{
-			path: "/tutorial/operators",
-			component: _51c7e1ea,
-			name: "tutorial-operators"
+			path: "/tutorial/remove",
+			component: _21354810,
+			name: "tutorial-remove"
 		},
 		{
-			path: "/tutorial/distinct",
-			component: _22464f70,
-			name: "tutorial-distinct"
+			path: "/example/drop-db",
+			component: _5eaf5908,
+			name: "example-drop-db"
 		},
 		{
-			path: "/tutorial/bulk-insert",
-			component: _4e756310,
-			name: "tutorial-bulk-insert"
-		},
-		{
-			path: "/tutorial/between",
-			component: _7bfea344,
-			name: "tutorial-between"
+			path: "/example/operator",
+			component: _7ca76930,
+			name: "example-operator"
 		},
 		{
 			path: "/tutorial/select",
@@ -373,14 +234,244 @@ export function createRouter () {
 			name: "tutorial-select"
 		},
 		{
+			path: "/example/distinct",
+			component: _66c73480,
+			name: "example-distinct"
+		},
+		{
+			path: "/example/skip",
+			component: _6defce7a,
+			name: "example-skip"
+		},
+		{
+			path: "/example/like",
+			component: _ea3bd24a,
+			name: "example-like"
+		},
+		{
+			path: "/example/order-by",
+			component: _d800660c,
+			name: "example-order-by"
+		},
+		{
+			path: "/example/count",
+			component: _2e53917b,
+			name: "example-count"
+		},
+		{
+			path: "/tutorial/aggregate",
+			component: _4da82f0a,
+			name: "tutorial-aggregate"
+		},
+		{
+			path: "/tutorial/adv-sql-example",
+			component: _60cbbde6,
+			name: "tutorial-adv-sql-example"
+		},
+		{
+			path: "/tutorial/change-table-design",
+			component: _655483d6,
+			name: "tutorial-change-table-design"
+		},
+		{
 			path: "/example/in",
 			component: _42da1869,
 			name: "example-in"
 		},
 		{
+			path: "/example/ignore-case",
+			component: _10f93492,
+			name: "example-ignore-case"
+		},
+		{
+			path: "/tutorial/like",
+			component: _d8374eea,
+			name: "tutorial-like"
+		},
+		{
+			path: "/tutorial/count",
+			component: _459985cb,
+			name: "tutorial-count"
+		},
+		{
+			path: "/example/remove",
+			component: _1decc648,
+			name: "example-remove"
+		},
+		{
+			path: "/example/between",
+			component: _1e6482f4,
+			name: "example-between"
+		},
+		{
+			path: "/tutorial/between",
+			component: _7bfea344,
+			name: "tutorial-between"
+		},
+		{
+			path: "/example/group-by",
+			component: _4a1f14a9,
+			name: "example-group-by"
+		},
+		{
+			path: "/tutorial/where",
+			component: _893374ba,
+			name: "tutorial-where"
+		},
+		{
+			path: "/example/export-json",
+			component: _4627a3cd,
+			name: "example-export-json"
+		},
+		{
+			path: "/tutorial/get-started",
+			component: _5c921d74,
+			name: "tutorial-get-started"
+		},
+		{
+			path: "/tutorial/export-json",
+			component: _0e191c1d,
+			name: "tutorial-export-json"
+		},
+		{
+			path: "/tutorial/in",
+			component: _1c3df3ce,
+			name: "tutorial-in"
+		},
+		{
+			path: "/example/createdb",
+			component: _3f28a63e,
+			name: "example-createdb"
+		},
+		{
+			path: "/tutorial/operators",
+			component: _51c7e1ea,
+			name: "tutorial-operators"
+		},
+		{
+			path: "/tutorial/orderby",
+			component: _e7304e3e,
+			name: "tutorial-orderby"
+		},
+		{
+			path: "/tutorial/update-with-operator",
+			component: _75fd68bb,
+			name: "tutorial-update-with-operator"
+		},
+		{
+			path: "/tutorial/join",
+			component: _02c6f6c4,
+			name: "tutorial-join"
+		},
+		{
+			path: "/tutorial/distinct",
+			component: _22464f70,
+			name: "tutorial-distinct"
+		},
+		{
+			path: "/tutorial/limit",
+			component: _5d004a77,
+			name: "tutorial-limit"
+		},
+		{
+			path: "/example/update",
+			component: _6a6347e6,
+			name: "example-update"
+		},
+		{
+			path: "/example/limit",
+			component: _45ba5627,
+			name: "example-limit"
+		},
+		{
+			path: "/tutorial/column",
+			component: _306b7dca,
+			name: "tutorial-column"
+		},
+		{
+			path: "/example/or",
+			component: _4d4f8a27,
+			name: "example-or"
+		},
+		{
+			path: "/example/multiple-table-join",
+			component: _25b98992,
+			name: "example-multiple-table-join"
+		},
+		{
+			path: "/tutorial/installation",
+			component: _17913ca4,
+			name: "tutorial-installation"
+		},
+		{
+			path: "/tutorial/enums",
+			component: _047e46ce,
+			name: "tutorial-enums"
+		},
+		{
+			path: "/example/change-table-design",
+			component: _960f48f4,
+			name: "example-change-table-design"
+		},
+		{
+			path: "/tutorial/ignore-case",
+			component: _811643f2,
+			name: "tutorial-ignore-case"
+		},
+		{
+			path: "/example/update-with-operators",
+			component: _4367fb78,
+			name: "example-update-with-operators"
+		},
+		{
+			path: "/tutorial/database",
+			component: _01f6da6f,
+			name: "tutorial-database"
+		},
+		{
 			path: "/example/simple-join",
 			component: _f65d3a5e,
 			name: "example-simple-join"
+		},
+		{
+			path: "/example/insert",
+			component: _16086dfd,
+			name: "example-insert"
+		},
+		{
+			path: "/example/where",
+			component: _b7bf5d5a,
+			name: "example-where"
+		},
+		{
+			path: "/tutorial/skip",
+			component: _5beb4b1a,
+			name: "tutorial-skip"
+		},
+		{
+			path: "/tutorial/update-with-operators",
+			component: _4d5b4fc8,
+			name: "tutorial-update-with-operators"
+		},
+		{
+			path: "/tutorial/helpers",
+			component: _d2f6d17e,
+			name: "tutorial-helpers"
+		},
+		{
+			path: "/example/clear",
+			component: _dbfdb08e,
+			name: "example-clear"
+		},
+		{
+			path: "/tutorial/insert",
+			component: _30fdf8a6,
+			name: "tutorial-insert"
+		},
+		{
+			path: "/tutorial/update",
+			component: _c7721c86,
+			name: "tutorial-update"
 		},
 		{
 			path: "/example/select",
@@ -393,94 +484,9 @@ export function createRouter () {
 			name: "tutorial-or"
 		},
 		{
-			path: "/tutorial/limit",
-			component: _5d004a77,
-			name: "tutorial-limit"
-		},
-		{
-			path: "/tutorial/change-table-design",
-			component: _655483d6,
-			name: "tutorial-change-table-design"
-		},
-		{
-			path: "/tutorial/export-json",
-			component: _0e191c1d,
-			name: "tutorial-export-json"
-		},
-		{
-			path: "/tutorial/get-started",
-			component: _5c921d74,
-			name: "tutorial-get-started"
-		},
-		{
-			path: "/tutorial/table",
-			component: _7e80f90a,
-			name: "tutorial-table"
-		},
-		{
-			path: "/tutorial/update-with-operator",
-			component: _75fd68bb,
-			name: "tutorial-update-with-operator"
-		},
-		{
-			path: "/tutorial/count",
-			component: _459985cb,
-			name: "tutorial-count"
-		},
-		{
-			path: "/tutorial/insert",
-			component: _30fdf8a6,
-			name: "tutorial-insert"
-		},
-		{
-			path: "/tutorial/join",
-			component: _02c6f6c4,
-			name: "tutorial-join"
-		},
-		{
-			path: "/example/multiple-table-join",
-			component: _25b98992,
-			name: "example-multiple-table-join"
-		},
-		{
-			path: "/tutorial/helpers",
-			component: _d2f6d17e,
-			name: "tutorial-helpers"
-		},
-		{
-			path: "/tutorial/clear",
-			component: _ad71c7ee,
-			name: "tutorial-clear"
-		},
-		{
-			path: "/tutorial/remove",
-			component: _21354810,
-			name: "tutorial-remove"
-		},
-		{
-			path: "/example/change-table-design",
-			component: _960f48f4,
-			name: "example-change-table-design"
-		},
-		{
-			path: "/example/group-by",
-			component: _4a1f14a9,
-			name: "example-group-by"
-		},
-		{
-			path: "/example/like",
-			component: _ea3bd24a,
-			name: "example-like"
-		},
-		{
-			path: "/tutorial/installation",
-			component: _17913ca4,
-			name: "tutorial-installation"
-		},
-		{
-			path: "/v1/tutorial/between",
-			component: _84e9242e,
-			name: "v1-tutorial-between"
+			path: "/v1/example/clear",
+			component: _f2803198,
+			name: "v1-example-clear"
 		},
 		{
 			path: "/v1/tutorial/remove",
@@ -498,9 +504,9 @@ export function createRouter () {
 			name: "v1-tutorial-join"
 		},
 		{
-			path: "/v1/example/clear",
-			component: _f2803198,
-			name: "v1-example-clear"
+			path: "/v1/tutorial/between",
+			component: _84e9242e,
+			name: "v1-tutorial-between"
 		},
 		{
 			path: "/v1/tutorial/helpers",

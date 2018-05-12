@@ -57,20 +57,12 @@ export default class Tutorial extends Vue {
   }
 
   mounted() {
-    this.version = Number(this.getVersion());
+   this.setVersion();
     var currentUrl: string = (this.$route as any).path;
     const activeUrl = this.links.find(
       value =>
-        currentUrl.toLowerCase() ===
-        `${this.relativeUrl}${value.url.toLowerCase()}`
-    );
-    console.log(
-      "version:" +
-        this.version +
-        "currentUrl:" +
-        currentUrl +
-        "activeUrl:" +
-        activeUrl
+        currentUrl.toLowerCase().replace(/\//g, '') ===
+        `${this.relativeUrl}${value.url.toLowerCase()}`.replace(/\//g, '')
     );
     if (activeUrl && activeUrl.url.length > 0) {
       this.activeUrl = activeUrl.url;
@@ -96,19 +88,16 @@ export default class Tutorial extends Vue {
     return $.val();
   }
 
+  setVersion(value?:number){
+    this.version =  value?value: Number(this.getVersion());
+  }
+
   onVersionChange(value: number) {
-    this.version = value;
+     this.setVersion(value);
     const currentUrl: string = (this.$route as any).path;
-    const nextUrl = this.relativeUrl + currentUrl.split("/").reverse()[0];
-    this.$router.push(nextUrl);
-    console.log(
-      "version:" +
-        this.version +
-        "currentUrl:" +
-        currentUrl +
-        "activeUrl:" +
-        nextUrl
-    );
+    const splittedUrl =  currentUrl.split("/").reverse();
+    const nextUrl = splittedUrl[0].length>0?splittedUrl[0]:splittedUrl[1];
+    this.$router.push(this.relativeUrl + nextUrl);
   }
 
   get tutorialHtml() {
@@ -189,7 +178,7 @@ export default class Tutorial extends Vue {
       },
       {
         text: "Group By",
-        url: "groupby"
+        url: "group-by"
       },
       {
         text: "Distinct",
@@ -278,6 +267,7 @@ export default class Tutorial extends Vue {
   }
 
   onNextBtnClick() {
+    debugger;
     const currentUrl = (this.$route as any).path;
     var nextUrl;
     const relativeUrl = this.relativeUrl;
