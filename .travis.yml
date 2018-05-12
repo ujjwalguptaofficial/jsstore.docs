@@ -7,4 +7,5 @@ before_script:
     - npm install
 script:
   - npm run deploy
+  - git add * :/
   - git commit -m 'Travis - deployed the latest document to docs folder'
