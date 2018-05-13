@@ -12,7 +12,7 @@ A column in JsStore is a JSON object. It has following properties -
     primaryKey: boolean, // declare this column as primary key (optional)
     // We strongly recommend to create the primary keys (optional)
     notNull: boolean, // ensure this column value should not be null (optional)
-    dataType: JsStore.Data_Type, // datatype of this column (optional)
+    dataType: JsStore.DATA_TYPE, // datatype of this column (optional)
     autoIncrement: boolean, // automatically increment value (optional)
     unique: boolean // This column will have unique value (optional)
     default: any, // Provides a default value for a column when none is specified (optional)

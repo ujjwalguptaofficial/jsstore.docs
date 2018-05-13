@@ -1,7 +1,7 @@
 ---
 Title: "Table"
 Created Date: "09/05/2018"
-Last Updated : "10/05/2018"
+Last Updated : "13/05/2018"
 ---
 
 Before creating Table, lets see how to create a column. A column in JsStore is a JSON object. It has following properties -
@@ -12,7 +12,7 @@ Before creating Table, lets see how to create a column. A column in JsStore is a
     primaryKey: boolean, // declare this column as primary key (optional)
     // We strongly recommend to create the primary keys (optional)
     notNull: boolean, // ensure this column value should not be null (optional)
-    dataType: JsStore.Data_Type, // datatype of this column (optional)
+    dataType: JsStore.DATA_TYPE, // datatype of this column (optional)
     autoIncrement: boolean, // automatically increment value (optional)
     unique: boolean // This column will have unique value (optional)
     default: any, // Provides a default value for a column when none is specified (optional)

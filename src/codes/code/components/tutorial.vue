@@ -57,12 +57,12 @@ export default class Tutorial extends Vue {
   }
 
   mounted() {
-   this.setVersion();
+    this.setVersion();
     var currentUrl: string = (this.$route as any).path;
     const activeUrl = this.links.find(
       value =>
-        currentUrl.toLowerCase().replace(/\//g, '') ===
-        `${this.relativeUrl}${value.url.toLowerCase()}`.replace(/\//g, '')
+        currentUrl.toLowerCase().replace(/\//g, "") ===
+        `${this.relativeUrl}${value.url.toLowerCase()}`.replace(/\//g, "")
     );
     if (activeUrl && activeUrl.url.length > 0) {
       this.activeUrl = activeUrl.url;
@@ -88,15 +88,15 @@ export default class Tutorial extends Vue {
     return $.val();
   }
 
-  setVersion(value?:number){
-    this.version =  value?value: Number(this.getVersion());
+  setVersion(value?: number) {
+    this.version = value ? value : Number(this.getVersion());
   }
 
   onVersionChange(value: number) {
-     this.setVersion(value);
+    this.setVersion(value);
     const currentUrl: string = (this.$route as any).path;
-    const splittedUrl =  currentUrl.split("/").reverse();
-    const nextUrl = splittedUrl[0].length>0?splittedUrl[0]:splittedUrl[1];
+    const splittedUrl = currentUrl.split("/").reverse();
+    const nextUrl = splittedUrl[0].length > 0 ? splittedUrl[0] : splittedUrl[1];
     this.$router.push(this.relativeUrl + nextUrl);
   }
 
@@ -105,20 +105,21 @@ export default class Tutorial extends Vue {
   }
 
   get links() {
-    const links = this.allLinks_;
+    var linksToRemove;
     switch (this.version) {
       case 1:
+        linksToRemove = ["v1-to-v2"];
         break;
       case 2:
-        const linksToRemove = ["promise"];
-        return links.filter(
-          value => linksToRemove.findIndex(qry => qry === value.url) < 0
-        );
+        linksToRemove = ["promise"];
+        break;
     }
-    return links;
+    return this.allLinks_.filter(
+      value => linksToRemove.findIndex(qry => qry === value.url) < 0
+    );
   }
 
-  get allLinks_() {
+  private get allLinks_() {
     return [
       {
         text: "Get Started",
@@ -251,6 +252,10 @@ export default class Tutorial extends Vue {
       {
         text: "Enums",
         url: "enums"
+      },
+      {
+        text: "V1 To V2",
+        url: "v1-to-v2"
       }
     ] as ITutorialLink[];
   }
@@ -267,19 +272,19 @@ export default class Tutorial extends Vue {
   }
 
   onNextBtnClick() {
-    debugger;
     const currentUrl = (this.$route as any).path;
-    var nextUrl;
     const relativeUrl = this.relativeUrl;
-    this.links.every((value, index) => {
-      if (currentUrl === relativeUrl + value.url) {
-        nextUrl = relativeUrl + this.links[index + 1].url;
-        return false;
+    const links = this.links;
+    const activeUrlIndex = links.findIndex(
+      value =>
+        currentUrl.toLowerCase().replace(/\//g, "") ===
+        `${this.relativeUrl}${value.url.toLowerCase()}`.replace(/\//g, "")
+    );
+    if (activeUrlIndex >= 0) {
+      const nextUrl = links[activeUrlIndex + 1];
+      if (nextUrl) {
+        this.$router.push(this.relativeUrl + nextUrl.url);
       }
-      return true;
-    });
-    if (nextUrl) {
-      this.$router.push(nextUrl);
     }
   }
 }
