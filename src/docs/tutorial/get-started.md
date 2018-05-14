@@ -195,6 +195,7 @@ We hope - you have understood the above article. Now lets make something awesome
 * [Using jsstore in typescript](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/TypeScript%20Example)
 * [Building an indexeddb app with webpack](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/webpack)
 * [Using react and webpack to store data in indexeddb](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/react)
+* [Using jsstore in angular](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/angular)
 
 <style>
     iframe {
