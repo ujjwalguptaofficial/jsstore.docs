@@ -1,23 +1,25 @@
 <template>
 <v-layout row wrap>
-    <v-flex md2 class="hidden-sm-and-down" id="divMenuContainer">
-<ul>
-     <li class="search margin-bottom-10px">
-       <v-card class="search-wrapper">
-         <v-card-text>
-            <input id="txtSearch" type="text" placeholder="Search">
-            <i class="material-icons">search</i>
-            <div class="search-results"></div>
-         </v-card-text>
-       </v-card>
-    </li>
-    <li v-for="link in links" :key="link.text" v-bind:class="{'link-active': link.url=== activeUrl}">
-        <a :href="relativeUrl+link.url">{{link.text}}</a>
-    </li>
-</ul>
+    <v-flex md2 class="hidden-sm-and-down" id="divMenuContainer" :class="{'show-menu':showMenu}">
+        <ul>
+            <li class="search margin-bottom-10px">
+              <v-card class="search-wrapper">
+                <v-card-text>
+                    <input id="txtSearch" type="text" placeholder="Search">
+                    <i class="material-icons">search</i>
+                    <div class="search-results"></div>
+                </v-card-text>
+              </v-card>
+            </li>
+            <li v-for="link in links" :key="link.text" v-bind:class="{'link-active': link.url=== activeUrl}">
+                <a :href="relativeUrl+link.url">{{link.text}}</a>
+            </li>
+        </ul>
     </v-flex>
-    <v-flex id="divTutorialContent" sm12 md9 l7 xl6 class="margin-left-15px">
-    <div v-html="tutorialHtml" class="margin-top-20px"></div>
+    <v-flex id="divTutorialContent" data-fuck="ddd"
+    :class="{'margin-left-15px': $vuetify.breakpoint.mdAndUp}"
+    xs12 md9 l7 xl6>
+      <div v-html="tutorialHtml" class="margin-top-20px"></div>
     </v-flex>
 </v-layout>
 
@@ -46,6 +48,7 @@ export default class Tutorial extends Vue {
 
   //property
   activeUrl = "";
+  showMenu = false;
 
   constructor() {
     super();
@@ -54,9 +57,17 @@ export default class Tutorial extends Vue {
 
   catchEvents() {
     vueEvent.$on("version_change", this.onVersionChange);
+    vueEvent.$on("menu_click", this.toggleMenu);
+    // if ((process as any).browser) {
+    //   new DomHelper().window.addEventListener(
+    //     "resize",
+    //     this.showHideMenuButton.bind(this)
+    //   );
+    // }
   }
 
   mounted() {
+    // this.showHideMenuButton();
     this.setVersion();
     var currentUrl: string = (this.$route as any).path;
     const activeUrl = this.links.find(
@@ -68,6 +79,20 @@ export default class Tutorial extends Vue {
       this.activeUrl = activeUrl.url;
     }
     this.registerNextBtnEvents();
+  }
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
+
+  showHideMenuButton() {
+    setTimeout(() => {
+      if (this.$vuetify.breakpoint.mdAndUp) {
+        this.showMenu = true;
+      } else {
+        this.showMenu = false;
+      }
+    }, 200);
   }
 
   registerNextBtnEvents() {

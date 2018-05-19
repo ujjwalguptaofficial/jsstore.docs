@@ -28,7 +28,11 @@ nav .brand-logo {
 #ulLink {
     position: absolute;
     right: 0px;
-    display: -webkit-box;
+    display: inline-flex;
+}
+
+#ulLink li {
+    display: inline-block;
 }
 
 #footer {

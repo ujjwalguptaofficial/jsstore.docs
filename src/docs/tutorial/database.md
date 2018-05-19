@@ -60,7 +60,9 @@ connection.isDbExist(db_name).then(function(isExist) {
 *   You dont need to open the db multiple times. Declare it one time at page load and use it always.
 *   At a time one db can be handled by one jsstore instance. So if you want to open multiple db, create multiple instance.
 
+
+If you are finding difficult to understand, please take a look at [examples](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples).
+
 <p class="margin-top-40px center-align">
-      <a class="btn info" target="_blank" href="/example/create_db">Example</a>
       <button class="btn info btnNext">Next</button>
 </p>

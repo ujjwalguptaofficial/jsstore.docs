@@ -59,9 +59,9 @@ function getDbSchema() {
           dataType: JsStore.DATA_TYPE.Number
       }, 
       {
-          Name: 'Quantity',
-          NotNull: true,
-          DataType: JsStore.DATA_TYPE.Number
+          name: 'Quantity',
+          notNull: true,
+          dataType: JsStore.DATA_TYPE.Number
       }
     ]
   };
@@ -139,6 +139,7 @@ connection.select({
         id: 5
     }
 }).then(function(results) {
+    // results will be array of objects
     alert(results.length + 'record found');
 }).catch(function(err) {
     console.log(err);
@@ -196,6 +197,7 @@ We hope - you have understood the above article. Now lets make something awesome
 * [Building an indexeddb app with webpack](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/webpack)
 * [Using react and webpack to store data in indexeddb](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/react)
 * [Using jsstore in angular](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/angular)
+* [Storing data in an electron app using JsStore](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/electron)
 
 <style>
     iframe {

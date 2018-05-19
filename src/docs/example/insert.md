@@ -5,18 +5,16 @@ Last Updated : "09/05/2018"
 ---
 
 ```
-var value={
+insert({
+    into: "Customers",
+    values: [{
     customerName:'ujjwal gupta', 
     contactName:'ujjwal', 
     address:'bhubaneswar odisha', 
     city:'bhubaneswar', 
     postalCode:'12345', 
     country:'India'
-}
-
-insert({
-    into: "Customers",
-    values: [value]
+}]
 });
 
 ```

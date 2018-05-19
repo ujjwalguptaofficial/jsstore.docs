@@ -51,15 +51,11 @@
 }
 
 .show-menu {
-    height: 100%;
     display: block !important;
     z-index: 1000;
     position: absolute;
     background-color: white;
-    width: 250px;
-    top: 0px;
-    left: -300px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .show-menu ul {
