@@ -5,9 +5,9 @@ Last Updated : "09/05/2018"
 ---
 
 ```
-var Connection = new JsStore.Instance(),
-dbName="TutorDb";
-JsStore.isDbExist(dbName,function(isExist){
+
+var dbName="TutorDb";
+isDbExist(dbName,function(isExist){
     if(isExist)
     {
         Connection.openDb(dbName);

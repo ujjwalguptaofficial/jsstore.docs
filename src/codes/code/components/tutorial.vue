@@ -4,10 +4,11 @@
         <ul>
             <li class="search margin-bottom-10px">
               <v-card class="search-wrapper">
-                <v-card-text>
-                    <input id="txtSearch" type="text" placeholder="Search">
+                <v-card-text style="padding:5px;">
+                    <input v-model="searchValue" id="txtSearch" type="text" placeholder="Search" 
+                    @keyup="onSearch">
                     <i class="material-icons">search</i>
-                    <div class="search-results"></div>
+                    <div class="search-results" v-html="searchResult"></div>
                 </v-card-text>
               </v-card>
             </li>
@@ -25,10 +26,11 @@
 
 </template>
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
+import { Component, Vue, Watch } from "nuxt-property-decorator";
 import * as axios from "axios";
 import DomHelper from "../helpers/dom_helper";
 import { vueEvent } from "../common_var";
+import { IInputSelect } from "../interfaces";
 
 export interface ITutorialLink {
   text: string;
@@ -49,6 +51,8 @@ export default class Tutorial extends Vue {
   //property
   activeUrl = "";
   showMenu = false;
+  searchValue = "";
+  searchResult = "";
 
   constructor() {
     super();
@@ -58,16 +62,19 @@ export default class Tutorial extends Vue {
   catchEvents() {
     vueEvent.$on("version_change", this.onVersionChange);
     vueEvent.$on("menu_click", this.toggleMenu);
-    // if ((process as any).browser) {
-    //   new DomHelper().window.addEventListener(
-    //     "resize",
-    //     this.showHideMenuButton.bind(this)
-    //   );
-    // }
+  }
+
+  onSearch() {
+    var html = "";
+    this.links.forEach(link => {
+      if (link.text.toLowerCase().indexOf(this.searchValue) >= 0) {
+        html += "<a href=" + link.url + ">" + link.text + "</a>";
+      }
+    });
+    this.searchResult = html;
   }
 
   mounted() {
-    // this.showHideMenuButton();
     this.setVersion();
     var currentUrl: string = (this.$route as any).path;
     const activeUrl = this.links.find(
