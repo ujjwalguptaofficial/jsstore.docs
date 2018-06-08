@@ -8,7 +8,7 @@ In this get started tutorial we will learn how to do crud operation in jsstore.
 
 #### Installation
 
-The simplest way to install jsstore is by using cdn. But since JsStore needs to be executed inside web worker and browsers does not allow cdn script for web worker. So the best way will be to download the script directly and use it.
+The simplest way to install jsstore is by using cdn. But if you want to jsstore to be executed inside web worker - you need to download the script directly and use it. Because browser does not allow cdn scripts in worker.
 
 You can download the script from [github](https://github.com/ujjwalguptaofficial/JsStore "jsstore github link") or from [npm](https://www.npmjs.com/package/jsstore "jsstore npm link")
 
@@ -198,6 +198,7 @@ We hope - you have understood the above article. Now lets make something awesome
 * [Using react and webpack to store data in indexeddb](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/react)
 * [Using jsstore in angular](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/angular)
 * [Storing data in an electron app using JsStore](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/electron)
+* [JsStore without web worker](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/without%20web%20worker)
 
 <style>
     iframe {
