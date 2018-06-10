@@ -4,6 +4,8 @@ Created Date: "08/05/2018"
 Last Updated : "08/05/2018"
 ---
 
+The Select api is used to select data from a database.
+
 #### Sql
 
 ```

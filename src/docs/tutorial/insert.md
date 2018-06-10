@@ -4,7 +4,7 @@ Created Date: "09/05/2018"
 Last Updated : "09/05/2018"
 ---
 
-Lets compare sql query with JsStore. It will help you to think in Sql and do in Js.
+The Insert api is used to insert new records in a table.
 
 #### Sql
 
@@ -29,9 +29,8 @@ var value = {
 connection.insert({
     into: "TABLE_NAME",
     values: [Value], //you can insert multiple values at a time
-
-}).then(function(rowsAffected) {
-    if (rowsAffected > 0) {
+}).then(function(rowsInserted) {
+    if (rowsInserted > 0) {
         alert('Successfully Added');
     }
 }).catch(function(error) {

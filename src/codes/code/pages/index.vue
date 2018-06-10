@@ -11,7 +11,7 @@
                 <v-flex sm12 offset-md1 md10 offset-xl-2 xl8 class="margin-top-40px">
                  <div id="divOverview">
                         <span style="font-size: 20px;font-weight: 500;">
-                            Store, Search, Delete and Update data in browsers with JsStore.</span>
+                            Execute Database operation in browsers with JsStore.</span>
                         <br>
                         <br>JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy with its SQL like apis.
                     </div>
@@ -19,12 +19,15 @@
                         <v-btn href="tutorial/get-started">Get Started</v-btn>
                         <v-btn href="https://github.com/ujjwalguptaofficial/JsStore" target="_blank">Download</v-btn>
                     </div>
+                    <div class="center-align margin-top-20px">
+                       <i class="material-icons" style="vertical-align:bottom;">insert_emoticon</i> Proudly Launching <a target="_blank" href="https://github.com/ujjwalguptaofficial/idbstudio">IDBStudio</a> - A cli management tool for jsstore.
+                    </div>
                     <div class="margin-top-50px top-border">
                         <h4></h4>
                         <ul id="ulFeatureList">
                             <li>
                                 <div class="li-header">Web worker support</div>
-                                <span class="li-body">JsStore automatically executes code in Webworker, if browser support.</span>
+                                <span class="li-body">JsStore can be executed in Web Worker or without Worker.</span>
                             </li>
                             <li>
                                 <div class="li-header">Join Support</div>

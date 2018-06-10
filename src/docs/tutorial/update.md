@@ -4,7 +4,7 @@ Created Date: "08/05/2018"
 Last Updated : "08/05/2018"
 ---
 
-You can use Where to filter results.
+Update is used to modify the existing records in a table. You can use Where to filter records.
 
 #### Sql
 
