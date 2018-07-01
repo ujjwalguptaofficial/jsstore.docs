@@ -140,7 +140,7 @@ export default class Tutorial extends Vue {
     var linksToRemove;
     switch (this.version) {
       case 1:
-        linksToRemove = ["v1-to-v2", "terminate"];
+        linksToRemove = ["v1-to-v2", "terminate","transaction"];
         break;
       case 2:
         linksToRemove = ["promise"];
@@ -292,6 +292,9 @@ export default class Tutorial extends Vue {
       {
         text: "V1 To V2",
         url: "v1-to-v2"
+      }, {
+        text: "Transaction",
+        url: "transaction"
       }
     ] as ITutorialLink[];
   }
