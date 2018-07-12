@@ -14,6 +14,7 @@ JsStore provides - 'transaction' api for executing transaction. The apis which a
 * remove
 * insert
 
+
 There are some extra api available inside the transaction to make the transaction more useful. These are -
 
 * setResult - setResult accepts key and value. setResult is used to save the value which will be returned when transaction completes. The transaction returns an object, the object is in form of key and value which is set using setResult.
