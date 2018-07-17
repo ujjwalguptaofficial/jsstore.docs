@@ -43,12 +43,12 @@ nav .brand-logo {
 }
 
 #footer .row {
-    padding: 40px 70px;
+    padding: 40px 50px;
     margin-bottom: 0px;
 }
 
 #footer .row div {
-    padding: 0px 50px;
+    padding: 0px 30px;
     text-align: justify;
 }
 
@@ -266,4 +266,16 @@ nav .brand-logo {
 
 .text-center {
     text-align: center;
+}
+
+.margin-left-10px {
+    margin-left: 10px
+}
+
+.padding-left-20px {
+    padding-left: 20px;
+}
+
+.inline-block {
+    display: inline-block;
 }

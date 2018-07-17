@@ -7,3 +7,10 @@ export interface IInputSelect {
     text: string;
     value: string;
 }
+
+export interface ITeam {
+    name: string;
+    about: string;
+    link: string;
+    imageUrl: string;
+}
