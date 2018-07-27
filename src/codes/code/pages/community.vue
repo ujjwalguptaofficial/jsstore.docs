@@ -13,7 +13,7 @@
             <li>
                 <a href="https://twitter.com/idbwrapper">Twitter</a> - Follow us on twitter and get jsstore news and updates.</li>
             <li>
-                <a href="https://medium.com/jsstore">Medium</a> - Write an article about jsstore. e.g - how jsstore helped you, explaining a problem and how you solved it using jsstore, a demo, an example, using it in some framework like - vue,angular,react etc. You should also write other community forms like - codeproject, dzone or your own blog etc.
+                <a href="https://medium.com/jsstore">Medium</a> - Follow us at Medium . You can also write an article about jsstore. e.g - how jsstore helped you, explaining a problem and how you solved it using jsstore, a demo, an example, using it in some framework like - vue,angular,react etc. You should also write in other community forum like - codeproject, dzone or your own blog etc.
                 <br><br>If you have written some tutorial, article or anything that you would like to know other people - please tweet to jsstore twitter account.
             </li>
             <li>

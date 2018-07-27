@@ -20,6 +20,7 @@ A column in JsStore is a JSON object. It has following properties -
     enableSearch: boolean - default value is true // Turn on/off search for this column (optional)
 }
 ```
+For all data types see this link - [DataType](tutorial/enums/)
 
 Column in jsstore can be created by two way - 
 

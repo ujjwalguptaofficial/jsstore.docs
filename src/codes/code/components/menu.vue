@@ -5,7 +5,7 @@
                 menu
             </i>
          </button>
-           <a href="../" title="JsStore Index Page" class="logo">
+           <a href="/" title="JsStore Index Page" class="logo">
                 <img src="/img/JsStore_145_64.png" alt="JsStore" :class="{'height-50px':$vuetify.breakpoint.smAndDown}" />
             </a>
             <ul id="ulLink">
