@@ -7,6 +7,9 @@ before_script:
     - npm install
 script:
   - npm run deploy
-local-dir: docs
-target-branch: master
+deploy:
+  api_key: $key
+  github-token: $key
+  local-dir: docs
+  target-branch: master
 
