@@ -7,18 +7,16 @@ Last Updated : "08/05/2018"
 Define your Table Object and add an extra property 'Version' with a value greater than Db Version and call api 'isDbExit' supplying table details (check out example). You can get Db version by using below code.
 
 ```
-JsStore.getDbVersion(db_name, function(version) {
+connection.getDbVersion(db_name).then(function(version) {
     console.log(version)
-});
+})
 ```
 
 The above code is for only development purpose.Dont execute this code to increase Db Version. You will have to specify the value manually.
 
 **Note :-** Doing this will delete all data from browser for the particular table.
 
-If you want to save your data.You can select all data and save it in a variable or you can use [KeyStore](https://github.com/ujjwalguptaofficial/KeyStore). And you can insert data into new table later.
-
-**Note :-** [KeyStore](https://github.com/ujjwalguptaofficial/KeyStore) is part of JsStore. It uses KeyStore to store meta data.
+If you want to save your data.You can select all data and save it in a variable. When your new db schema is created , inserts all data into new table.
 
 #### Example
 
@@ -50,12 +48,12 @@ Step - 2 : call api 'isDbExit' supplying table details
 ```
 // You can also change multiple table at a time. Just change version no and specify only one table in isDbExist and JsStore will take care of everything.
 
-var connection == new JsStore.Instance(new Worker('jsstore.js'));
+var connection = new JsStore.Instance(new Worker('jsstore.js'));
 connection.isDbExist({
     dbName: "db_name",
     table: {
         name: table_name,
-        version: 2
+        version: 2 // the same version which you have specified in the table
     }
 }).then(function(isExist) {
     if (isExist) {
