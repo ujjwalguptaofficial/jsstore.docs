@@ -65,6 +65,6 @@ connection.isDbExist({
 ```
 
 <p class="margin-top-40px center-align">
-    <a class="btn info" target="_blank" href="/example/change_table_design">Example</a>
+    <a class="btn info" target="_blank" href="https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/change%20table%20schema">Example</a>
     <button class="btn info btnNext">Next</button>
 </p>

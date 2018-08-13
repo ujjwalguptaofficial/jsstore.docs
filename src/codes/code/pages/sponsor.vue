@@ -14,7 +14,6 @@
                 <a href="https://paypal.me/ujjwalkrgupta" target="_blank">
                     <img src="/img/paypal.png" style="width:100px">
                 </a>
-                <a style="top:5px;position:relative;" class="margin-left-20px" href='https://ko-fi.com/S6S4G9W1' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
             </p>
         </div>
         <div class="margin-top-20px">
@@ -23,13 +22,15 @@
             <p class="margin-top-20px">
                 Recurring pledges come with exclusive perks, e.g. having your name listed in the JsStore GitHub repository, or have your company logo placed on this website.
             </p>
-            <p class="margin-top-20px center-align">
-                <a href="https://paypal.me/ujjwalkrgupta" target="_blank">
-                    <img src="/img/paypal.png" style="width:100px">
-                </a>
-                <a class="margin-left-20px" href="https://www.patreon.com/ujjwalgupta" target="_blank">
-                    <img src="/img/patreon_logo.png" style="width:100px">
-                </a>
+            <p class="margin-top-20px">
+                <ul>
+                    <li>
+                        <a href="https://www.patreon.com/ujjwalgupta" target="_blank">Become a backer or sponsor via Patreon</a> (goes directly to support Ujjwal gupta's full-time work on jsstore)
+                    </li>
+                    <li>
+                        <a href="https://opencollective.com/jsstore">Become a backer or sponsor via OpenCollective</a> (goes into a fund with transparent expense models supporting community efforts and events)
+                    </li>
+                </ul>
             </p>
         </div>
     </div>
