@@ -12,6 +12,8 @@ The simplest way to install jsstore is by using cdn. But if you want to jsstore 
 
 You can download the script from [github](https://github.com/ujjwalguptaofficial/JsStore "jsstore github link") or from [npm](https://www.npmjs.com/package/jsstore "jsstore npm link")
 
+If you dont know what is Web Worker. Please take a look at this link - https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -192,6 +194,7 @@ We hope - you have understood the above article. Now lets make something awesome
 
 #### * Check it out some examples for more understanding -
 
+* [JsFiddle Demo](http://jsfiddle.net/ujjwalguptaofficial/2ewpy6t4/6/)
 * [Crud implementation](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/Simple%20Example)
 * [Using jsstore in typescript](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/TypeScript%20Example)
 * [Building an indexeddb app with webpack](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/webpack)
@@ -199,6 +202,7 @@ We hope - you have understood the above article. Now lets make something awesome
 * [Using jsstore in angular](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/angular)
 * [Storing data in an electron app using JsStore](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/electron)
 * [JsStore without web worker](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/without%20web%20worker)
+
 
 <style>
     iframe {

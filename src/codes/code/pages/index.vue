@@ -20,8 +20,8 @@
                 <v-btn href="https://github.com/ujjwalguptaofficial/JsStore" target="_blank">Download</v-btn>
             </div>
             <div class="center-align margin-top-20px">
-                <i class="material-icons" style="vertical-align:bottom;">insert_emoticon</i> Proudly Launching
-                <a target="_blank" href="https://github.com/ujjwalguptaofficial/idbstudio">IDBStudio</a> - A cli management tool for jsstore.
+                Introducing
+                <a target="_blank" href="https://github.com/ujjwalguptaofficial/idbstudio">IDBStudio</a> - A management tool for jsstore. It helps you to see your data, debug query and much more.
             </div>
             <div class="margin-top-50px top-border">
                 <h4></h4>
@@ -35,8 +35,8 @@
                         <span class="li-body">Execute inner, left and right join.</span>
                     </li>
                     <li>
-                        <div class="li-header">Complex queries Support</div>
-                        <span class="li-body"> Execute complex queries and much more.</span>
+                        <div class="li-header">Cross Browsers Support</div>
+                        <span class="li-body">Develop your application without worrying about cross browser compatibility.</span>
                     </li>
 
                     <li>
@@ -73,6 +73,9 @@
                     <svg class="svgIcon-use" width="45" height="45" viewBox="0 0 45 45">
                         <path d="M5 40V5h35v35H5zm8.56-12.627c0 .555-.027.687-.318 1.03l-2.457 2.985v.396h6.974v-.396l-2.456-2.985c-.291-.343-.344-.502-.344-1.03V18.42l6.127 13.364h.714l5.256-13.364v10.644c0 .29 0 .342-.185.528l-1.848 1.796v.396h9.19v-.396l-1.822-1.796c-.184-.186-.21-.238-.21-.528V15.937c0-.291.026-.344.21-.528l1.823-1.797v-.396h-6.471l-4.622 11.542-5.203-11.542h-6.79v.396l2.14 2.64c.239.292.291.37.291.768v10.353z"></path>
                     </svg>
+                </a>
+                <a target="_blank" class="margin-left-20px" title="saucelab" href="https://saucelabs.com/u/ujjwalgupta">
+                    <img style="height:55px;width:50px;padding-top: 8px;" class="responsive-img" src="/img/saucelab.png" alt="travis logo" />
                 </a>
             </div>
         </v-flex>
