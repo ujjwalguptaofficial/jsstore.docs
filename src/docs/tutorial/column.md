@@ -18,6 +18,7 @@ A column in JsStore is a JSON object. It has following properties -
     default: any, // Provides a default value for a column when none is specified (optional)
     multiEntry: boolean, // Provides support to search inside array values (optional)
     enableSearch: boolean - default value is true // Turn on/off search for this column (optional)
+    keyPath : string[] - allows you to use multiple indexing // optional 
 }
 ```
 For all data types see this link - [DataType](/tutorial/enums/)

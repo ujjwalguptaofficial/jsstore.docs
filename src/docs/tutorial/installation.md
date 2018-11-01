@@ -26,7 +26,7 @@ JsStore can be installed by multiple ways -
 
 *   **Latest** \- npm install jsstore
 *   **Version** \- npm install jsstore@version  
-    e.g - npm install jsstore@version@2.0.0
+    e.g - npm install jsstore@2.0.0
 
 #### Raw file -
 

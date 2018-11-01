@@ -1,28 +1,30 @@
 <template>
-<v-layout row wrap>
+  <v-layout row wrap>
     <v-flex md2 class="hidden-sm-and-down" id="divMenuContainer" :class="{'show-menu':showMenu}">
-        <ul>
-            <li class="search margin-bottom-10px">
-              <v-card class="search-wrapper">
-                <v-card-text style="padding:5px;">
-                    <input v-model="searchValue" id="txtSearch" type="text" placeholder="Search" 
-                    @keyup="onSearch">
-                    <i class="material-icons">search</i>
-                    <div class="search-results" v-html="searchResult"></div>
-                </v-card-text>
-              </v-card>
-            </li>
-            <li v-for="link in links" :key="link.text" v-bind:class="{'link-active': link.url=== activeUrl}">
-                <a :href="relativeUrl+link.url">{{link.text}}</a>
-            </li>
-        </ul>
+      <ul>
+        <li class="search margin-bottom-10px">
+          <v-card class="search-wrapper">
+            <v-card-text style="padding:5px;">
+              <input v-model="searchValue" id="txtSearch" type="text" placeholder="Search" @keyup="onSearch">
+              <i class="material-icons">search</i>
+              <div class="search-results" v-html="searchResult"></div>
+            </v-card-text>
+          </v-card>
+        </li>
+        <li v-for="link in links" :key="link.text" v-bind:class="{'link-active': link.url=== activeUrl}">
+          <a :href="relativeUrl+link.url">{{link.text}}</a>
+        </li>
+      </ul>
     </v-flex>
-    <v-flex id="divTutorialContent" data-fuck="ddd"
-    :class="{'margin-left-15px': $vuetify.breakpoint.mdAndUp}"
-    xs12 md9 l7 xl6>
+    <v-flex id="divTutorialContent" :class="{'margin-left-15px': $vuetify.breakpoint.mdAndUp}" xs12 md8 l7 xl6>
       <div v-html="tutorialHtml" class="margin-top-20px"></div>
     </v-flex>
-</v-layout>
+    <v-flex class="md1 margin-top-50px">
+      <v-btn href="/sponsor" color="success right-side-button">Sponsor <br>Us</v-btn>
+      <br><br>
+      <v-btn href="/sponsor" color="success right-side-button">Be a backer</v-btn>
+    </v-flex>
+  </v-layout>
 
 </template>
 <script lang="ts">
@@ -140,7 +142,7 @@ export default class Tutorial extends Vue {
     var linksToRemove;
     switch (this.version) {
       case 1:
-        linksToRemove = ["v1-to-v2", "terminate","transaction"];
+        linksToRemove = ["v1-to-v2", "terminate", "transaction"];
         break;
       case 2:
         linksToRemove = ["promise"];
@@ -160,6 +162,10 @@ export default class Tutorial extends Vue {
       {
         text: "Installation",
         url: "installation"
+      },
+      {
+        text: "Column",
+        url: "column"
       },
       {
         text: "Table",
@@ -292,9 +298,22 @@ export default class Tutorial extends Vue {
       {
         text: "V1 To V2",
         url: "v1-to-v2"
-      }, {
+      },
+      {
         text: "Transaction",
         url: "transaction"
+      },
+      {
+        text: "keyPath",
+        url: "keypath"
+      },
+      {
+        text: "SqlWeb",
+        url: "sqlweb"
+      },
+      {
+        text: "IDBStudio",
+        url: "idbstudio"
       }
     ] as ITutorialLink[];
   }

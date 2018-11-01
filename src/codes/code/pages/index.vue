@@ -40,16 +40,16 @@
                     </li>
 
                     <li>
-                        <div class="li-header">DataType Support</div>
-                        <span class="li-body">Define your column with data type and JsStore will validate when you insert or update.</span>
+                        <div class="li-header">Sql Support</div>
+                        <span class="li-body">Using an extension <a href="https://github.com/ujjwalguptaofficial/sqlweb">SqlWeb</a>.</span>
                     </li>
                     <li>
                         <div class="li-header">TypeScript Support</div>
                         <span class="li-body">Dont worry if you are working in Typescript technologies.</span>
                     </li>
                     <li>
-                        <div class="li-header">Online code editor</div>
-                        <span class="li-body">Execute your code and get the output with execution time.</span>
+                        <div class="li-header">Debugging tool</div>
+                        <span class="li-body">JsStore provides <a href="https://github.com/ujjwalguptaofficial/idbstudio">IDBStudio</a> to help you debug, manage db.</span>
                     </li>
                 </ul>
             </div>
