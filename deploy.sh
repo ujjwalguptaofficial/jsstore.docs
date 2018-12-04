@@ -38,11 +38,12 @@ cd ..
 # rm -rf out/**/* || exit 0
 
 # Run our compile script
-cd out 
-cd src
+cd out/src
 node build.js
 # npm install
 # npm run deploy
+cd ../../
+ls
 
 
 # Now let's go have some fun with the cloned repo
