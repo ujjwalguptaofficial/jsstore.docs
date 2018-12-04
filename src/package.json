@@ -14,7 +14,7 @@
     "dev": "node build.js && nuxt",
     "build": "node build.js && nuxt build",
     "start": "node build.js && nuxt start",
-    "deploy": "npm run build && nuxt generate"
+    "deploy": "node build.js && nuxt generate"
   },
   "devDependencies": {
     "@types/node": "^9.4.6",
