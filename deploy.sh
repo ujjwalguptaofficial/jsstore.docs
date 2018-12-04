@@ -42,7 +42,7 @@ cd out/src
 node build.js
 # npm install
 # npm run deploy
-cd ../../
+cd ../
 ls
 
 
