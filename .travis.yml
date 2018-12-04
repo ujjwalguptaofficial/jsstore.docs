@@ -2,8 +2,8 @@ language: node_js
 node_js:
   - "10"
 script: 
-  npm install
-  npm run deploy
+  - npm install
+  - npm run deploy
 env:
   global:
   - ENCRYPTION_LABEL: "cdc898a32e59"
