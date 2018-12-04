@@ -15,7 +15,7 @@ exports.convertMdToVueAndSaveInFolder = function (folderPath, folderToSave, layo
     // console.log("src exist",fs.existsSync("src"));
     // console.log("src layout exist",fs.existsSync("src/layouts"));
     // open tutorial layout
-    var layoutContent = fs.readFileSync('src/layouts/' + layout + '.vueLayout', {
+    var layoutContent = fs.readFileSync('code/layouts/' + layout + '.vueLayout', {
         encoding: 'utf8'
     });
 
