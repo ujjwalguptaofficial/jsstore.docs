@@ -13,7 +13,7 @@ function getAllFilesFromFolder(folderName) {
 exports.convertMdToVueAndSaveInFolder = function (folderPath, folderToSave, layout) {
     folderName = folderPath;
     // open tutorial layout
-    var layoutContent = fs.readFileSync('./code/layouts/' + layout + '.vueLayout', {
+    var layoutContent = fs.readFileSync('./src/layouts/' + layout + '.vueLayout', {
         encoding: 'utf8'
     });
 

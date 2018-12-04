@@ -19,13 +19,13 @@ const host =
   process.env.npm_package_config_nuxt_host ||
   "localhost"
 module.exports = {
-  srcDir: 'code/',
+  srcDir: 'src/',
   env: {
     baseUrl: process.env.BASE_URL ||
       `http://${host}:${port}`
   },
   generate: {
-    dir: '../../docs/'
+    dir: '../'
   },
   head: {
     title: "JsStore - Think in SQL and do in JS",
