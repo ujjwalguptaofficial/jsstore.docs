@@ -27,12 +27,13 @@ cd ..
 rm -rf out/**/* || exit 0
 
 # Run our compile script
-npm run spec
+cd out 
+npm run deploy
 
 # Now let's go have some fun with the cloned repo
-cd out
+#cd out
 git config user.name "Travis CI"
-git config user.email "d@domenic.me"
+git config user.email "ujjwalkumargupta44@gmail.com"
 
 # If there are no changes (e.g. this is a README update) then just bail.
 if [ -z `git diff --exit-code` ]; then

@@ -1,16 +1,10 @@
-language: node_js
-node_js:
-  - "8"
-before_install: 
-   cd src/codes
-before_script:
-    - npm install
-script:
-  - npm run deploy
-deploy:
-  - provider: pages
-  api_key: $key
-  github-token: $key
-  local-dir: docs
-  target-branch: master
+language: nodejs
+nodejs:
+ -stable
+
+script: bash ./deploy.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: "cdc898a32e59"
+  - COMMIT_AUTHOR_EMAIL: "ujjwalkumargupta44@gmail.com"
 
