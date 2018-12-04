@@ -40,12 +40,12 @@ cd ..
 # Run our compile script
 cd out 
 cd src
-npm install
-npm run deploy
+# npm install
+# npm run deploy
 
 
 # Now let's go have some fun with the cloned repo
-#cd out
+# cd out
 git config user.name "Travis CI"
 git config user.email "ujjwalkumargupta44@gmail.com"
 
