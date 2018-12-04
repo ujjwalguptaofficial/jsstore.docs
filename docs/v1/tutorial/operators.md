@@ -6,10 +6,10 @@ Last Updated : "08/05/2018"
 
 JsStore supports following operators : -
 
-*   **" \> " :** Finds value greater than supplied value.
-*   **" < " :** Finds value less than supplied value.
-*   **" >= " :** Finds value greater than or equal to supplied value.
-*   **" <= " :** Finds value less than or equal to supplied value.
+*   **" &gt; " :** Finds value greater than supplied value.
+*   **" &lt; " :** Finds value less than supplied value.
+*   **" &gt;= " :** Finds value greater than or equal to supplied value.
+*   **" &lt;= " :** Finds value less than or equal to supplied value.
 *   **" \- " :** Finds value between two supplied value.
 *   **" != " :** Finds value not equal to supplied value.
 

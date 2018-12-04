@@ -4,6 +4,7 @@
 
 node_modules
 .nuxt
+build
 dist
 src/pages/example
 src/pages/tutorial
