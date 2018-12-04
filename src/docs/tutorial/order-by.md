@@ -30,6 +30,33 @@ connection.select({
 });
 ```
 
+Option order is of type - OrderQuery 
+
+```
+type OrderQuery = {
+    /**
+     * sorting column name
+     *
+     * @type {string}
+     */
+    by: string;
+
+    /**
+     * sorting type - asc/desc
+     *
+     * @type {string}
+     */
+    type: string;
+
+    /**
+     * whether to do sorting by indexeddb or by jsstore
+     * default - true
+     * @type {boolean}
+     */
+    idbSorting: boolean
+};
+```
+
 <p class="margin-top-40px center-align">
     <a class="btn info" target="_blank" href="/example/order-by">Example</a>
     <button class="btn info btnNext">Next</button>
