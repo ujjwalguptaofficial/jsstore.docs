@@ -1,10 +1,8 @@
 language: node_js
 node_js:
   - "10"
-script:
-  - cd src 
-  - npm install
-  - npm run deploy
+script: 
+ - bash ./deploy.sh
 env:
   global:
   - ENCRYPTION_LABEL: "cdc898a32e59"
