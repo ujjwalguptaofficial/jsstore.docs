@@ -21,8 +21,12 @@ SHA=`git rev-parse --verify HEAD`
 git clone $REPO out
 cd out
 # merge master code to gh-pages
+
+# pull first master
+# git checkout $SOURCE_BRANCH
+# git pull origin $SOURCE_BRANCH
+git checkout $TARGET_BRANCH
 git checkout $SOURCE_BRANCH
-git pull origin $SOURCE_BRANCH
 git merge $TARGET_BRANCH
 git push origin $SOURCE_BRANCH
 
