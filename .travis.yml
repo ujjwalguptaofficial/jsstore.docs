@@ -1,6 +1,6 @@
 language: nodejs
 nodejs:
- -stable
+ -"10"
 
  
 script: bash ./deploy.sh

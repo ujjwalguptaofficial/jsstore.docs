@@ -5,6 +5,6 @@
 node_modules
 .nuxt
 dist
-# src/pages/example
-# src/pages/tutorial
-# src/pages/v1
+src/pages/example
+src/pages/tutorial
+src/pages/v1
