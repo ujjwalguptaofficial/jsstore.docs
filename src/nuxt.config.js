@@ -25,7 +25,7 @@ module.exports = {
       `http://${host}:${port}`
   },
   generate: {
-    dir: '../build'
+    dir: '../'
   },
   head: {
     title: "JsStore - Think in SQL and do in JS",
