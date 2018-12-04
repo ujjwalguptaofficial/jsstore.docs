@@ -2,6 +2,7 @@ language: nodejs
 nodejs:
  -stable
 
+ 
 script: bash ./deploy.sh
 env:
   global:
