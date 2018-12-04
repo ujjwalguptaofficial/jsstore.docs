@@ -39,6 +39,7 @@ cd ..
 
 # Run our compile script
 cd out/src
+npm install
 npm run deploy
 cd ../
 ls
