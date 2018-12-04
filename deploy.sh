@@ -40,6 +40,7 @@ cd ..
 # Run our compile script
 cd out 
 cd src
+node build.js
 # npm install
 # npm run deploy
 
@@ -50,10 +51,10 @@ git config user.name "Travis CI"
 git config user.email "ujjwalkumargupta44@gmail.com"
 
 # If there are no changes (e.g. this is a README update) then just bail.
-# if [ -z `git diff --exit-code` ]; then
-#     echo "No changes to the spec on this push; exiting."
-#     exit 0
-# fi
+if [ -z `git diff --exit-code` ]; then
+    echo "No changes to the spec on this push; exiting."
+    exit 0
+fi
 
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
