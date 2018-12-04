@@ -12,6 +12,8 @@ function getAllFilesFromFolder(folderName) {
 
 exports.convertMdToVueAndSaveInFolder = function (folderPath, folderToSave, layout) {
     folderName = folderPath;
+    console.log("src exist",fs.existsSync("src"));
+    console.log("src layout exist",fs.existsSync("src/layouts"));
     // open tutorial layout
     var layoutContent = fs.readFileSync('src/layouts/' + layout + '.vueLayout', {
         encoding: 'utf8'

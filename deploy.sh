@@ -28,7 +28,7 @@ rm -rf out/**/* || exit 0
 
 # Run our compile script
 cd out 
-npm install
+# npm install
 ls
 npm run deploy
 
