@@ -31,7 +31,7 @@
 import { Component, Vue, Watch } from "nuxt-property-decorator";
 import * as axios from "axios";
 import DomHelper from "../helpers/dom_helper";
-import { vueEvent } from "../common_var";
+import { vueEvent,VueWithRoute } from "../common_var";
 import { IInputSelect } from "../interfaces";
 
 export interface ITutorialLink {
@@ -44,7 +44,7 @@ export interface ITutorialLink {
     pageTitle: String
   }
 })
-export default class Tutorial extends Vue {
+export default class Tutorial extends VueWithRoute {
   // props
   innerHtml: string;
   pageTitle: string;

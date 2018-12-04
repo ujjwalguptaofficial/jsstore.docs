@@ -72,7 +72,7 @@ import * as axios from "axios";
 import { DemoDbService } from "../service/demo_db_service";
 import { IDbInfo } from "../interfaces";
 import DomHelper from "../helpers/dom_helper";
-import { vueEvent } from "../common_var";
+import { vueEvent,VueWithRoute } from "../common_var";
 
 var codeInitTime;
 var isJoin = false;
@@ -83,7 +83,7 @@ var isJoin = false;
     pageTitle: String
   }
 })
-export default class Example extends Vue {
+export default class Example extends VueWithRoute {
   // props
   innerHtml;
   pageTitle;
