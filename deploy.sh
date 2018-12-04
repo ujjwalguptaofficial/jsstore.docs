@@ -29,6 +29,7 @@ rm -rf out/**/* || exit 0
 # Run our compile script
 cd out 
 npm install
+ls
 npm run deploy
 
 # Now let's go have some fun with the cloned repo
