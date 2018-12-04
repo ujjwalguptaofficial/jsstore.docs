@@ -27,7 +27,7 @@ exports.convertMdToVueAndSaveInFolder = function (folderPath, folderToSave, layo
         fileName = fileName.split(".")[0].trim();
         var filePath = `${folderToSave}/${fileName}.vue`;
         //recreate file if exist otherwise create
-        fs.closeSync(fs.openSync(filePath, 'w'));
+        //fs.closeSync(fs.openSync(filePath, 'w'));
         var index = layout.indexOf('`');
         var firstString = layout.substring(0, index + 1);
         var lastString = layout.substring(index + 1);
