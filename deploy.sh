@@ -25,13 +25,28 @@ cd out
 # pull first master
 # git checkout $SOURCE_BRANCH
 # git pull origin $SOURCE_BRANCH
-# git checkout $TARGET_BRANCH
-# git checkout $SOURCE_BRANCH
-# git merge $TARGET_BRANCH
-# git push origin $SOURCE_BRANCH
+ git checkout $TARGET_BRANCH
+ git merge $SOURCE_BRANCH
+ #git checkout $SOURCE_BRANCH
+
+ # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
+ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
+ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
+ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
+ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
+
+# Comment 
+# openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in deploy_key.enc -out deploy_key -d
+# openssl aes-256-cbc -K $encrypted_cdc898a32e59_key -iv $encrypted_cdc898a32e59_iv -in deploy_key.enc -out deploy_key -d
+openssl aes-256-cbc -K $encrypted_4861525a4619_key -iv $encrypted_4861525a4619_iv -in deploy_key.enc -out deploy_key -d
+chmod 600 deploy_key
+eval `ssh-agent -s`
+ssh-add deploy_key
+
+#git push origin $TARGET_BRANCH
 
 # change branch to gh-pages
-git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+#git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 cd ..
 
 # Clean out existing contents
@@ -61,19 +76,7 @@ fi
 git add .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 
-# Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
-ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
-ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
-ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
-ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
 
-# Comment 
-# openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in deploy_key.enc -out deploy_key -d
-# openssl aes-256-cbc -K $encrypted_cdc898a32e59_key -iv $encrypted_cdc898a32e59_iv -in deploy_key.enc -out deploy_key -d
-openssl aes-256-cbc -K $encrypted_4861525a4619_key -iv $encrypted_4861525a4619_iv -in deploy_key.enc -out deploy_key -d
-chmod 600 deploy_key
-eval `ssh-agent -s`
-ssh-add deploy_key
 
 # Now that we're all set up, we can push.
 git push $SSH_REPO $TARGET_BRANCH
