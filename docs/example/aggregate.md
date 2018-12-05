@@ -8,7 +8,7 @@ Last Updated : "09/05/2018"
 select({
     from: "Products",
     aggregate: {
-        min: "price"
+        min: "price" // column name
     }
 });
 
