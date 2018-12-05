@@ -12,7 +12,7 @@ Connection.select({
         Min:"price"
     },
     OnSuccess:function (results){
-        log(results);
+        log(results); // log results
     },
     OnError:function (error) {
         log(error);
