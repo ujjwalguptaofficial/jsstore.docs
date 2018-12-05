@@ -50,7 +50,7 @@ ls
 git config user.name "Travis CI"
 git config user.email "ujjwalkumargupta44@gmail.com"
 
-#If there are no changes (e.g. this is a README update) then just bail.
+If there are no changes (e.g. this is a README update) then just bail.
 if [ -z `git diff --exit-code` ]; then
     echo "No changes to the spec on this push; exiting."
     exit 0
