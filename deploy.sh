@@ -25,10 +25,10 @@ cd out
 # pull first master
 # git checkout $SOURCE_BRANCH
 # git pull origin $SOURCE_BRANCH
-# git checkout $TARGET_BRANCH
-# git checkout $SOURCE_BRANCH
-# git merge $TARGET_BRANCH
-# git push origin $SOURCE_BRANCH
+git checkout $TARGET_BRANCH
+git checkout $SOURCE_BRANCH
+git merge $TARGET_BRANCH
+git push origin $SOURCE_BRANCH
 
 # change branch to gh-pages
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
