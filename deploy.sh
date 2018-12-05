@@ -60,6 +60,10 @@ if [ -z `git diff --exit-code` ]; then
     exit 0
 fi
 
+# Move files from build to root
+
+node src/copy_helper.js
+
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 git add .
