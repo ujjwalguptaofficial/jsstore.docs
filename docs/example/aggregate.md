@@ -6,7 +6,7 @@ Title: "Aggregate"
 select({
     from: "Products",
     aggregate: {
-        min: "price"
+        min: "price" //column name
     }
 });
 
