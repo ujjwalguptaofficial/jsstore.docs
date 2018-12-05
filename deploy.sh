@@ -22,14 +22,14 @@ git clone $REPO out
 cd out
 
 # merge master code to gh-pages
-# pull first master
-# git checkout $SOURCE_BRANCH
-# git pull origin $SOURCE_BRANCH
- git checkout $TARGET_BRANCH
- git merge $SOURCE_BRANCH
- #git checkout $SOURCE_BRANCH
+git checkout $TARGET_BRANCH
+git merge $SOURCE_BRANCH
 
- # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
+#Authenticate
+git config user.name "Travis CI"
+git config user.email "ujjwalkumargupta44@gmail.com"
+
+# Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
 ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
 ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
 ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
@@ -43,27 +43,16 @@ chmod 600 deploy_key
 eval `ssh-agent -s`
 ssh-add deploy_key
 
-#git push origin $TARGET_BRANCH
-
-# change branch to gh-pages
-#git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
-cd ..
-
 # Clean out existing contents
 # rm -rf out/**/* || exit 0
 
 # Run our compile script
-cd out/src
+cd src
 npm install
 npm run deploy
 cd ../
-ls
 
 
-# Now let's go have some fun with the cloned repo
-# cd out
-git config user.name "Travis CI"
-git config user.email "ujjwalkumargupta44@gmail.com"
 
 #If there are no changes (e.g. this is a README update) then just bail.
 if [ -z `git diff --exit-code` ]; then
@@ -75,8 +64,6 @@ fi
 # The delta will show diffs between new and old versions.
 git add .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
-
-
 
 # Now that we're all set up, we can push.
 git push $SSH_REPO $TARGET_BRANCH
