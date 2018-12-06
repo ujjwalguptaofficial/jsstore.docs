@@ -38,6 +38,7 @@ ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
 # Comment 
 # openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in deploy_key.enc -out deploy_key -d
 # openssl aes-256-cbc -K $encrypted_cdc898a32e59_key -iv $encrypted_cdc898a32e59_iv -in deploy_key.enc -out deploy_key -d
+# openssl aes-256-cbc -K $encrypted_4861525a4619_key -iv $encrypted_4861525a4619_iv -in deploy_key.enc -out deploy_key -d
 openssl aes-256-cbc -K $encrypted_4861525a4619_key -iv $encrypted_4861525a4619_iv -in deploy_key.enc -out deploy_key -d
 chmod 600 deploy_key
 eval `ssh-agent -s`

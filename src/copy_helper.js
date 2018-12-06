@@ -1,2 +1,2 @@
 const fs = require('fs-extra')
-fs.copySync('../build', '../');
+fs.copySync('./build', './');
