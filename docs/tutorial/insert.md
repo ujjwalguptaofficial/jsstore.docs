@@ -42,9 +42,15 @@ Insert api has following options -
 
 ```
 {
+    into : string // table name
+
     values: Array // values to insert
-    return: Boolean // Return the inserted record. Default value is false.This is useful in case - you want the autoincrement column value.
-    skipDataCheck: Boolean // Whether to check or not supplied data. Default value is false. If supplied true, this will directly insert data without checking any thing like datatype, auto increment etc. This is useful in case - where you want to insert huge record at a time.
+
+    return?: Boolean // Return the inserted record. Default value is false.This is useful in case - you want the autoincrement column value.
+
+    skipDataCheck?: Boolean // Whether to check or not supplied data. Default value is false. If supplied true, this will directly insert data without checking any thing like datatype, auto increment etc. This is useful in case - where you want to insert huge record at a time.
+
+    upsert?: boolean; // Update data if exist otherwise insert 
 }
 ```
 
