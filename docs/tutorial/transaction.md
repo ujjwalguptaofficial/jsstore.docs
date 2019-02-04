@@ -17,11 +17,12 @@ JsStore provides - 'transaction' api for executing transaction. The apis which a
 
 There are some extra api available inside the transaction to make the transaction more useful. These are -
 
+* start - start the transaction.
 * setResult - setResult accepts key and value. setResult is used to save the value which will be returned when transaction completes. The transaction returns an object, the object is in form of key and value which is set using setResult.
 * abort - abort is used to abort the transaction. 
 * getResult - getResult is used to get the value setted by setResult.
 
- 
+<br>
 Let's see a example - so consider a situation where a customer buy some products and customer is not into the db.
 
 So the steps will be - 
@@ -29,7 +30,7 @@ So the steps will be -
 1. Add new customer - so insert in the table - "Customer"
 2. add new order - insert new order for the above customer
 3. Insert OrderDetails 
-4. Update products - reduce the number of product for the particular or list of products.
+4. Update products - reduce the quantity of product available. 
 5. Calculate total price
 
 ```
