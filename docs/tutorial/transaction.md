@@ -4,7 +4,7 @@ Created Date: "07/01/2018"
 Last Updated : NA
 ---
 
-IndexedDB is a pure transactional database which means all the query is executed inside the transaction.
+IndexedDB is a pure transactional database which means all the query is executed using the transaction.
 
 JsStore provides - 'transaction' api for executing transaction. The apis which are available inside the transaction are - 
 
@@ -19,68 +19,115 @@ There are some extra api available inside the transaction to make the transactio
 
 * setResult - setResult accepts key and value. setResult is used to save the value which will be returned when transaction completes. The transaction returns an object, the object is in form of key and value which is set using setResult.
 * abort - abort is used to abort the transaction. 
+* getResult - getResult is used to get the value setted by setResult.
 
-**Note :-** All extra apis are sychronous , so you should call these api inside the promise resolve callback i.e inside then callback.
-
+ 
 Let's see a example - so consider a situation where a customer buy some products and customer is not into the db.
 
 So the steps will be - 
 
 1. Add new customer - so insert in the table - "Customer"
 2. add new order - insert new order for the above customer
-3. Update products - reduce the number of product for the particular or list of products.
+3. Insert OrderDetails 
+4. Update products - reduce the number of product for the particular or list of products.
+5. Calculate total price
 
 ```
 connection.transaction({
-    tables: ['customers', 'orders'], // list of tables which will be used in transaction
+    tables: ['customers', 'orders', 'products', 'orderDetails'], // list of tables which will be used in transaction
     // the logic callback is not a closure i.e it wont have access to outer scope or global scope.
     // basically function should be independent
-    logic: function(data) {
-        insert({
+    logic: async function(data) {  // async is used to make code more clear
+        start(); // start the transaction
+        const insertedCustomers = await insert({
             into: 'customers',
             values: [data.customer],
             return: true
-        }).then(function(customer) {
-            //add customerid in order
-            data.order.customerId = customer.Id;
-            // add the result to get in transaction result
-            setResult('customer', customer)
         });
 
-        insert({
+        const newCustomer = insertedCustomers[0];
+
+        // insert order
+
+        const order = {
+            customerId: newCustomer.id,
+            orderDate: new Date(),
+        };
+
+        const insertedOrders = await insert({
             into: 'orders',
-            values: [data.order],
+            values: [order],
             return: true
-        }).then(function(order) {
-            setResult('order', order)
+        })
+
+        const newOrder = insertedOrders[0];
+
+        // insert orderDetail
+
+        const orderDetails = data.orderDetails.map((value) => {
+            value.orderId = newOrder.orderId
+            return value;
         });
 
-        update({ in: 'product',
-            where: {
-                productId: data.productId
-            },
-            set: {
-                count: {
-                    '-': data.itemSelled
-                }
-            }
+        const insertedOrderDetails = await insert({
+            into: 'orderDetails',
+            values: orderDetails,
+        })
+
+        // update the product inventory and evaluate price
+
+        setResult('totalPrice', 0); //initiating totalPrice
+
+        data.orderDetails.forEach((orderDetail, index) => {
+            const where = {
+                productId: orderDetail.productId
+            };
+
+            const updateProduct = async () => {
+                const productUpdated = await update({
+                    in: 'products',
+                    where: where,
+                    set: {
+                        unit: {
+                            '-': orderDetail.quantity
+                        }
+                    }
+                });
+                if (productUpdated < 0) {
+                    abort("No orderDetails inserted");
+                }  
+            };
+            updateProduct();
+ 
+            const products = await select({
+                from: 'products',
+                where: where
+            })
+
+            const product = results[0];
+            const price = product.price * orderDetail.quantity
+            setResult('totalPrice', getResult('totalPrice') + price);
         })
     },
     data: { // the transaction logic will be called with supplying data
         customer: {
-            name: 'ujjwal gupta',
-            address: 'india',
-            gender: 'male'
+            customerName: 'ujjwal gupta',
+            address: 'bhubaneswar odisha',
+            city: 'bhubaneswar',
+            postalCode: 'asdf',
+            country: 'india',
+            email: 'sdfg@m.com'
         },
-        order: {
-            total: 1000,
-            date: "12/04/2018"
-        },
-        productId: 5,
-        itemSelled: 4
+        orderDetails: [{
+            productId: 1,
+            quantity: 2
+        }, {
+            productId: 2,
+            quantity: 4
+        }]
     }
 }).then(function(result) {
-    console.log(result)
+    const totalPrice = result.totalPrice;
 }).catch(function(err) {
     console.log(err);
 });
@@ -89,7 +136,7 @@ connection.transaction({
 Few important things to make sure you are using transaction in right way - 
 
 * Transaction should be light weight. Dont write too many or heavy logics inside it. The reason is  - the indexeddb transaction is asyc and automatically commited and so jsstore.
-* There may be situation where you have a heavy logic then - calculate the result and put it in data option.
+* There may be situation where you have a heavy logic, in that case - calculate the result and put it in data option.
 
 <p class="margin-top-40px center-align">
     <button class="btn info btnNext">Next</button>
