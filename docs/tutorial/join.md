@@ -52,7 +52,7 @@ connection.select({
 **Note :-** you can also use - WhereIn, Skip, Order By and limit just like where has been used in the above example.
 
 <p class="margin-top-40px center-align">
-    <a class="btn info" target="_blank" href="/example/simple_join">Example</a>
+    <a class="btn info" target="_blank" href="/example/simple-join">Example</a>
     <button class="btn info btnNext">Next</button>
 </p>
 
@@ -104,6 +104,6 @@ Connection.select({
 ```
 
 <p class="margin-top-40px center-align">
-    <a class="btn info" target="_blank" href="/example/multiple_table_join">Example</a>
+    <a class="btn info" target="_blank" href="/example/multiple-table-join">Example</a>
     <button class="btn info btnNext">Next</button>
 </p>
