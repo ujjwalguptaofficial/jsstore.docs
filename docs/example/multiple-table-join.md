@@ -35,7 +35,7 @@ var join2={
 }
 
 select({
-    from: Join2 // provide last join query
+    from: join2 // provide last join query
 });
 
 ```

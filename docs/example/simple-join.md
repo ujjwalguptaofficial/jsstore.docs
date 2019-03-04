@@ -18,7 +18,7 @@ var joinLogic={
 }
 
 select({
-    from: JoinLogic
+    from: joinLogic
 });
 
 ```
