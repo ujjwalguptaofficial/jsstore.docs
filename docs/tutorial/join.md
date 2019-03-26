@@ -23,16 +23,16 @@ Table2.Column1=some_another_value
 ```
 var joinLogic = {
     table1: {
-        table: table1_name
-        column: table1.common_field
+        table: table1_name,
+        column: table1.common_field,
         where: {
             Column1: some_value
         }
     },
     join: 'inner',
     table2: {
-        table: table2_name
-        column: table2.common_field
+        table: table2_name,
+        column: table2.common_field,
         where: {
             Column1: some_another_value
         }
@@ -71,16 +71,16 @@ On Table1.some_column = Table3.some_common_column
 ```
 var joinLogic1 = {
     table1: {
-        table: table1_name
+        table: table1_name,
         column: common_field of table1
     },
     join: 'inner',
     table2: {
-        table: table2_name
+        table: table2_name,
         column: common_field of table2
     },
     nextJoin: {
-        table: table1_name
+        table: table1_name,
         column: some_column of table1
     };
 };
@@ -88,7 +88,7 @@ var joinLogic2 = {
     table1: joinLogic1
     join: 'inner',
     table2: {
-        table: table3_name
+        table: table3_name,
         column: some_common_column of table3
     }
 };
