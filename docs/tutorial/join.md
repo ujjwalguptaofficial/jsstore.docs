@@ -40,7 +40,7 @@ var joinLogic = {
 }
 
 connection.select({
-    From: joinLogic
+    from: joinLogic
 }).then(function(results) {
     //results will be array of objects.
     console.log(results);
@@ -85,15 +85,15 @@ var joinLogic1 = {
     };
 };
 var joinLogic2 = {
-    table1: joinLogic1
+    table1: joinLogic1,
     join: 'inner',
     table2: {
         table: table3_name,
         column: some_common_column of table3
     }
 };
-Connection.select({
-    From: joinLogic2
+connection.select({
+    from: joinLogic2
 }).then(function(results) {
     //results will contains objects of all tables at a index.
     console.log(results);
