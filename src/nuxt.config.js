@@ -134,7 +134,10 @@ module.exports = {
   },
   modules: [
     "@nuxtjs/axios",
-    "~/modules/typescript.js"
+    "~/modules/typescript.js",
+    ['@nuxtjs/google-analytics', {
+      id: process.env.GA_ID || 'UA-131290933-2'
+    }]
   ],
   axios: {}
 }
