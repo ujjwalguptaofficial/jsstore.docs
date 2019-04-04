@@ -14,7 +14,7 @@ Imagine you are in a situation where -
 * You want to learn jsstore & want to experiment something.
 * You want to inspect database - tables, columns etc.
   
-
+<br>
 With all of these situations - you end up creating an application & executing queries through console or taking help of browser debugging tools. 
 
 IDBStudio helps you with these situations and let you speed up your development.
