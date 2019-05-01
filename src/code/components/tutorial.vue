@@ -5,33 +5,53 @@
         <li class="search margin-bottom-10px">
           <v-card class="search-wrapper">
             <v-card-text style="padding:5px;">
-              <input v-model="searchValue" id="txtSearch" type="text" placeholder="Search" @keyup="onSearch">
+              <input
+                v-model="searchValue"
+                id="txtSearch"
+                type="text"
+                placeholder="Search"
+                @keyup="onSearch"
+              >
               <i class="material-icons">search</i>
               <div class="search-results" v-html="searchResult"></div>
             </v-card-text>
           </v-card>
         </li>
-        <li v-for="link in links" :key="link.text" v-bind:class="{'link-active': link.url=== activeUrl}">
+        <li
+          v-for="link in links"
+          :key="link.text"
+          v-bind:class="{'link-active': link.url=== activeUrl}"
+        >
           <a :href="relativeUrl+link.url">{{link.text}}</a>
         </li>
       </ul>
     </v-flex>
-    <v-flex id="divTutorialContent" :class="{'margin-left-15px': $vuetify.breakpoint.mdAndUp}" xs12 md8 l7 xl6>
+    <v-flex
+      id="divTutorialContent"
+      :class="{'margin-left-15px': $vuetify.breakpoint.mdAndUp}"
+      xs12
+      md8
+      l7
+      xl6
+    >
       <div v-html="tutorialHtml" class="margin-top-20px"></div>
     </v-flex>
     <v-flex class="md1 margin-top-50px">
-      <v-btn href="/sponsor" color="success right-side-button">Sponsor <br>Us</v-btn>
-      <br><br>
+      <v-btn href="/sponsor" color="success right-side-button">
+        Sponsor
+        <br>Us
+      </v-btn>
+      <br>
+      <br>
       <v-btn href="/sponsor" color="success right-side-button">Be a backer</v-btn>
     </v-flex>
   </v-layout>
-
 </template>
 <script lang="ts">
 import { Component, Vue, Watch } from "nuxt-property-decorator";
 import * as axios from "axios";
 import DomHelper from "../helpers/dom_helper";
-import { vueEvent,VueWithRoute } from "../common_var";
+import { vueEvent, VueWithRoute } from "../common_var";
 import { IInputSelect } from "../interfaces";
 
 export interface ITutorialLink {
@@ -142,10 +162,10 @@ export default class Tutorial extends VueWithRoute {
     var linksToRemove;
     switch (this.version) {
       case 1:
-        linksToRemove = ["v1-to-v2", "terminate", "transaction"];
+        linksToRemove = ["v1-to-v2", "terminate", "transaction", "regex"];
         break;
       case 2:
-        linksToRemove = ["promise"];
+        linksToRemove = ["promise", "export-json"];
         break;
     }
     return this.allLinks_.filter(
@@ -238,6 +258,10 @@ export default class Tutorial extends VueWithRoute {
       {
         text: "Count",
         url: "count"
+      },
+      {
+        text: "Regex",
+        url: "regex"
       },
       {
         text: "Like",
