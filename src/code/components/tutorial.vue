@@ -44,6 +44,13 @@
       <br>
       <br>
       <v-btn href="/sponsor" color="success right-side-button">Be a backer</v-btn>
+      <br>
+      <br>
+      <!-- codefund ads -->
+      <div id="codefund">
+        <!-- fallback content -->
+      </div>
+      <script src="https://codefund.app/properties/279/funder.js" async="async"></script>
     </v-flex>
   </v-layout>
 </template>
