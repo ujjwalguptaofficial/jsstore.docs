@@ -1,6 +1,12 @@
 <template>
   <v-layout row wrap>
-    <v-flex md2 class="hidden-sm-and-down" id="divMenuContainer" :class="{'show-menu':showMenu}">
+    <v-flex
+      md2
+      xl2
+      class="hidden-sm-and-down"
+      id="divMenuContainer"
+      :class="{'show-menu':showMenu}"
+    >
       <ul>
         <li class="search margin-bottom-10px">
           <v-card class="search-wrapper">
@@ -28,15 +34,14 @@
     </v-flex>
     <v-flex
       id="divTutorialContent"
-      :class="{'margin-left-15px': $vuetify.breakpoint.mdAndUp}"
+      :class="{'padding-left-15px': $vuetify.breakpoint.mdAndUp}"
       xs12
       md8
-      l7
-      xl6
+      xl8
     >
       <div v-html="tutorialHtml" class="margin-top-20px"></div>
     </v-flex>
-    <v-flex class="md1 margin-top-50px">
+    <v-flex md2 class="margin-top-50px">
       <v-btn href="/sponsor" color="success right-side-button">
         Sponsor
         <br>Us
@@ -47,10 +52,8 @@
       <br>
       <br>
       <!-- codefund ads -->
-      <div id="codefund">
-        <!-- fallback content -->
-      </div>
-      <script src="https://codefund.app/properties/279/funder.js" async="async"></script>
+      <div id="codefund"></div>
+      <script src="https://codefund.app/properties/280/funder.js" async="async"></script>
     </v-flex>
   </v-layout>
 </template>

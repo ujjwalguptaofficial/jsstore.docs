@@ -216,13 +216,16 @@ nav .brand-logo {
         margin-top: 7px;
         line-height: initial;
     }
+
     nav .nav-wrapper {
         height: 100px !important;
     }
+
     nav .brand-logo {
         margin-top: 30px;
         margin-left: 0;
     }
+
     nav ul a {
         padding-bottom: 5px;
         margin-right: 5px;
@@ -230,6 +233,7 @@ nav .brand-logo {
         -webkit-transition: width .2s;
         transition: border-bottom-width .25s linear;
     }
+
     nav ul a:hover {
         background-color: inherit;
         border-bottom-width: 1px;
@@ -278,4 +282,8 @@ nav .brand-logo {
 
 .inline-block {
     display: inline-block;
+}
+
+.padding-left-15px {
+    padding-left: 15px;
 }
