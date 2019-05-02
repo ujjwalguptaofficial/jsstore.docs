@@ -56,10 +56,10 @@ cd ../
 
 
 #If there are no changes (e.g. this is a README update) then just bail.
-if [ -z `git diff --exit-code` ]; then
-    echo "No changes to the spec on this push; exiting."
-    exit 0
-fi
+# if [ -z `git diff --exit-code` ]; then
+#     echo "No changes to the spec on this push; exiting."
+#     exit 0
+# fi
 
 # Move files from build to root
 
