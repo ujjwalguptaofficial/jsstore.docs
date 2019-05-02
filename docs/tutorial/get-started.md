@@ -12,7 +12,7 @@ The simplest way to install jsstore is by using cdn. But if you want to jsstore 
 
 You can download the script from [github](https://github.com/ujjwalguptaofficial/JsStore "jsstore github link") or from [npm](https://www.npmjs.com/package/jsstore "jsstore npm link")
 
-If you dont know what is Web Worker. Please take a look at this link - https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
+If you dont know what is Web Worker, please visit [mozilla doc](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 
 ```
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ If you dont know what is Web Worker. Please take a look at this link - https://d
 
 ```
 
-For more about installation check out the [installation](/tutorial/installation)
+For more about installation check out the [installation](/tutorial/installation) page
 
 #### Creating Database
 
