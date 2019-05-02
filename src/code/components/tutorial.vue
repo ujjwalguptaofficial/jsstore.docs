@@ -50,7 +50,7 @@
       <div id="codefund">
         <!-- fallback content -->
       </div>
-      <script src="https://codefund.app/properties/279/funder.js" async="async"></script>
+      <script src="https://codefund.app/properties/280/funder.js" async="async"></script>
     </v-flex>
   </v-layout>
 </template>
