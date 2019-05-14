@@ -1,5 +1,6 @@
 ---
 Title: "SqlWeb"
+Keywords: "websql, alternate, sql, indexeddb, jsstore"
 Created Date: "27/10/2018"
 Last Updated : 
 ---

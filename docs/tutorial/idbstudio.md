@@ -1,5 +1,6 @@
 ---
 Title: "IDBStudio"
+Keywords: "idbstudio, debugger, tool, indexeddb, jsstore"
 Created Date: "1/11/2018"
 Last Updated : 
 ---

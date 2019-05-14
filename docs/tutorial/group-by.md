@@ -1,5 +1,6 @@
 ---
 Title: "Group By"
+Keywords: "group, by, select, indexeddb, jsstore"
 Created Date: "09/05/2018"
 Last Updated : "09/05/2018"
 ---

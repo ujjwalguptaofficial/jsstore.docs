@@ -1,5 +1,6 @@
 ---
 Title: "Like"
+Keywords: "like, filter, query, indexeddb, jsstore"
 Created Date: "08/05/2018"
 Last Updated : "10/05/2018"
 ---

@@ -5,43 +5,34 @@
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
       integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
       crossorigin="anonymous"
-    />
+    >
     <v-flex sm12>
       <div id="divLogoContainer">
         <div class="margin-left-20px">
-          <img
-            class="responsive-img"
-            src="/img/JsStore_350_155.png"
-            alt="JsStore logo"
-          />
+          <img class="responsive-img" src="/img/JsStore_350_155.png" alt="JsStore logo">
         </div>
       </div>
       <div id="divStyle"></div>
     </v-flex>
     <v-flex sm12 offset-md1 md10 offset-xl-2 xl8 class="margin-top-40px">
       <div id="divOverview">
-        <span style="font-size: 20px;font-weight: 500;">
-          Execute Database operation in browsers with JsStore.</span
-        >
-        <br />
-        <br />JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy
+        <span
+          style="font-size: 20px;font-weight: 500;"
+        >Execute Database operation in browsers with JsStore.</span>
+        <br>
+        <br>JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy
         with its SQL like apis.
       </div>
       <div id="divLinkGroup">
         <v-btn href="tutorial/get-started">Get Started</v-btn>
-        <v-btn
-          href="https://github.com/ujjwalguptaofficial/JsStore"
-          target="_blank"
-          >Download</v-btn
-        >
+        <v-btn href="https://github.com/ujjwalguptaofficial/JsStore" target="_blank">Download</v-btn>
       </div>
       <div class="center-align margin-top-20px">
         Introducing
         <a
           target="_blank"
           href="https://github.com/ujjwalguptaofficial/idbstudio"
-          >IDBStudio</a
-        >
+        >IDBStudio</a>
         - A management tool for jsstore. It helps you to see your data, debug
         query and much more.
       </div>
@@ -50,9 +41,7 @@
         <ul id="ulFeatureList">
           <li>
             <div class="li-header">Web worker support</div>
-            <span class="li-body"
-              >JsStore can be executed in Web Worker or without Worker.</span
-            >
+            <span class="li-body">JsStore can be executed in Web Worker or without Worker.</span>
           </li>
           <li>
             <div class="li-header">Join Support</div>
@@ -60,45 +49,36 @@
           </li>
           <li>
             <div class="li-header">Cross Browsers Support</div>
-            <span class="li-body"
-              >Develop your application without worrying about cross browser
-              compatibility.</span
-            >
+            <span class="li-body">
+              Develop your application without worrying about cross browser
+              compatibility.
+            </span>
           </li>
 
           <li>
             <div class="li-header">Sql Support</div>
-            <span class="li-body"
-              >Using an extension
-              <a href="https://github.com/ujjwalguptaofficial/sqlweb">SqlWeb</a
-              >.</span
-            >
+            <span class="li-body">
+              Using an extension
+              <a href="https://github.com/ujjwalguptaofficial/sqlweb">SqlWeb</a>.
+            </span>
           </li>
           <li>
             <div class="li-header">TypeScript Support</div>
-            <span class="li-body"
-              >Dont worry if you are working in Typescript technologies.</span
-            >
+            <span class="li-body">Dont worry if you are working in Typescript technologies.</span>
           </li>
           <li>
             <div class="li-header">Debugging tool</div>
-            <span class="li-body"
-              >JsStore provides
-              <a href="https://github.com/ujjwalguptaofficial/idbstudio"
-                >IDBStudio</a
-              >
-              to help you debug, manage db.</span
-            >
+            <span class="li-body">
+              JsStore provides
+              <a href="https://github.com/ujjwalguptaofficial/idbstudio">IDBStudio</a>
+              to help you debug, manage db.
+            </span>
           </li>
         </ul>
       </div>
       <div class="text-center">
-        <a
-          target="_blank"
-          title="github"
-          href="https://github.com/ujjwalguptaofficial/JsStore"
-        >
-          <img class="responsive-img" src="/img/github.svg" alt="github logo" />
+        <a target="_blank" title="github" href="https://github.com/ujjwalguptaofficial/JsStore">
+          <img class="responsive-img" src="/img/github.svg" alt="github logo">
         </a>
         <a
           target="_blank"
@@ -106,24 +86,15 @@
           title="twitter handle"
           href="https://twitter.com/idbwrapper"
         >
-          <img
-            class="responsive-img"
-            src="/img/twitter.svg"
-            alt="twitter logo"
-          />
+          <img class="responsive-img" src="/img/twitter.svg" alt="twitter logo">
         </a>
-        <a
-          target="_blank"
-          class="margin-left-20px"
-          title="gitter"
-          href="https://gitter.im/JsStore"
-        >
+        <a target="_blank" class="margin-left-20px" title="gitter" href="https://gitter.im/JsStore">
           <img
             style="height:50px;width:50px;padding-top: 8px;"
             class="responsive-img"
             src="/img/gitter.svg"
             alt="github logo"
-          />
+          >
         </a>
         <a
           target="_blank"
@@ -136,7 +107,7 @@
             class="responsive-img"
             src="/img/Npm-logo.svg"
             alt="npm logo"
-          />
+          >
         </a>
         <a
           target="_blank"
@@ -149,7 +120,7 @@
             class="responsive-img"
             src="/img/travis.png"
             alt="travis logo"
-          />
+          >
         </a>
         <a
           target="_blank"
@@ -174,11 +145,12 @@
             class="responsive-img"
             src="/img/saucelab.png"
             alt="travis logo"
-          />
+          >
         </a>
       </div>
       <div class="text-center margin-top-20px">
-        Created with <i class="fas fa-heart" style="color:red;"></i> by
+        Created with
+        <i class="fas fa-heart" style="color:red;"></i> by
         <a href="https://twitter.com/ujjwal_kr_gupta">Ujjwal Gupta</a>
       </div>
     </v-flex>
@@ -202,4 +174,21 @@
   padding: 0px;
 }
 </style>
+
+<script>
+export default {
+  head() {
+    return {
+      meta: [
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: "jsstore, sql, indexeddb, wrapper, library"
+        }
+      ]
+    };
+  }
+};
+</script>
+
 

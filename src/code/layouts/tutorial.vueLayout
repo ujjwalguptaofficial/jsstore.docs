@@ -1,5 +1,5 @@
 <template>
-<Tutorial v-bind:innerHtml="tutorialContent" v-bind:pageTitle="title"></Tutorial>
+<Tutorial v-bind:pageKeywords="keywords" v-bind:innerHtml="tutorialContent" v-bind:pageTitle="title"></Tutorial>
 </template>
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
@@ -12,5 +12,6 @@ import Tutorial from "../../components/tutorial.vue";
 export default class extends Vue {
   tutorialContent = ``;
   title="";
+  keywords="";
 }
 </script>

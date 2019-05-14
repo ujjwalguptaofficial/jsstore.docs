@@ -1,5 +1,6 @@
 ---
 Title: "Enums"
+Keywords: "enums, datatype, query, indexeddb, jsstore"
 Created Date: "08/05/2018"
 Last Updated : "09/05/2018"
 ---

@@ -1,5 +1,6 @@
 ---
 Title: "Drop Database"
+Keywords: "drop, database, remove, indexeddb, jsstore"
 Created Date: "09/05/2018"
 Last Updated : "09/05/2018"
 ---

@@ -1,4 +1,4 @@
-<template>
+<templateundefined>
 <IdbStudioAppender v-bind:innerHtml="exampleContent" v-bind:pageTitle="title"></IdbStudioAppender>
 </template>
 <script lang="ts">

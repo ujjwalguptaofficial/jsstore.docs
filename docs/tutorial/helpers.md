@@ -1,5 +1,6 @@
 ---
 Title: "Helpers"
+Keywords: "helpers, api, query, indexeddb, jsstore"
 Created Date: "10/05/2018"
 Last Updated : "10/05/2018"
 ---
