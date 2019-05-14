@@ -1,4 +1,4 @@
-<template>
+<templateundefined>
 <Tutorial v-bind:innerHtml="tutorialContent" v-bind:pageTitle="title"></Tutorial>
 </template>
 <script lang="ts">

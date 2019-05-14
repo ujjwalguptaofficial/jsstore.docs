@@ -1,5 +1,6 @@
 ---
 Title: "Regex"
+Keywords: "regex, api, query, indexeddb, jsstore"
 Created Date: "01/05/2019"
 Last Updated : "01/05/2019"
 ---

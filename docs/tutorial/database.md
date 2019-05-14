@@ -1,5 +1,6 @@
 ---
 Title: "DataBase"
+Keywords: "database, api, query, indexeddb, jsstore"
 Last Updated : "09/05/2018"
 ---
 

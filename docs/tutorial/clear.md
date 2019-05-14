@@ -1,5 +1,6 @@
 ---
 Title: "Clear"
+Keywords: "clear, table, api, indexeddb, jsstore"
 Created Date: "08/05/2018"
 Last Updated : "08/05/2018"
 ---

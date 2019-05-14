@@ -40,12 +40,20 @@ exports.convertMdToVueAndSaveInFolder = function (folderPath, folderToSave, layo
 }
 
 function addMetaTags(layout, metaTags) {
-    var index = layout.indexOf('title=');
-    index = index + 6;
-    var firstString = layout.substring(0, index + 1);
-    var lastString = layout.substring(index + 1);
-    var firstString = layout.substring(0, index + 1);
-    return firstString + metaTags.Title + lastString;
+    var addTag = function (stringConst, tagName) {
+        // var stringConst = 'title=';
+        // console.log('layout', layout);
+        var index = layout.indexOf(stringConst);
+        index = index + stringConst.length;
+        var firstString = layout.substring(0, index + 1);
+        var lastString = layout.substring(index + 1);
+        var firstString = layout.substring(0, index + 1);
+        return firstString + metaTags[tagName] + lastString;
+    }
+
+    layout = addTag('title=', 'Title');
+    layout = addTag('keywords=', 'Keywords');
+    return layout;
 }
 
 function getContentOfFile(fileName) {

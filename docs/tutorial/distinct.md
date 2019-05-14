@@ -1,5 +1,6 @@
 ---
 Title: "Distinct"
+Keywords: "distinct, select, query, indexeddb, jsstore"
 Last Updated : "09/05/2018"
 ---
 

@@ -1,5 +1,6 @@
 ---
 Title: "Join"
+Keywords: "join, left, inner, right, jsstore"
 Created Date: "09/05/2018"
 Last Updated : "09/05/2018"
 ---

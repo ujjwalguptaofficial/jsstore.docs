@@ -1,5 +1,6 @@
 ---
 Title: "Aggregate Functions"
+Keywords: "aggregate, api, query, indexeddb, jsstore"
 Created Date: "08/05/2018"
 Last Updated : "11/05/2018"
 ---

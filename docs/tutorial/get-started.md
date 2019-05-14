@@ -1,5 +1,6 @@
 ---
 Title: "Get Started"
+Keywords: "jsstore, get started, tutorial, indexeddb, sql"
 Created Date: "09/05/2018"
 Last Updated : "12/05/2018"
 ---

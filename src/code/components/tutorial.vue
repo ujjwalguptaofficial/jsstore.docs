@@ -71,7 +71,8 @@ export interface ITutorialLink {
 @Component({
   props: {
     innerHtml: String,
-    pageTitle: String
+    pageTitle: String,
+    pageKeywords: String
   }
 })
 export default class Tutorial extends VueWithRoute {
@@ -79,6 +80,7 @@ export default class Tutorial extends VueWithRoute {
   innerHtml: string;
   pageTitle: string;
   version: number = 2;
+  pageKeywords: string;
 
   //property
   activeUrl = "";
@@ -143,7 +145,15 @@ export default class Tutorial extends VueWithRoute {
 
   head() {
     return {
-      title: `JsStore - ${this.pageTitle}`
+      title: `JsStore - ${this.pageTitle}`,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: this.pageKeywords
+        }
+      ]
     };
   }
 

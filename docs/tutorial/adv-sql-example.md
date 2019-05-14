@@ -1,5 +1,6 @@
 ---
 Title: "Advanced Sql Example"
+Keywords: "advanced sql, example, indexeddb, jsstore"
 Created Date: "08/05/2018"
 Last Updated : "08/05/2018"
 ---

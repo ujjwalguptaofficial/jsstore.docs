@@ -1,5 +1,6 @@
 ---
 Title: "keyPath"
+Keywords: "keypath, column, indexing, indexeddb, jsstore"
 Created Date: "31/10/2018"
 Last Updated : 
 ---
