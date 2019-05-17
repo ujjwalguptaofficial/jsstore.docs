@@ -182,7 +182,13 @@ export default class Tutorial extends VueWithRoute {
     var linksToRemove;
     switch (this.version) {
       case 1:
-        linksToRemove = ["v1-to-v2", "terminate", "transaction", "regex"];
+        linksToRemove = [
+          "v1-to-v2",
+          "terminate",
+          "transaction",
+          "regex",
+          "connection"
+        ];
         break;
       case 2:
         linksToRemove = ["promise", "export-json"];
@@ -202,6 +208,10 @@ export default class Tutorial extends VueWithRoute {
       {
         text: "Installation",
         url: "installation"
+      },
+      {
+        text: "Connection",
+        url: "connection"
       },
       {
         text: "Column",
