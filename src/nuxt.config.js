@@ -107,6 +107,9 @@ module.exports = {
       rel: "mask-icon",
       href: "/safari-pinned-tab.svg",
       color: "#5bbad5"
+    }, {
+      href: "https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons",
+      rel: "stylesheet"
     }]
   },
   /*
