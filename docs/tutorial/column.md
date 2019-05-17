@@ -7,21 +7,29 @@ Last Updated : "10/05/2018"
 
 A column in JsStore is a JSON object. It has following properties -
 
-```
-{
-    name: string, // name of column (required)
-    primaryKey: boolean, // declare this column as primary key (optional)
+* name: string, // name of column (required)
+
+* primaryKey: boolean, // declare this column as primary key (optional)
     // We strongly recommend to create the primary keys (optional)
-    notNull: boolean, // ensure this column value should not be null (optional)
-    dataType: JsStore.DATA_TYPE, // datatype of this column (optional)
-    autoIncrement: boolean, // automatically increment value (optional)
-    unique: boolean // This column will have unique value (optional)
-    default: any, // Provides a default value for a column when none is specified (optional)
-    multiEntry: boolean, // Provides support to search inside array values (optional)
-    enableSearch: boolean - default value is true // Turn on/off search for this column (optional)
-    keyPath : string[] - allows you to use multiple indexing // optional 
-}
-```
+
+* notNull: boolean, // ensure this column value should not be null (optional)
+
+* dataType: JsStore.DATA_TYPE, // datatype of this column (optional)
+
+**Note:-** do not use data type boolean, if you want to filter on that column. For more info,check out - https://stackoverflow.com/questions/48149851/failed-to-execute-only-on-idbkeyrange-the-parameter-is-not-a-valid-key/48179792#48179792
+
+* autoIncrement: boolean, // automatically increment value (optional)
+
+* unique: boolean // This column will have unique value (optional)
+
+* default: any, // Provides a default value for a column when none is specified (optional)
+
+* multiEntry: boolean, // Provides support to search inside array values (optional)
+
+* enableSearch: boolean - default value is true // Turn on/off search for this column (optional)
+
+* keyPath : string[] - allows you to use multiple indexing // optional 
+
 For all data types see this link - [DataType](/tutorial/enums/)
 
 Column in jsstore can be created by two way - 
@@ -35,8 +43,8 @@ var column={
     dataType:'data_type'
 }
 ```
-        
-2. Class Instance - This is way to create column in less amount of code.
+
+1. Class Instance - This is way to create column in single line.
 
 ```
 var column=new JsStore.Column("column_name").options([COL_OPTION.AutoIncrement]).setDataType('datatype')
