@@ -79,7 +79,7 @@ export default class Tutorial extends VueWithRoute {
   // props
   innerHtml: string;
   pageTitle: string;
-  version: number = 2;
+  version: number = 3;
   pageKeywords: string;
 
   //property
@@ -191,6 +191,8 @@ export default class Tutorial extends VueWithRoute {
         ];
         break;
       case 2:
+        linksToRemove = ["promise", "export-json"];
+      case 3:
         linksToRemove = ["promise", "export-json"];
         break;
     }
@@ -377,6 +379,8 @@ export default class Tutorial extends VueWithRoute {
       case 1:
         return "/v1/tutorial/";
       case 2:
+        return "/v2/tutorial/";
+      case 3:
         return "/tutorial/";
       default:
         return "/";
