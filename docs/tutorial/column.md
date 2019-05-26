@@ -5,9 +5,26 @@ Created Date: "09/05/2018"
 Last Updated : "10/05/2018"
 ---
 
-A column in JsStore is a JSON object. It has following properties -
+Columns in jsstore is an object where column name is key & column options are values.
 
-* name: string, // name of column (required)
+```
+var columns = {
+    [column name]: {} 
+}
+```
+
+Let's see an example - 
+
+```
+var columns = {
+    Id:{ primaryKey: true, autoIncrement: true },
+    ItemName:  { notNull: true, dataType: "string" },
+    Price:  { notNull: true, dataType: "number" },
+    Quantity : { notNull: true, dataType: "number" }
+}
+```
+
+A column has following properties -
 
 * primaryKey: boolean, // declare this column as primary key (optional)
     // We strongly recommend to create the primary keys (optional)
@@ -31,30 +48,3 @@ A column in JsStore is a JSON object. It has following properties -
 * keyPath : string[] - allows you to use multiple indexing // optional 
 
 For all data types see this link - [DataType](/tutorial/enums/)
-
-Column in jsstore can be created by two way - 
-
-1. JSON object - 
-
-```
-var column={
-    name:'column_name',
-    autoIncrement:true,
-    dataType:'data_type'
-}
-```
-
-1. Class Instance - This is way to create column in single line.
-
-```
-var column=new JsStore.Column("column_name").options([COL_OPTION.AutoIncrement]).setDataType('datatype')
-```
-
-    * 'options' - It takes array of column options : PrimaryKey, AutoIncrement, Unique, NotNull, MultiEntry and set the specified options as true.
-
-         **Note :-** If supplied invalid value - option is ignored.
-
-    * 'setDataType' - It is used to set the data type of column.
-    * 'disableSearch' - It disables the search on the column.
-    * 'setDefault' - It is used to set the default value of column.
-

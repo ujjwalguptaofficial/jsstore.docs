@@ -1,11 +1,11 @@
 ---
 Title: "Join"
-Keywords: "join, left, inner, right, jsstore"
+Keywords: "indexeddb, join, left, inner, jsstore"
 Created Date: "09/05/2018"
 Last Updated : "09/05/2018"
 ---
 
-JsStore supports three joins - Inner, Left, Right.
+JsStore supports two joins - Inner & Left.
 
 #### Sql (inner join between two tables)
 
@@ -22,32 +22,21 @@ Table2.Column1=some_another_value
 #### JsStore
 
 ```
-var joinLogic = {
-    table1: {
-        table: table1_name,
-        column: table1.common_field,
-        where: {
-            Column1: some_value
-        }
+var results = await connection.select({
+    from: table1 name,
+    where: {
+        [column name]: some value
     },
-    join: 'inner',
-    table2: {
-        table: table2_name,
-        column: table2.common_field,
+    join: {
+        with: table2_name,
+        on: "table1.common_field=table2.common_field",
+        type:"inner",
         where: {
-            Column1: some_another_value
+            [column name]: some value
         }
     }
-}
-
-connection.select({
-    from: joinLogic
-}).then(function(results) {
-    //results will be array of objects.
-    console.log(results);
-}).catch(function(error) {
-    alert(error.message);
 });
+console.log(results);
 ```
 
 **Note :-** you can also use - WhereIn, Skip, Order By and limit just like where has been used in the above example.
@@ -70,38 +59,17 @@ On Table1.some_column = Table3.some_common_column
 #### JsStore
 
 ```
-var joinLogic1 = {
-    table1: {
-        table: table1_name,
-        column: common_field of table1
-    },
-    join: 'inner',
-    table2: {
-        table: table2_name,
-        column: common_field of table2
-    },
-    nextJoin: {
-        table: table1_name,
-        column: some_column of table1
-    };
-};
-var joinLogic2 = {
-    table1: joinLogic1,
-    join: 'inner',
-    table2: {
-        table: table3_name,
-        column: some_common_column of table3
-    }
-};
-connection.select({
-    from: joinLogic2
-}).then(function(results) {
-    //results will contains objects of all tables at a index.
-    console.log(results);
-
-}).catch(function(error) {
-    alert(error.message);
+var results = await connection.select({
+    from: table1_name,
+    join:[{
+        with:table2_name,
+        on: "table1.common_field=table2.common_field"
+    },{
+        with:table3_name,
+        on: "table1.common_field=table3.common_field"
+    }]
 });
+console.log(results);
 ```
 
 <p class="margin-top-40px center-align">
