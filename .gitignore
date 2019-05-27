@@ -7,6 +7,7 @@ node_modules
 build
 deploy_key
 dist
+v2/
 # src/pages/example
 # src/pages/tutorial
 # src/pages/v1

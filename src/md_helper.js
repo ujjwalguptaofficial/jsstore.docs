@@ -1,12 +1,12 @@
 var showdown = require('showdown'),
-    fs = require('fs'),
+    fse = require('fs-extra'),
     converter = new showdown.Converter(),
     fm = require('front-matter');
 
 var folderName;
 
 function getAllFilesFromFolder(folderName) {
-    return fs.readdirSync(folderName);
+    return fse.readdirSync(folderName);
 };
 
 
@@ -15,7 +15,7 @@ exports.convertMdToVueAndSaveInFolder = function (folderPath, folderToSave, layo
     // console.log("src exist",fs.existsSync("src"));
     // console.log("src layout exist",fs.existsSync("src/layouts"));
     // open tutorial layout
-    var layoutContent = fs.readFileSync('code/layouts/' + layout + '.vueLayout', {
+    var layoutContent = fse.readFileSync('code/layouts/' + layout + '.vueLayout', {
         encoding: 'utf8'
     });
 
@@ -26,13 +26,14 @@ exports.convertMdToVueAndSaveInFolder = function (folderPath, folderToSave, layo
         // console.log(layoutContent);
         fileName = fileName.split(".")[0].trim();
         var filePath = `${folderToSave}/${fileName}.vue`;
+        fse.ensureDirSync(folderToSave);
         //recreate file if exist otherwise create
-        fs.closeSync(fs.openSync(filePath, 'w'));
+        fse.closeSync(fse.openSync(filePath, 'w'))
         var index = layout.indexOf('`');
         var firstString = layout.substring(0, index + 1);
         var lastString = layout.substring(index + 1);
         html = encodeURI(html);
-        fs.writeFileSync(filePath, firstString + html + lastString, {
+        fse.writeFileSync(filePath, firstString + html + lastString, {
             encoding: 'utf8'
         });
         // console.log(html);
@@ -57,7 +58,7 @@ function addMetaTags(layout, metaTags) {
 }
 
 function getContentOfFile(fileName) {
-    return fs.readFileSync(`${folderName}/${fileName}`, {
+    return fse.readFileSync(`${folderName}/${fileName}`, {
         encoding: 'utf8'
     });
 }
