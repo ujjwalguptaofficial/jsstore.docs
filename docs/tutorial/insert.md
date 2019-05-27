@@ -27,35 +27,29 @@ var value = {
     columnN: valueN
 };
 
-connection.insert({
+var noOfRowsInserted = await connection.insert({
     into: "TABLE_NAME",
     values: [Value], //you can insert multiple values at a time
-}).then(function(rowsInserted) {
-    if (rowsInserted > 0) {
-        alert('Successfully Added');
-    }
-}).catch(function(error) {
-    alert(error.message);
 });
+if (noOfRowsInserted > 0) {
+    alert('Successfully Added');
+}
 ```
 
 Insert api has following options -
 
-```
-{
-    into : string // table name
+* into : string // table name
 
-    values: Array // values to insert
+* values: Array // values to insert
 
-    return?: Boolean // Return the inserted record. Default value is false.This is useful in case - you want the autoincrement column value.
+* return?: Boolean // Return the inserted record. Default value is false.This is useful in case - you want the autoincrement column value.
 
-    skipDataCheck?: Boolean // Whether to check or not supplied data. Default value is false. If supplied true, this will directly insert data without checking any thing like datatype, auto increment etc. This is useful in case - where you want to insert huge record at a time.
+* skipDataCheck?: Boolean // Whether to check or not supplied data. Default value is false. If supplied true, this will directly insert data without checking any thing like datatype, auto increment etc. This is useful in case - where you want to insert huge record at a time.
 
-    upsert?: boolean; // Update data if exist otherwise insert 
-}
-```
+* upsert?: boolean; // Update data if exist otherwise insert 
 
-**Note :-** You can also insert column, which you have not defined while creating Db. JsStore preserves the NoSql functionality of IndexedDb.
+
+<br>**Note :-** You can also insert column, which you have not defined in db. JsStore preserves the NoSql functionality of IndexedDb.
 
 <p class="margin-top-40px center-align">
     <a class="btn info" target="_blank" href="/example/insert">Example</a>
