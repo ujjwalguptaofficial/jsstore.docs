@@ -8,6 +8,9 @@ build
 deploy_key
 dist
 v2/
+v1/
+src/code/pages/tutorial
+src/code/pages/example
 # src/pages/example
 # src/pages/tutorial
 # src/pages/v1
