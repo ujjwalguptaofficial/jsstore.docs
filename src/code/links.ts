@@ -153,6 +153,10 @@ export const links = [
         url: "v1-to-v2"
     },
     {
+        text: "V2 To V3",
+        url: "v2-to-v3"
+    },
+    {
         text: "Transaction",
         url: "transaction"
     },

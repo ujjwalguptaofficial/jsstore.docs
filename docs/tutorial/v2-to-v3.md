@@ -1,6 +1,6 @@
 ---
-Title: "Migrating from v1 to v2"
-Keywords: "migrate, v1, v2, indexeddb, jsstore"
+Title: "Migrating from v2 to v3"
+Keywords: "migrate, v2, v3, indexeddb, jsstore"
 Created Date: "13/05/2018"
 Last Updated : "13/05/2018"
 ---
