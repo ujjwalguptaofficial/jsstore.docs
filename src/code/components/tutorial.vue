@@ -184,13 +184,14 @@ export default class Tutorial extends VueWithRoute {
           "terminate",
           "transaction",
           "regex",
-          "connection"
+          "connection",
+          "v2-to-v3"
         ];
         break;
       case 2:
-        linksToRemove = ["promise", "export-json"];
+        linksToRemove = ["promise", "export-json", "v2-to-v3"];
       case 3:
-        linksToRemove = ["promise", "export-json"];
+        linksToRemove = ["promise", "export-json", "v1-to-v2"];
         break;
     }
     return this.allLinks_.filter(
