@@ -14,11 +14,10 @@ e.g - Lets take a table name with cities having column pinCodes & name
 ```
 var table = {
     name: 'cities',
-    columns: [{
-        name: 'cityName'
-    }, {
-        name: 'pincCodes'
-    }]
+    columns: {
+        cityName:{},
+        pincCodes:{}
+    }
 }
 
 ```
@@ -40,14 +39,11 @@ Now lets define the table using keyPath
 ```
 var table = {
     name: 'cities',
-    columns: [{
-        name: 'cityName'
-    }, {
-        name: 'pincCodes'
-    },{
-        name:'cityPincodes',
-        keyPath:['cityName','pinCodes']
-    }]
+    columns: {
+        cityName:{},
+        pincCodes:{},
+        cityPincodes:{keyPath:['cityName','pinCodes']}
+    }
 }
 
 ```

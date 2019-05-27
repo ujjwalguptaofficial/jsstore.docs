@@ -16,15 +16,13 @@ Select * from Table_Name Limit number;
 #### JsStore
 
 ```
-connection.select({
+var results = await connection.select({
     from: "Table_Name",
     limit: number
-}).then(function(results) {
-    //results will be array of objects.
-    console.log(results);
-}).catch(function(error) {
-    alert(error.message);
 });
+
+//results will be array of objects.
+console.log(results);
 ```
 
 <p class="margin-top-40px center-align">

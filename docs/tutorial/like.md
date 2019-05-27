@@ -24,19 +24,16 @@ Column_Name Like 'a%'
 #### JsStore
 
 ```
-connection.select({
+var results = await connection.select({
     from: "Table_Name",
     where: {
         Column_Name: {
             like: 'a%'
         },
     }
-}).then(function(results) {
-    //results will be array of objects.
-    console.log(results);
-}).catch(function(error) {
-    alert(error.message);
 });
+//results will be array of objects.
+console.log(results);
 ```
 
 <p class="margin-top-40px center-align">

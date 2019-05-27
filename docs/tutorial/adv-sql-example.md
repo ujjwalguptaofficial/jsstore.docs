@@ -10,7 +10,7 @@ These are some examples of common use cases -
 *   **SQL** \- Select * from Table_Name where Column1=value1 or Column2=value2 or Column3=value3;
 
 ```
-Connection.select({
+connection.select({
     from: "Table_Name",
     where: {
         Column1: value1,
@@ -25,7 +25,7 @@ Connection.select({
 *   **SQL** \- Select * from Table_Name where Column1=value1 and (Column2=value2 or Column3=value3);
 
 ```
-Connection.select({
+connection.select({
     from: "Table_Name",
     where: [{
             Column1: value1
@@ -43,7 +43,7 @@ Connection.select({
 *   **SQL** \- Select * from Table_Name where Column1=value1 or (Column2=value2 and Column3=value3);
 
 ```
-Connection.select({
+connection.select({
     from: "Table_Name",
     where: [{
             Column1: value1
