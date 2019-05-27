@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.2.0",
+    "@types/fs-extra": "^7.0.0",
     "@types/node": "^9.4.6",
     "expose-loader": "^0.7.5",
     "front-matter": "^2.3.0",

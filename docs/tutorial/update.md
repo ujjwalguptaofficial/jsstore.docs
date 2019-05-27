@@ -23,7 +23,7 @@ and
 #### JsStore
 
 ```
-connection.update({ 
+var noOfRowsUpdated = connection.update({ 
   	in: "Table_Name",
     set: {
         Column1: value1,
@@ -33,11 +33,8 @@ connection.update({
         Column3: some_value,
         Column4: some_another_value
     }
-}).then(function(rowsUpdated) {
-    alert(rowsUpdated + ' rows updated');
-}).catch(function(err) {
-    console.log(err);
 });
+alert(noOfRowsUpdated + ' rows updated');
 ```
 
 <p class="margin-top-40px center-align">

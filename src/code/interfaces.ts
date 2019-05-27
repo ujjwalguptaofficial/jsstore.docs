@@ -14,3 +14,8 @@ export interface ITeam {
     link: string;
     imageUrl: string;
 }
+
+export interface ITutorialLink {
+    text: string;
+    url: string;
+  }
