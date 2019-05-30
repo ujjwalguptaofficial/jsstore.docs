@@ -20,14 +20,14 @@ JsStore can be installed by multiple ways -
     2. jsstore.worker - https://cdn.jsdelivr.net/npm/jsstore/dist/jsstore.worker.min.js
 *   **Version** \- https://cdn.jsdelivr.net/npm/jsstore@version  
     e.g - 
-    1. jsstore - https://cdn.jsdelivr.net/npm/jsstore@2.1.0/dist/jsstore.min.js
-    2. jsstore.worker - https://cdn.jsdelivr.net/npm/jsstore@2.1.0/dist/jsstore.worker.min.js
+    1. jsstore - https://cdn.jsdelivr.net/npm/jsstore@3.0.0/dist/jsstore.min.js
+    2. jsstore.worker - https://cdn.jsdelivr.net/npm/jsstore@3.0.0/dist/jsstore.worker.min.js
 
 #### Npm -
 
 *   **Latest** \- npm install jsstore
 *   **Version** \- npm install jsstore@version  
-    e.g - npm install jsstore@2.0.0
+    e.g - npm install jsstore@3.0.0
 
 #### Raw file -
 

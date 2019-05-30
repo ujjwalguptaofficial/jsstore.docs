@@ -16,6 +16,6 @@ connection.dropDb().then(function() {
 ```
 
 <p class="margin-top-40px center-align">
-    <a class="btn info" target="_blank" href="/example/drop_db">Example</a>
+    <a class="btn info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=dropDb()%3B">Example</a>
     <button class="btn info btnNext">Next</button>
 </p>

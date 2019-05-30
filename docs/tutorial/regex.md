@@ -10,19 +10,16 @@ Regex is used with Where to search for a specified pattern in a column. For more
 #### JsStore
 
 ```
-connection.select({
+var results = await connection.select({
     from: 'Customers',
     where: {
         Country: {
             regex: /mexico|brazil/i
         }
     }
-}).then(function(results) {
-    //results will be array of objects.
-    console.log(results);
-}).catch(function(error) {
-    alert(error.message);
 });
+//results will be array of objects.
+console.log(results);
 ```
 
 <p class="margin-top-40px center-align">

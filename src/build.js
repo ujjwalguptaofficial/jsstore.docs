@@ -4,7 +4,7 @@ mdHelper.convertMdToVueAndSaveInFolder('../docs/v1/example', 'code/pages/v1/exam
 mdHelper.convertMdToVueAndSaveInFolder('../docs/v2/tutorial', 'code/pages/v2/tutorial', 'tutorial.v2');
 mdHelper.convertMdToVueAndSaveInFolder('../docs/v2/example', 'code/pages/v2/example', 'example.v2');
 mdHelper.convertMdToVueAndSaveInFolder('../docs/tutorial', 'code/pages/tutorial', 'tutorial');
-mdHelper.convertMdToVueAndSaveInFolder('../docs/example', 'code/pages/example', 'example');
+// mdHelper.convertMdToVueAndSaveInFolder('../docs/example', 'code/pages/example', 'example');
 
 // var fs = require('fs');
 
