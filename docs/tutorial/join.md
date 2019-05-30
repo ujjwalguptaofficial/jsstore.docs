@@ -46,6 +46,56 @@ console.log(results);
     <button class="btn info btnNext">Next</button>
 </p>
 
+`join` has following properties -
+
+* with : string // name of table to join
+
+* on : string // join condition eg - table1.property = table2.property
+
+* as : object // rename some column name in order to avoid the column match with other tables 
+
+e.g - if a column customerId is present in both table, then a column match error will be thrown & in this situation you can use `as` to resolve the error. 
+
+```
+connection.select({
+    from: table1 name,
+    join: {
+        with: table2_name,
+        on: "table1.common_field=table2.common_field",
+        as: {
+            customerId: table2_customerId
+        } 
+    }
+});
+```
+
+* where // to filter 
+
+<br><br>Some options like "order" works different in joins -
+
+* order // for ordering data - but like wihtout join order here is little different. You need to provide query along with table name in the form of [tablename].[columnName] 
+
+e.g - 
+
+```
+select({
+    from: "Student",
+    join: {
+        with: "StudentDetail",
+        on: "Student.Name=StudentDetail.Name"
+    },
+    order: { by: 'Student.Order', type: 'asc' }
+})
+```
+<p class="margin-top-40px center-align">
+    <a class="btn info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=select(%7B%0A%20%20%20%20from%3A%20'Orders'%2C%0A%20%20%20%20join%3A%20%7B%0A%20%20%20%20%20%20%20%20with%3A%20'OrderDetails'%2C%0A%20%20%20%20%20%20%20%20on%3A%20'Orders.orderId%3DOrderDetails.orderId'%0A%20%20%20%20%7D%2C%0A%20%20%20%20order%3A%7B%0A%20%20%20%20%20%20%20%20by%3A'Orders.customerId'%0A%20%20%20%20%7D%0A%7D)">Example</a>
+</p>
+
+* groupBy // for grouping
+
+* aggregate // aggregation of data 
+
+
 #### Sql (inner join between three tables)
 
 ```
