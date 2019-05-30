@@ -5,16 +5,13 @@ Created Date: "08/05/2018"
 Last Updated : "08/05/2018"
 ---
 
-Terminate close the connection and releases everything. This is useful in case - where you dont want to keep the connection alive since you are not using it often.
+Terminate close the connection and releases everything.
 
 #### JsStore
 
 ```
-connection.terminate().then(function() {
-    console.log("connection terminated");
-}).catch(function(error) {
-    alert(error.message);
-});
+await connection.terminate();
+console.log("connection terminated");
 ```
 
 But what to do - when you want to initiate the terminated connection ?

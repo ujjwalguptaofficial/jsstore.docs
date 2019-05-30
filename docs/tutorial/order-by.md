@@ -17,48 +17,27 @@ Select * from Table_Name Order by column_name sort_type;
 #### JsStore
 
 ```
-connection.select({
+var results = await connection.select({
     from: "Table_Name",
     order: {
         by: column_name,
         type: sort_type //supprted sort type is - asc,desc
     }
-}).then(function(results) {
-    //results will be array of objects.
-    console.log(results);
-}).catch(function(error) {
-    alert(error.message);
 });
+//results will be array of objects.
+console.log(results);
 ```
 
-Option order is of type - OrderQuery 
+Option order has following properties -  
 
-```
-type OrderQuery = {
-    /**
-     * sorting column name
-     *
-     * @type {string}
-     */
-    by: string;
+* by: string; // sorting column name
 
-    /**
-     * sorting type - asc/desc
-     *
-     * @type {string}
-     */
-    type: string;
+* type: string; // sorting type - asc/desc, default is asc
 
-    /**
-     * whether to do sorting by indexeddb or by jsstore
-     * default - true
-     * @type {boolean}
-     */
-    idbSorting: boolean
-};
-```
+* idbSorting: boolean // whether to do sorting by indexeddb or by jsstore, default - true
+
 
 <p class="margin-top-40px center-align">
-    <a class="btn info" target="_blank" href="/example/order-by">Example</a>
+    <a class="btn info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=select(%7B%0A%20%20%20%20from%3A%20%22Customers%22%2C%0A%20%20%20%20order%3A%20%7B%0A%20%20%20%20%20%20%20%20by%3A%20'country'%2C%0A%20%20%20%20%20%20%20%20type%3A%20%22desc%22%0A%20%20%20%20%7D%0A%7D)%3B%0A">Example</a>
     <button class="btn info btnNext">Next</button>
 </p>

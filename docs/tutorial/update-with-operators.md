@@ -10,7 +10,7 @@ JsStore provides you a way to update data with arithmetic operators.
 e.g - you want to add 5 to current stored data.
 
 ```
-connection.update({
+var rowsUpdated = await connection.update({
     in: "Table_Name",
     set: {
         Column1: {
@@ -23,14 +23,11 @@ connection.update({
         Column3: some_value,
         Column4: some_another_value
     }
-}).then(function(rowsUpdated) {
-    alert(rowsUpdated + ' rows updated');
-}).catch(function(err) {
-    console.log(err);
 });
+alert(rowsUpdated + ' rows updated');
 ```
 
 <p class="margin-top-40px center-align">
-    <a class="btn info" target="_blank" href="/example/update-with-operators">Example</a>
+    <a class="btn info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=update(%7B%0A%20%20%20%20in%3A%20%22Products%22%2C%0A%20%20%20%20set%3A%20%7B%0A%20%20%20%20%20%20%20%20price%3A%20%7B'%2B'%3A5%7D%0A%20%20%20%20%7D%2C%0A%20%20%20%20where%3A%20%7B%0A%20%20%20%20%20%20%20%20productId%3A%201%0A%20%20%20%20%7D%0A%7D)%3B%0A">Example</a>
     <button class="btn info btnNext">Next</button>
 </p>

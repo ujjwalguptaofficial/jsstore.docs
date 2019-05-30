@@ -31,6 +31,6 @@ connection.select({
 ```
 
 <p class="margin-top-40px center-align">
-    <a class="btn info" target="_blank" href="/example/distinct">Example</a>
+    <a class="btn info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=select(%7B%0A%20%20%20%20from%3A%20%22Customers%22%2C%0A%20%20%20%20distinct%3Atrue%20%2F%2F%20boolean%20value%0A%7D)%3B%0A">Example</a>
     <button class="btn info btnNext">Next</button>
 </p>

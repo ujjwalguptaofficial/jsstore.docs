@@ -35,7 +35,7 @@ So the steps will be -
 5. Calculate total price
 
 ```
-connection.transaction({
+var result = await connection.transaction({
     tables: ['customers', 'orders', 'products', 'orderDetails'], // list of tables which will be used in transaction
     // the logic callback is not a closure i.e it wont have access to outer scope or global scope.
     // basically function should be independent
@@ -128,16 +128,14 @@ connection.transaction({
             quantity: 4
         }]
     }
-}).then(function(result) {
-    const totalPrice = result.totalPrice;
-}).catch(function(err) {
-    console.log(err);
 });
+const totalPrice = result.totalPrice;
 ```
 
 Few important things to make sure you are using transaction in right way - 
 
 * Transaction should be light weight. Dont write too many or heavy logics inside it. The reason is  - the indexeddb transaction is asyc and automatically commited and so jsstore.
+
 * There may be situation where you have a heavy logic, in that case - calculate the result and put it in data option.
 
 <p class="margin-top-40px center-align">
