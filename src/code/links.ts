@@ -25,6 +25,10 @@ export const links = [
         url: "database"
     },
     {
+        text: "Data Type",
+        url: "data-type"
+    },
+    {
         text: "insert",
         url: "insert"
     },

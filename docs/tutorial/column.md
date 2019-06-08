@@ -1,5 +1,5 @@
 ---
-Title: "Table"
+Title: "Column"
 Keywords: "column, api, query, indexeddb, jsstore"
 Created Date: "09/05/2018"
 Last Updated : "10/05/2018"
@@ -33,7 +33,7 @@ A column has following properties -
 
 * dataType: JsStore.DATA_TYPE, // datatype of this column (optional)
 
-**Note:-** do not use data type boolean, if you want to filter on that column. For more info,check out - https://stackoverflow.com/questions/48149851/failed-to-execute-only-on-idbkeyrange-the-parameter-is-not-a-valid-key/48179792#48179792
+For more info about data type, see this link - [DataType](/tutorial/data-type/)
 
 * autoIncrement: boolean, // automatically increment value (optional)
 
@@ -47,4 +47,5 @@ A column has following properties -
 
 * keyPath : string[] - allows you to use multiple indexing // optional 
 
-For all data types see this link - [DataType](/tutorial/enums/)
+For more info about keypath see this link - [KeyPath](/tutorial/keypath/)
+
