@@ -43,12 +43,15 @@
     </v-flex>
     <v-flex md2 class="margin-top-50px">
       <v-btn href="/sponsor" color="success right-side-button">
-        Sponsor
-        <br>Us
+        Sponsor Us &
+        <br>get your logo here
       </v-btn>
       <br>
       <br>
-      <v-btn href="/sponsor" color="success right-side-button">Be a backer</v-btn>
+      <v-btn href="/sponsor" color="success right-side-button">
+        Be a backer &
+        <br>get your logo on our page
+      </v-btn>
       <br>
       <br>
       <!-- codefund ads -->
@@ -185,11 +188,12 @@ export default class Tutorial extends VueWithRoute {
           "transaction",
           "regex",
           "connection",
-          "v2-to-v3"
+          "v2-to-v3",
+          "data-type"
         ];
         break;
       case 2:
-        linksToRemove = ["promise", "export-json", "v2-to-v3"];
+        linksToRemove = ["promise", "export-json", "v2-to-v3", "data-type"];
       case 3:
         linksToRemove = ["promise", "export-json", "v1-to-v2"];
         break;
