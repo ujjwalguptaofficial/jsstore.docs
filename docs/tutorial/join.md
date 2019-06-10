@@ -46,6 +46,8 @@ console.log(results);
     <button class="btn info btnNext">Next</button>
 </p>
 
+<div class="margin-top-30px top-border margin-bottom-20px"></div>
+
 `join` has following properties -
 
 * with : string // name of table to join
@@ -73,7 +75,7 @@ connection.select({
 
 <br><br>Some options like "order" works different in joins -
 
-* order // for ordering data - but like wihtout join order here is little different. You need to provide query along with table name in the form of [tablename].[columnName] 
+* order // for ordering data - but unlike query without join, order here is little different. You need to provide query along with table name in the form of [tablename].[columnName] 
 
 e.g - 
 

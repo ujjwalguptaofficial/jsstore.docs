@@ -15,10 +15,6 @@
     visibility: hidden;
 }
 
-.top-border {
-    border-top: 2px solid #ccc;
-}
-
 .li-header {
     text-transform: uppercase;
     font-size: 18px;
