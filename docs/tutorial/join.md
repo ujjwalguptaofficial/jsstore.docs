@@ -97,6 +97,7 @@ select({
 
 * aggregate // aggregation of data 
 
+<div class="margin-top-30px top-border margin-bottom-20px"></div>
 
 #### Sql (inner join between three tables)
 
