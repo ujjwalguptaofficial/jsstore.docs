@@ -102,7 +102,7 @@ export default class Tutorial extends VueWithRoute {
     var html = "";
     this.links.forEach(link => {
       if (link.text.toLowerCase().indexOf(this.searchValue) >= 0) {
-        html += "<a href=" + link.url + ">" + link.text + "</a>";
+        html += `<a href="/tutorial/${link.url}">${link.text}</a>`;
       }
     });
     this.searchResult = html;

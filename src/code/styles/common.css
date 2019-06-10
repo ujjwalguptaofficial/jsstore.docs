@@ -225,3 +225,7 @@ nav .brand-logo {
 .padding-left-15px {
     padding-left: 15px;
 }
+
+.top-border {
+    border-top: 2px solid #ccc;
+}
