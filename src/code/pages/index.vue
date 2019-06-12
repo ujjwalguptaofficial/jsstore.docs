@@ -183,7 +183,7 @@ export default {
         {
           hid: "keywords",
           name: "keywords",
-          content: "jsstore, sql, indexeddb, wrapper, library"
+          content: "jsstore, sql, indexeddb, storage, library"
         }
       ]
     };
