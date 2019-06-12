@@ -55,8 +55,8 @@
       <br>
       <br>
       <!-- codefund ads -->
-      <div id="codefund"></div>
-      <script src="https://codefund.app/properties/280/funder.js" async="async"></script>
+      <!-- <div id="codefund"></div>
+      <script src="https://codefund.app/properties/280/funder.js" async="async"></script> -->
     </v-flex>
   </v-layout>
 </template>
