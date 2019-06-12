@@ -101,5 +101,17 @@ export default class Sponsor extends Vue{
         }
         this.dialog = true;
     }
+
+    head() {
+        return {
+        meta: [
+            {
+            hid: "keywords",
+            name: "keywords",
+            content: "sponsor, jsstore, sql, indexeddb, storage"
+            }
+        ]
+        };
+  }
 }
 </script>
