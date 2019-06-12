@@ -15,25 +15,26 @@ Set
     column1 = value1,
     column2 = value2,
 Where
-    Column3=some_value
+    column3=some_value
 and
-    Column4=some_another_value;
+    column4=some_another_value;
 ```
 
 #### JsStore
 
 ```
-var noOfRowsUpdated = connection.update({ 
+var noOfRowsUpdated = await connection.update({ 
   	in: "Table_Name",
     set: {
-        Column1: value1,
-        Column2: value2
+        column1: value1,
+        column2: value2
     },
     where: {
-        Column3: some_value,
-        Column4: some_another_value
+        column3: some_value,
+        column4: some_another_value
     }
 });
+
 alert(noOfRowsUpdated + ' rows updated');
 ```
 
