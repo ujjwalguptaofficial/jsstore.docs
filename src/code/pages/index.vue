@@ -25,7 +25,22 @@
       </div>
       <div id="divLinkGroup">
         <v-btn href="tutorial/get-started">Get Started</v-btn>
-        <v-btn href="https://github.com/ujjwalguptaofficial/JsStore" target="_blank">Download</v-btn>
+        <v-btn
+          style="background:#617b92 !important;"
+          href="https://github.com/ujjwalguptaofficial/JsStore"
+          target="_blank"
+        >
+          Github
+          <i class="margin-left-10px fab fa-github"></i>
+        </v-btn>
+        <v-btn
+          style="background:#617b92 !important;"
+          target="_blank"
+          href="https://gitter.im/JsStore/Lobby"
+        >
+          Get Help
+          <i class="margin-left-10px fab fa-gitter"></i>
+        </v-btn>
       </div>
       <div class="center-align margin-top-20px">
         Introducing
@@ -33,48 +48,8 @@
           target="_blank"
           href="https://github.com/ujjwalguptaofficial/idbstudio"
         >IDBStudio</a>
-        - A management tool for jsstore. It helps you to see your data, debug
+        - A management tool for jsstore. It helps you to observe your data, debug
         query and much more.
-      </div>
-      <div class="margin-top-50px top-border">
-        <h4></h4>
-        <ul id="ulFeatureList">
-          <li>
-            <div class="li-header">Web worker support</div>
-            <span class="li-body">JsStore can be executed in Web Worker or without Worker.</span>
-          </li>
-          <li>
-            <div class="li-header">Join Support</div>
-            <span class="li-body">Execute inner, left and right join.</span>
-          </li>
-          <li>
-            <div class="li-header">Cross Browsers Support</div>
-            <span class="li-body">
-              Develop your application without worrying about cross browser
-              compatibility.
-            </span>
-          </li>
-
-          <li>
-            <div class="li-header">Sql Support</div>
-            <span class="li-body">
-              Using an extension
-              <a href="https://github.com/ujjwalguptaofficial/sqlweb">SqlWeb</a>.
-            </span>
-          </li>
-          <li>
-            <div class="li-header">TypeScript Support</div>
-            <span class="li-body">Dont worry if you are working in Typescript technologies.</span>
-          </li>
-          <li>
-            <div class="li-header">Debugging tool</div>
-            <span class="li-body">
-              JsStore provides
-              <a href="https://github.com/ujjwalguptaofficial/idbstudio">IDBStudio</a>
-              to help you debug, manage db.
-            </span>
-          </li>
-        </ul>
       </div>
       <div class="text-center">
         <a target="_blank" title="github" href="https://github.com/ujjwalguptaofficial/JsStore">
@@ -147,6 +122,46 @@
             alt="travis logo"
           >
         </a>
+      </div>
+      <div class="margin-top-50px top-border">
+        <h4></h4>
+        <ul id="ulFeatureList">
+          <li>
+            <div class="li-header">Web worker support</div>
+            <span class="li-body">JsStore can be executed in Web Worker or without Worker.</span>
+          </li>
+          <li>
+            <div class="li-header">Join Support</div>
+            <span class="li-body">Execute inner, left and right join.</span>
+          </li>
+          <li>
+            <div class="li-header">Cross Browsers Support</div>
+            <span class="li-body">
+              Develop your application without worrying about cross browser
+              compatibility.
+            </span>
+          </li>
+
+          <li>
+            <div class="li-header">Sql Support</div>
+            <span class="li-body">
+              Using an extension
+              <a href="https://github.com/ujjwalguptaofficial/sqlweb">SqlWeb</a>.
+            </span>
+          </li>
+          <li>
+            <div class="li-header">TypeScript Support</div>
+            <span class="li-body">Dont worry if you are working in Typescript technologies.</span>
+          </li>
+          <li>
+            <div class="li-header">Debugging tool</div>
+            <span class="li-body">
+              JsStore provides
+              <a href="https://github.com/ujjwalguptaofficial/idbstudio">IDBStudio</a>
+              to help you debug, manage db.
+            </span>
+          </li>
+        </ul>
       </div>
       <div class="text-center margin-top-20px">
         Created with
