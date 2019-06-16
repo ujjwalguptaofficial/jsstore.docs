@@ -12,7 +12,7 @@
                     <li class="margin-bottom-10px">Having your company name listed in the JsStore GitHub repository & on this website at various place.</li>
                     <li class="margin-bottom-10px">A private seminar to your company for jsstore by Ujjwal Gupta. <a href="#" @click="showTC('jsstore_seminar')">T&C</a>.</li>
                     <li class="margin-bottom-10px">A private seminar for every runing & upcoming projects like - fortjs etc. <a href="#" @click="showTC('private_seminar')">T&C</a>.</li>
-                    <li class="margin-bottom-10px">Occassionaly visit to your company. <a href="#" @click="showTC('occasionally_visit')">T&C</a>.</li>
+                    <li class="margin-bottom-10px">Occassionaly visit to your company. </li>
                 </ul> 
             </p>
             <p>
