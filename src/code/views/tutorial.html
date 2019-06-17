@@ -1,0 +1,43 @@
+<v-layout row wrap>
+    <v-flex md2 xl2 class="hidden-sm-and-down" id="divMenuContainer" :class="{'show-menu':showMenu}">
+        <ul>
+            <li class="search margin-bottom-10px">
+                <v-card class="search-wrapper">
+                    <v-card-text style="padding:5px;">
+                        <input v-model="searchValue" id="txtSearch" type="text" placeholder="Search" @keyup="onSearch">
+                        <i class="material-icons">search</i>
+                        <div class="search-results" v-html="searchResult"></div>
+                    </v-card-text>
+                </v-card>
+            </li>
+            <li v-for="link in links" :key="link.text" v-bind:class="{'link-active': link.url=== activeUrl}">
+                <a :href="relativeUrl+link.url">{{link.text}}</a>
+            </li>
+        </ul>
+    </v-flex>
+    <v-flex id="divTutorialContent" :class="{'padding-left-15px': $vuetify.breakpoint.mdAndUp}" xs12 md8 xl8>
+        <div v-html="tutorialHtml" class="margin-top-20px"></div>
+    </v-flex>
+    <v-flex md2 class="margin-top-50px">
+        <v-btn href="/sponsor" color="success right-side-button">
+            Sponsor Us &
+            <br>get your logo here
+        </v-btn>
+        <br>
+        <br>
+        <v-btn href="/sponsor" color="success right-side-button">
+            Be a backer &
+            <br>get your logo on our page
+        </v-btn>
+
+        <v-btn v-if="docToEdit!=null" alt="edit this doc" target="_blank" :href="`https://github.com/ujjwalguptaofficial/jsstore.docs/edit/master/docs/tutorial/${docToEdit}.md`" color="primary" fixed bottom right fab>
+            <v-icon>edit</v-icon>
+        </v-btn>
+
+        <!-- codefund ads -->
+        <!-- <br>
+      <br>-->
+        <!-- <div id="codefund"></div>
+      <script src="https://codefund.app/properties/280/funder.js" async="async"></script>-->
+    </v-flex>
+</v-layout>
