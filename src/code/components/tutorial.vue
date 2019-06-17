@@ -1,65 +1,4 @@
-<template>
-  <v-layout row wrap>
-    <v-flex
-      md2
-      xl2
-      class="hidden-sm-and-down"
-      id="divMenuContainer"
-      :class="{'show-menu':showMenu}"
-    >
-      <ul>
-        <li class="search margin-bottom-10px">
-          <v-card class="search-wrapper">
-            <v-card-text style="padding:5px;">
-              <input
-                v-model="searchValue"
-                id="txtSearch"
-                type="text"
-                placeholder="Search"
-                @keyup="onSearch"
-              >
-              <i class="material-icons">search</i>
-              <div class="search-results" v-html="searchResult"></div>
-            </v-card-text>
-          </v-card>
-        </li>
-        <li
-          v-for="link in links"
-          :key="link.text"
-          v-bind:class="{'link-active': link.url=== activeUrl}"
-        >
-          <a :href="relativeUrl+link.url">{{link.text}}</a>
-        </li>
-      </ul>
-    </v-flex>
-    <v-flex
-      id="divTutorialContent"
-      :class="{'padding-left-15px': $vuetify.breakpoint.mdAndUp}"
-      xs12
-      md8
-      xl8
-    >
-      <div v-html="tutorialHtml" class="margin-top-20px"></div>
-    </v-flex>
-    <v-flex md2 class="margin-top-50px">
-      <v-btn href="/sponsor" color="success right-side-button">
-        Sponsor Us &
-        <br>get your logo here
-      </v-btn>
-      <br>
-      <br>
-      <v-btn href="/sponsor" color="success right-side-button">
-        Be a backer &
-        <br>get your logo on our page
-      </v-btn>
-      <br>
-      <br>
-      <!-- codefund ads -->
-      <!-- <div id="codefund"></div>
-      <script src="https://codefund.app/properties/280/funder.js" async="async"></script> -->
-    </v-flex>
-  </v-layout>
-</template>
+<template src="../views/tutorial.html"></template>
 <script lang="ts">
 import { Component, Vue, Watch } from "nuxt-property-decorator";
 import * as axios from "axios";
@@ -87,6 +26,14 @@ export default class Tutorial extends VueWithRoute {
   showMenu = false;
   searchValue = "";
   searchResult = "";
+
+  get docToEdit() {
+    const url = this.allLinks_[this.getCurrentUrlIndex()];
+    if (url) {
+      return url.url;
+    }
+    return null;
+  }
 
   constructor() {
     super();
@@ -218,6 +165,18 @@ export default class Tutorial extends VueWithRoute {
       default:
         return "/";
     }
+  }
+
+  getCurrentUrlIndex() {
+    const currentUrl = (this.$route as any).path;
+    const relativeUrl = this.relativeUrl;
+    const links = this.links;
+    const activeUrlIndex = links.findIndex(
+      value =>
+        currentUrl.toLowerCase().replace(/\//g, "") ===
+        `${this.relativeUrl}${value.url.toLowerCase()}`.replace(/\//g, "")
+    );
+    return activeUrlIndex;
   }
 
   onNextBtnClick() {
