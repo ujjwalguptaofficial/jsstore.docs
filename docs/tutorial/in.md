@@ -5,7 +5,7 @@ Created Date: "08/05/2018"
 Last Updated : "08/05/2018"
 ---
 
-In allows you to specify multiple values in a Where.It can be used to execute multiple or condition.
+In allows you to specify multiple values in Where query. It is a shorthand for multiple or query.
 
 #### Sql (Where)
 
