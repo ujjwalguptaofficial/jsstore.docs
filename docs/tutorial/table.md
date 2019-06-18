@@ -5,7 +5,9 @@ Created Date: "09/05/2018"
 Last Updated : "13/05/2018"
 ---
 
-Table in JsStore is an object which contains columns.
+Table in JsStore is an object which contains name of table & columns schema.
+
+### Syntax :- 
 
 ```
 var table1 = {
@@ -19,9 +21,21 @@ var table1 = {
 }
 ```
 
-Note :- We strongly recommend to create a primary key for every table.
+### Example :-
 
-Above Syntax is good and clear but when there are lots of tables - codes becomes large and messy. So JsStore provides another approach to create column.
+```
+var tblProduct = {
+    name: 'Product',
+    columns: {
+        // Here "Id" is name of column 
+        Id:{ primaryKey: true, autoIncrement: true },
+        ItemName:  { notNull: true, dataType: "string" },
+        Price:  { notNull: true, dataType: "number" },
+        Quantity : { notNull: true, dataType: "number" }
+    }
+};
+```
+**Note :-** We strongly recommend to create a primary key for every table.
 
 For more information about column - please check [column](/tutorial/column) doc.
 
