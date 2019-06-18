@@ -1,4 +1,6 @@
 <v-layout row wrap>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <v-flex md2 xl2 class="hidden-sm-and-down" id="divMenuContainer" :class="{'show-menu':showMenu}">
         <ul>
             <li class="search margin-bottom-10px">
@@ -15,7 +17,7 @@
             </li>
         </ul>
     </v-flex>
-    <v-flex id="divTutorialContent" :class="{'padding-left-15px': $vuetify.breakpoint.mdAndUp}" xs12 md8 xl8>
+    <v-flex id="divTutorialContent" xs12 md8 xl8 :class="{'padding-left-15px': $vuetify.breakpoint.mdAndUp}">
         <div v-html="tutorialHtml" class="margin-top-20px"></div>
     </v-flex>
     <v-flex md2 class="margin-top-50px">
@@ -30,7 +32,13 @@
             <br>get your logo on our page
         </v-btn>
 
-        <v-btn v-if="docToEdit!=null" alt="edit this doc" target="_blank" :href="`https://github.com/ujjwalguptaofficial/jsstore.docs/edit/master/docs/tutorial/${docToEdit}.md`" color="primary" fixed bottom right fab>
+        <v-btn class="margin-bottom-70px" v-if="docToEdit!=null" alt="edit this doc" target="_blank"
+            href="https://gitter.im/JsStore/Lobby" color="primary" fixed bottom right fab>
+            <i class="fab fa-gitter"></i>
+        </v-btn>
+        <v-btn v-if="docToEdit!=null" alt="edit this doc" target="_blank"
+            :href="`https://github.com/ujjwalguptaofficial/jsstore.docs/edit/master/docs/tutorial/${docToEdit}.md`"
+            color="primary" fixed bottom right fab>
             <v-icon>edit</v-icon>
         </v-btn>
 

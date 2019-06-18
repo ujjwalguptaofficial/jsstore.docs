@@ -180,14 +180,7 @@ export default class Tutorial extends VueWithRoute {
   }
 
   onNextBtnClick() {
-    const currentUrl = (this.$route as any).path;
-    const relativeUrl = this.relativeUrl;
-    const links = this.links;
-    const activeUrlIndex = links.findIndex(
-      value =>
-        currentUrl.toLowerCase().replace(/\//g, "") ===
-        `${this.relativeUrl}${value.url.toLowerCase()}`.replace(/\//g, "")
-    );
+    const activeUrlIndex = this.getCurrentUrlIndex();
     if (activeUrlIndex >= 0) {
       const nextUrl = links[activeUrlIndex + 1];
       if (nextUrl) {
