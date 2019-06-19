@@ -136,11 +136,18 @@ export default class Tutorial extends VueWithRoute {
           "regex",
           "connection",
           "v2-to-v3",
-          "data-type"
+          "data-type",
+          "initiate-database"
         ];
         break;
       case 2:
-        linksToRemove = ["promise", "export-json", "v2-to-v3", "data-type"];
+        linksToRemove = [
+          "promise",
+          "export-json",
+          "v2-to-v3",
+          "data-type",
+          "initiate-database"
+        ];
       case 3:
         linksToRemove = ["promise", "export-json", "v1-to-v2"];
         break;
