@@ -43,7 +43,7 @@ var db = {
 }
 ```
 
-<br>If you are finding difficult to understand, please take a look at [examples](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples) or our [medium page](https://medium.com/jsstore) 
+Please read [initiate database](/tutorial/initiate-database) doc for knowing how to use database schema. 
 
 <p class="margin-top-40px center-align">
       <button class="btn info btnNext">Next</button>
