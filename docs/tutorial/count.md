@@ -1,11 +1,10 @@
 ---
 Title: "Count"
 Keywords: "count, api, query, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Description: "count api is used to count no of record in a table."
 ---
 
-You can use Where and WhereIn to filter results.
+JsStore provides `count` api to count no of records in a table. You can use Where and WhereIn to filter results similar to select.
 
 #### Sql
 

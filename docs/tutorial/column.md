@@ -1,11 +1,10 @@
 ---
 Title: "Column"
 Keywords: "column, api, query, indexeddb, jsstore"
-Created Date: "09/05/2018"
-Last Updated : "10/05/2018"
+Description: "column in jsstore is an object where column name is key & column options are values."
 ---
 
-Columns in jsstore is an object where column name is key & column options are values.
+Column in jsstore is an object where column name is key & column options are values.
 
 ```
 var columns = {

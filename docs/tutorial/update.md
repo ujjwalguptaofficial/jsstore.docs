@@ -1,8 +1,7 @@
 ---
 Title: "Update"
 Keywords: "update, api, query, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Description: "learn how to update data in indexedb using jsstore"
 ---
 
 Update is used to modify the existing records in a table. You can use Where to filter records.

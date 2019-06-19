@@ -1,6 +1,7 @@
 ---
 Title: "Data Type"
 Keywords: "data type, column, query, indexeddb, jsstore"
+Description: "data type in jsstore"
 ---
 
 JsStore provides following data type - 

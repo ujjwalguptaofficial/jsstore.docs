@@ -1,7 +1,7 @@
 ---
 Title: "Distinct"
 Keywords: "distinct, select, query, indexeddb, jsstore"
-Last Updated : "09/05/2018"
+Description: "Distinct is used to return unique set of results."
 ---
 
 Distinct is used to return the unique set of result. Distinct filters the result for all columns together except Primary column, since Primary column will make the result always unique.

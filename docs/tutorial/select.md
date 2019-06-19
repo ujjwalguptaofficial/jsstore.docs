@@ -1,8 +1,7 @@
 ---
 Title: "Select"
 Keywords: "select, api, query, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Description: "select data from a table in indexeddb"
 ---
 
 The Select api is used to select data from a database.

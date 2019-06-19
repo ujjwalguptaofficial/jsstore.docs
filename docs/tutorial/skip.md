@@ -1,8 +1,7 @@
 ---
 Title: "Skip"
 Keywords: "skip, select, query, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Description: "skip records in select query"
 ---
 
 Skip is used to specify the number of records to skip. It is available with only select.

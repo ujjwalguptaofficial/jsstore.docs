@@ -1,8 +1,7 @@
 ---
 Title: "Regex"
 Keywords: "regex, api, query, indexeddb, jsstore"
-Created Date: "01/05/2019"
-Last Updated : "01/05/2019"
+Description: "using regex to fliter data"
 ---
 
 Regex is used with Where to search for a specified pattern in a column. For more information about regex, visit [mozilla regular expression guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)

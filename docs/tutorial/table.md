@@ -1,8 +1,7 @@
 ---
 Title: "Table"
 Keywords: "table, api, query, indexeddb, jsstore"
-Created Date: "09/05/2018"
-Last Updated : "13/05/2018"
+Description: "learn how to create table in indexedb using jsstore"
 ---
 
 Table in JsStore is an object which contains name of table & columns schema.

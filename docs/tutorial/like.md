@@ -1,8 +1,7 @@
 ---
 Title: "Like"
 Keywords: "like, filter, query, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "10/05/2018"
+Description: "filter data using like operator"
 ---
 
 Like is used with Where to search for a specified pattern in a column. Currently We support only '%' character.

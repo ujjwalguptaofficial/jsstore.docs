@@ -1,8 +1,7 @@
 ---
 Title: "Or"
 Keywords: "or, api, query, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Description: "learn how to use or to filter records in indexeddb"
 ---
 
 Or can be used with Where to filter records.

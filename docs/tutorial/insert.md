@@ -1,8 +1,7 @@
 ---
 Title: "Insert"
 Keywords: "insert, api, query, indexeddb, jsstore"
-Created Date: "09/05/2018"
-Last Updated : "09/05/2018"
+Description: "insert data in indexedb"
 ---
 
 The Insert api is used to insert new records in a table.

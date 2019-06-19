@@ -1,8 +1,7 @@
 ---
 Title: "Migrating from v2 to v3"
 Keywords: "migrate, v2, v3, indexeddb, jsstore"
-Created Date: "13/05/2018"
-Last Updated : "13/05/2018"
+Description: "migrating from v2 to v3"
 ---
 
 Migrating from V2 to V3 is very easy - You just need to change the db schema as per v3.

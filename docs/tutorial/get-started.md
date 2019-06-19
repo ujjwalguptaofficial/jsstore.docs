@@ -1,8 +1,7 @@
 ---
 Title: "Get Started"
 Keywords: "jsstore, get started, introduction, indexeddb, tutorial"
-Created Date: "09/05/2018"
-Last Updated : "12/05/2018"
+Description: "learn how to use indexeddb with jsstore"
 ---
 
 In this get started tutorial we will learn how to do crud operation in indexeddb using jsstore. You can download the example of this tutorial from - [Crud implementation](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/Simple%20Example)

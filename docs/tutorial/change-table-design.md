@@ -1,11 +1,12 @@
 ---
 Title: "Change Table Design"
 Keywords: "change table, api, query, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Description: "how to change table schema after database is created"
 ---
 
-Define your Table Object and add an extra property 'version' with a value greater than Db Version and call api 'isDbExit' supplying table details (check out example). You can get Db version by using below code.
+Define your Table Object and add an extra property 'version' with a value greater than Db Version. 
+
+You can get Db version by using below code.
 
 ```
 connection.getDbVersion(db_name).then(function(version) {

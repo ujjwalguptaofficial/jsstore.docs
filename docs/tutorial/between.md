@@ -1,8 +1,7 @@
 ---
 Title: "Between"
-Keywords: "between, values, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Keywords: "between, values, where, indexeddb, jsstore"
+Description: "between is used with where query to select result between two values"
 ---
 
 **" \- "** symbol is used to select result between two values. The values should be numbers only.

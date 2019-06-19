@@ -1,8 +1,7 @@
 ---
 Title: "Terminate"
 Keywords: "terminate, api, query, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Description: "learn how to use release the connection"
 ---
 
 Terminate close the connection and releases everything.

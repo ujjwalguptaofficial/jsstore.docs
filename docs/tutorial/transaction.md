@@ -1,8 +1,7 @@
 ---
 Title: "Transaction"
 Keywords: "transaction, api, query, indexeddb, jsstore"
-Created Date: "07/01/2018"
-Last Updated : NA
+Description: "learn how to use transaction in jsstore"
 ---
 
 IndexedDB is a pure transactional database which means all the query is executed using the transaction.

@@ -1,8 +1,7 @@
 ---
 Title: "Drop Database"
 Keywords: "drop, database, remove, indexeddb, jsstore"
-Created Date: "09/05/2018"
-Last Updated : "09/05/2018"
+Description: "deleting database from indexeddb"
 ---
 
 dropDb is used to remove the current database from browser storage.

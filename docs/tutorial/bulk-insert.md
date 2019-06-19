@@ -1,8 +1,7 @@
 ---
 Title: "Bulk Insert"
 Keywords: "bulk insert, api, query, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Description: "bulk insert is used to insert data very fastly in indexeddb."
 ---
 
 Bulk insert is a special type of api for inserting large amount of data. It is much faster compared to insert api as it does not check and return any thing.

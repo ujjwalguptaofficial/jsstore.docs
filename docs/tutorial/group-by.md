@@ -1,8 +1,7 @@
 ---
 Title: "Group By"
 Keywords: "group, by, select, indexeddb, jsstore"
-Created Date: "09/05/2018"
-Last Updated : "09/05/2018"
+Description: "learn how to use group by in indexeddb using jsstore"
 ---
 
 The Group By is used to group the result-set by one or more columns. You can also use Aggregate functions with group by similar to what you can use in SQL.

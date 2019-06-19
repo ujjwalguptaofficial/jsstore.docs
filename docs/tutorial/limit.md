@@ -1,8 +1,7 @@
 ---
 Title: "Limit"
 Keywords: "limit, select, query, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Description: "Limit no of data in select query"
 ---
 
 Limit is used to specify the number of records to return. It is available with only select.
