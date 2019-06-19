@@ -34,9 +34,6 @@ module.exports = {
       content: "#42a5f5"
     },
     {
-      name: "description",
-      content: "JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy with its SQL like apis."
-    }, {
       name: "robots",
       content: "index, follow"
     }, {

@@ -1,8 +1,7 @@
 ---
 Title: "Aggregate Functions"
 Keywords: "aggregate, count, avg, min, max, indexeddb"
-Created Date: "08/05/2018"
-Last Updated : "11/05/2018"
+Description: "Aggreagte functions available in jsstore are count, sum, avg, max and min."
 ---
 
 JsStore supports following aggregate functions : -

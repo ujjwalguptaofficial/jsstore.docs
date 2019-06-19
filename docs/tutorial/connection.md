@@ -1,7 +1,7 @@
 ---
 Title: "Connection"
 Keywords: "database, connection, query, indexeddb, jsstore"
-Last Updated : "09/05/2018"
+Description: "How to create connection in jsstore"
 ---
 
 Connection in jsstore is object of `Instance` class of jsstore.

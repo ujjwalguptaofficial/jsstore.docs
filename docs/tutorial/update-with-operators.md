@@ -1,8 +1,7 @@
 ---
 Title: "Update With Operators"
 Keywords: "update , operators, query, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Description: "update with operators is a shorthand for updating data with arithmetic operators"
 ---
 
 JsStore provides you a way to update data with arithmetic operators.

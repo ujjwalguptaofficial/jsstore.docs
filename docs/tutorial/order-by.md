@@ -1,8 +1,7 @@
 ---
 Title: "Order By"
 Keywords: "order by, sort by, select, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Description: "learn how to use order data in indexeddb"
 ---
 
 Order By is used to sort the data in ascending or descending order, based on any column.

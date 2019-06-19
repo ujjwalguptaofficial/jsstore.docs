@@ -44,16 +44,20 @@ function addMetaTags(layout, metaTags) {
     var addTag = function (stringConst, tagName) {
         // var stringConst = 'title=';
         // console.log('layout', layout);
-        var index = layout.indexOf(stringConst);
-        index = index + stringConst.length;
-        var firstString = layout.substring(0, index + 1);
-        var lastString = layout.substring(index + 1);
-        var firstString = layout.substring(0, index + 1);
-        return firstString + metaTags[tagName] + lastString;
+        if (metaTags[tagName] != null) {
+            var index = layout.indexOf(stringConst);
+            index = index + stringConst.length;
+            var firstString = layout.substring(0, index + 1);
+            var lastString = layout.substring(index + 1);
+            var firstString = layout.substring(0, index + 1);
+            return firstString + metaTags[tagName] + lastString;
+        }
+        return layout;
     }
 
     layout = addTag('title=', 'Title');
     layout = addTag('keywords=', 'Keywords');
+    layout = addTag('description=', 'Description');
     return layout;
 }
 

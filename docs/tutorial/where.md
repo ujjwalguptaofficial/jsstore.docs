@@ -1,8 +1,7 @@
 ---
 Title: "Where"
 Keywords: "where, filter, query, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Description: "learn how to filter record with where in indexedb using jsstore"
 ---
 
 Where can be used to filter records same as Sql Where clause.

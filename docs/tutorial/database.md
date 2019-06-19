@@ -1,10 +1,10 @@
 ---
 Title: "DataBase"
 Keywords: "database, api, query, indexeddb, jsstore"
-Last Updated : "09/05/2018"
+Description: "Database in JsStore is an object which contains name of database and list of tables."
 ---
 
-Database in JsStore contains name of database and list of tables.
+Database in JsStore is an object which contains name of database and list of tables.
 
 ### Syntax :- 
 

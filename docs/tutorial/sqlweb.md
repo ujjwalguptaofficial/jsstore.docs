@@ -1,8 +1,7 @@
 ---
 Title: "SqlWeb"
 Keywords: "websql, alternate, sql, indexeddb, jsstore"
-Created Date: "27/10/2018"
-Last Updated : 
+Description: "an alternative to websql but uses indexedb behind the scene."
 ---
 
 SqlWeb is an extension of JsStore which allows to use sql query for performing database operation in IndexedDB.

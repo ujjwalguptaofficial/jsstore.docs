@@ -1,8 +1,7 @@
 ---
 Title: "In"
 Keywords: "in, sql, query, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Description: "learn how to use in query in indexedb using jsstore"
 ---
 
 In allows you to specify multiple values in Where query. It is a shorthand for multiple or query.

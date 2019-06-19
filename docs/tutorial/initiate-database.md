@@ -1,6 +1,7 @@
 ---
 Title: "Initiate Database"
 Keywords: "initiate, database, table, column, indexeddb"
+Description: "how to initiate database in indexeddb using jsstore"
 ---
 
 For initiating database you need to perform two steps - 

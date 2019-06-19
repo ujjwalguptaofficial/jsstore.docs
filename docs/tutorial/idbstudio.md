@@ -1,8 +1,7 @@
 ---
 Title: "IDBStudio"
 Keywords: "idbstudio, debugger, tool, indexeddb, jsstore"
-Created Date: "1/11/2018"
-Last Updated : 
+Description: "An indexeddb app to observe your data, debug your query and much more."
 ---
 
 IDBStudio is a helper tool for jsstore development. It helps users to execute , debug and learn jsstore query.

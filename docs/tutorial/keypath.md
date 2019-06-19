@@ -1,8 +1,7 @@
 ---
 Title: "keyPath"
 Keywords: "keypath, column, indexing, indexeddb, jsstore"
-Created Date: "31/10/2018"
-Last Updated : 
+Description: "learn how to use keypath for querying faster in indexeddb"
 ---
 
 keyPath is a option in column. It is used to add multiple index, so that query execution can be made faster. It takes an array of type string.

@@ -1,8 +1,7 @@
 ---
 Title: "Operators"
 Keywords: "operators, >, <, indexeddb, jsstore"
-Created Date: "08/05/2018"
-Last Updated : "08/05/2018"
+Description: "list of operators available and their uses"
 ---
 
 JsStore supports following operators : -

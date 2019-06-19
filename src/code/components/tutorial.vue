@@ -11,7 +11,8 @@ import { links } from "../links";
   props: {
     innerHtml: String,
     pageTitle: String,
-    pageKeywords: String
+    pageKeywords: String,
+    pageDescription: String
   }
 })
 export default class Tutorial extends VueWithRoute {
@@ -20,6 +21,7 @@ export default class Tutorial extends VueWithRoute {
   pageTitle: string;
   version: number = 3;
   pageKeywords: string;
+  pageDescription: string;
 
   //property
   activeUrl = "";
@@ -99,6 +101,11 @@ export default class Tutorial extends VueWithRoute {
           hid: "keywords",
           name: "keywords",
           content: this.pageKeywords
+        },
+        {
+          hid: "description",
+          name: "description",
+          content: this.pageDescription
         }
       ]
     };

@@ -1,8 +1,7 @@
 ---
 Title: "Installation"
 Keywords: "installation, npm, cdn, indexeddb, jsstore"
-Created Date: "09/05/2018"
-Last Updated : "09/05/2018"
+Description: "jsstore installation guidelines"
 ---
 
 In order to set up jsstore - you need two files - 
