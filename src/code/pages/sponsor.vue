@@ -104,13 +104,17 @@ export default class Sponsor extends Vue{
 
     head() {
         return {
-        meta: [
-            {
-            hid: "keywords",
-            name: "keywords",
-            content: "sponsor, jsstore, sql, indexeddb, storage"
-            }
-        ]
+            meta: [
+                {
+                hid: "keywords",
+                name: "keywords",
+                content: "sponsor, jsstore, sql, indexeddb, storage"
+                }, {
+          hid: "description",
+          name: "description",
+          content: "Become a partner by sponsoring jsstore."
+        }
+            ]
         };
   }
 }

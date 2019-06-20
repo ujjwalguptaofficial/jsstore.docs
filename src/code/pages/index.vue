@@ -199,6 +199,11 @@ export default {
           hid: "keywords",
           name: "keywords",
           content: "jsstore, sql, indexeddb, storage, library"
+        },
+        {
+          hid: "description",
+          name: "description",
+          content: "JsStore is a client side javascript library for performing database operation inside indexeddb."
         }
       ]
     };
