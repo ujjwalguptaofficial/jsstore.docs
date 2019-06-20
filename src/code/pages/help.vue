@@ -5,7 +5,7 @@
         </p>
         <ul>
             <li>
-                <b>Not able to understand something or needs some clarification -</b> In this case please ask question at different forums like - stackoverflow.com, codeproject etc.
+                <b>Not able to understand something or needs some clarification -</b> In this case you can ask your question at [jsstore gitter](https://gitter.im/JsStore/Lobby) group or create question at different forums like - stackoverflow.com etc.
             </li>
             <li>
                 <b>You found some issue in jsstore -</b> Please raise an issue at official github page.
