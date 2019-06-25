@@ -4,7 +4,7 @@ Keywords: "database, connection, query, indexeddb, jsstore"
 Description: "How to create connection in jsstore"
 ---
 
-Connection in jsstore is object of class `Instance`.
+Connection in jsstore is object of class `Instance`. All apis are called using connection.
 
 ##### Syntax
 <br>
