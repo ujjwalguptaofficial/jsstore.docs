@@ -5,13 +5,15 @@ Description: "jsstore installation guidelines"
 ---
 
 In order to set up jsstore - you need two files - 
-* jsstore - It contains all apis code and need to be included directly in html file.
+
+* jsstore - It contains all api and your code interact with this.
+
 * jsstore.worker.js - It contains all logic and can be used as worker or without worker.
-If you want dont want to use as worker - you can just include in html page just like other scripts.
 
-JsStore can be installed by multiple ways -
 
-#### Cdn -
+JsStore can be installed from multiple sources -
+
+##### Cdn -
 
 *   **Latest** \- https://cdn.jsdelivr.net/npm/jsstore/dist
     e.g - 
@@ -22,15 +24,17 @@ JsStore can be installed by multiple ways -
     1. jsstore - https://cdn.jsdelivr.net/npm/jsstore@3.0.0/dist/jsstore.min.js
     2. jsstore.worker - https://cdn.jsdelivr.net/npm/jsstore@3.0.0/dist/jsstore.worker.min.js
 
-#### Npm -
+##### Npm -
 
 *   **Latest** \- npm install jsstore
 *   **Version** \- npm install jsstore@version  
     e.g - npm install jsstore@3.0.0
 
-#### Raw file -
+<br>
+##### Distribution file -
 
-You can get the raw file from [Github](https://github.com/ujjwalguptaofficial/JsStore).You will find the script in dist folder.
+You can get the distribution file from [jsstore release](https://github.com/ujjwalguptaofficial/JsStore/releases/latest).
+
 
 <p class="margin-top-40px center-align">
       <button class="btn info btnNext">Next</button>
