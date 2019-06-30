@@ -12,7 +12,7 @@
         src="/img/JsStore_145_64.png"
         alt="JsStore"
         :class="{'height-50px':$vuetify.breakpoint.smAndDown}"
-      >
+      />
     </a>
     <ul id="ulLink">
       <li>
@@ -39,7 +39,7 @@
             <path
               fill-rule="evenodd"
               d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"
-            ></path>
+            />
           </svg>
           Fork
         </a>
@@ -73,9 +73,9 @@ export default class Menu extends VueWithRoute {
 
   getVersion() {
     const currentUrl = (this.$route as any).path;
-    if (currentUrl.indexOf("v1") >= 0) {
+    if (currentUrl.indexOf("v1") >= 0 && currentUrl.indexOf("v2") < 0) {
       return 1;
-    } else if (currentUrl.indexOf("v2") >= 0) {
+    } else if (currentUrl.indexOf("v2") >= 0 && currentUrl.indexOf("v3") < 0) {
       return 2;
     }
     return 3;

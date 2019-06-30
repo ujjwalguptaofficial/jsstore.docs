@@ -62,4 +62,8 @@ function getDbSchema() {
 }
 ```
 
-That's all you need to do & everything should work as normal.
+Another step is to change api `createDb` to `initDb` because in v3 createDb has been changed to initDb.
+
+For more help, you can take a look at our [examples](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples) which has been updated as per latest version.
+
+That's all you need to do & everything should work as normal. If you have any problem ask in our gitter group.
