@@ -48,10 +48,10 @@ function getDbSchema() {
     name: 'Product',
     columns: {
         // Here "Id" is name of column 
-        Id:{ primaryKey: true, autoIncrement: true },
-        ItemName:  { notNull: true, dataType: "string" },
-        Price:  { notNull: true, dataType: "number" },
-        Quantity : { notNull: true, dataType: "number" }
+        id:{ primaryKey: true, autoIncrement: true },
+        itemName:  { notNull: true, dataType: "string" },
+        price:  { notNull: true, dataType: "number" },
+        quantity : { notNull: true, dataType: "number" }
     }
   };
   var db = {
@@ -61,7 +61,7 @@ function getDbSchema() {
   return db;
 }
 ```
-As written in the code, you can define constraints like autoincrement, datatype, default, notnull as you can do in SQL.
+As written in the code - you can define constraints like autoincrement, datatype, default, notnull similar to what you can do in SQL.
 
 Now we need to use the above database schema to create the database in indexeddb -
 
