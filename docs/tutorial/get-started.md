@@ -10,7 +10,7 @@ In this get started tutorial we will learn how to do crud operation in indexeddb
 
 JsStore can be installed using npm, cdn or scripts can be also download from jsstore github page. 
 
-IndexedDb query can be executed inside web worker & JsStore preserve this functionality. JsStore provides way to execute inside both web worker & without web worker. But it is recommended to use [web worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) because it runs scripts in background thread. So i am going to use web worker in this tutorial. 
+IndexedDb query can be executed inside web worker & JsStore preserve this functionality. JsStore provides way to execute query inside both web worker & without web worker. But it is highly recommended to use [web worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) because it runs scripts in background thread. So i am going to use web worker in this tutorial. 
 
 Let's download the script from github. Go to this link - <a href="https://github.com/ujjwalguptaofficial/JsStore/releases/latest" target="_blank">jsstore release</a> & download files jsstore.js & jsstore.worker.js. 
 
@@ -66,7 +66,9 @@ As written in the code - you can define constraints like autoincrement, datatype
 Now we need to use the above database schema to create the database in indexeddb -
 
 ```
+// executing jsstore inside a web worker
 var connection = new JsStore.Instance(new Worker('jsstore.worker.js'));
+
 async function initJsStore() {
       var schema = getDbSchema();
       const isDbCreated = await connection.initDb(database);
