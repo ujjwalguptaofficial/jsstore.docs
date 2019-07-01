@@ -10,7 +10,7 @@ In this get started tutorial we will learn how to do crud operation in indexeddb
 
 JsStore can be installed using npm, cdn or scripts can be also download from jsstore github page. 
 
-JsStore can be executed in a web worker as well as directly in the main window. But it is recommended to use [web worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) because it runs scripts in background thread. So i am going to use web worker in this tutorial. 
+IndexedDb query can be executed inside web worker & JsStore preserve this functionality. JsStore provides way to execute inside both web worker & without web worker. But it is recommended to use [web worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) because it runs scripts in background thread. So i am going to use web worker in this tutorial. 
 
 Let's download the script from github. Go to this link - <a href="https://github.com/ujjwalguptaofficial/JsStore/releases/latest" target="_blank">jsstore release</a> & download files jsstore.js & jsstore.worker.js. 
 
@@ -48,10 +48,10 @@ function getDbSchema() {
     name: 'Product',
     columns: {
         // Here "Id" is name of column 
-        Id:{ primaryKey: true, autoIncrement: true },
-        ItemName:  { notNull: true, dataType: "string" },
-        Price:  { notNull: true, dataType: "number" },
-        Quantity : { notNull: true, dataType: "number" }
+        id:{ primaryKey: true, autoIncrement: true },
+        itemName:  { notNull: true, dataType: "string" },
+        price:  { notNull: true, dataType: "number" },
+        quantity : { notNull: true, dataType: "number" }
     }
   };
   var db = {
@@ -61,7 +61,7 @@ function getDbSchema() {
   return db;
 }
 ```
-As written in the code, you can define constraints like autoincrement, datatype, default, notnull as you can do in SQL.
+As written in the code - you can define constraints like autoincrement, datatype, default, notnull similar to what you can do in SQL.
 
 Now we need to use the above database schema to create the database in indexeddb -
 
