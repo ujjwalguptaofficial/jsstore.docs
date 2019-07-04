@@ -72,25 +72,7 @@ connection.select({
 
 * where // to filter 
 
-<br><br>Some options like "order" works different in joins -
-
 * order // for ordering data - but unlike query without join, order here is little different. You need to provide query along with table name in the form of [tablename].[columnName] 
-
-e.g - 
-
-```
-select({
-    from: "Student",
-    join: {
-        with: "StudentDetail",
-        on: "Student.Name=StudentDetail.Name"
-    },
-    order: { by: 'Student.Order', type: 'asc' }
-})
-```
-<p class="margin-top-40px center-align">
-    <a class="btn info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=select(%7B%0A%20%20%20%20from%3A%20'Orders'%2C%0A%20%20%20%20join%3A%20%7B%0A%20%20%20%20%20%20%20%20with%3A%20'OrderDetails'%2C%0A%20%20%20%20%20%20%20%20on%3A%20'Orders.orderId%3DOrderDetails.orderId'%0A%20%20%20%20%7D%2C%0A%20%20%20%20order%3A%7B%0A%20%20%20%20%20%20%20%20by%3A'Orders.customerId'%0A%20%20%20%20%7D%0A%7D)">Example</a>
-</p>
 
 * groupBy // for grouping
 
