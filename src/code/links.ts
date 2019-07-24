@@ -173,6 +173,10 @@ export const links = [
         url: "keypath"
     },
     {
+        text: "Event",
+        url: "event"
+    },
+    {
         text: "SqlWeb",
         url: "sqlweb"
     },
