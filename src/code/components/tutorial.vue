@@ -144,7 +144,8 @@ export default class Tutorial extends VueWithRoute {
           "connection",
           "v2-to-v3",
           "data-type",
-          "initiate-database"
+          "initiate-database",
+          "event"
         ];
         break;
       case 2:
@@ -153,7 +154,8 @@ export default class Tutorial extends VueWithRoute {
           "export-json",
           "v2-to-v3",
           "data-type",
-          "initiate-database"
+          "initiate-database",
+          "event"
         ];
       case 3:
         linksToRemove = ["promise", "export-json", "v1-to-v2"];
