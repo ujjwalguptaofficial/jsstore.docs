@@ -14,7 +14,7 @@ JsStore provides - 'transaction' api for executing transaction. The apis which a
 * remove
 * insert
 
-
+<br>
 There are some extra api available inside the transaction to make the transaction more useful. These are -
 
 * start - start the transaction.
@@ -23,7 +23,7 @@ There are some extra api available inside the transaction to make the transactio
 * getResult - getResult is used to get the value setted by setResult.
 
 <br>
-Let's see a example - so consider a situation where a customer buy some products and customer is not into the db.
+Let's see a example - Consider a situation where a customer buy some products and customer is not into the db.
 
 So the steps will be - 
 
@@ -36,13 +36,11 @@ So the steps will be -
 ```
 var result = await connection.transaction({
     tables: ['customers', 'orders', 'products', 'orderDetails'], // list of tables which will be used in transaction
-    // the logic callback is not a closure i.e it wont have access to outer scope or global scope.
-    // basically function should be independent
-    logic: async function(data) {  // async is used to make code more clear
+    logic: async function(ctx) {  // async is used to make code more clear
         start(); // start the transaction
-        const insertedCustomers = await insert({
+        const insertedCustomers = await ctx.insert({
             into: 'customers',
-            values: [data.customer],
+            values: [ctx.data.customer],
             return: true
         });
 
@@ -55,7 +53,7 @@ var result = await connection.transaction({
             orderDate: new Date(),
         };
 
-        const insertedOrders = await insert({
+        const insertedOrders = await ctx.insert({
             into: 'orders',
             values: [order],
             return: true
@@ -65,12 +63,12 @@ var result = await connection.transaction({
 
         // insert orderDetail
 
-        const orderDetails = data.orderDetails.map((value) => {
+        const orderDetails = ctx.data.orderDetails.map((value) => {
             value.orderId = newOrder.orderId
             return value;
         });
 
-        const insertedOrderDetails = await insert({
+        const insertedOrderDetails = await ctx.insert({
             into: 'orderDetails',
             values: orderDetails,
         })
@@ -79,13 +77,13 @@ var result = await connection.transaction({
 
         setResult('totalPrice', 0); //initiating totalPrice
 
-        data.orderDetails.forEach((orderDetail, index) => {
+        ctx.data.orderDetails.forEach((orderDetail, index) => {
             const where = {
                 productId: orderDetail.productId
             };
 
             const updateProduct = async () => {
-                const productUpdated = await update({
+                const productUpdated = await ctx.update({
                     in: 'products',
                     where: where,
                     set: {
@@ -100,7 +98,7 @@ var result = await connection.transaction({
             };
             updateProduct();
  
-            const products = await select({
+            const products = await ctx.select({
                 from: 'products',
                 where: where
             })
