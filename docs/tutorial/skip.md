@@ -1,6 +1,6 @@
 ---
 Title: "Skip"
-Keywords: "skip, select, query, indexeddb, jsstore"
+Keywords: "skip, offset, select, query, indexeddb"
 Description: "skip records in select query"
 ---
 
