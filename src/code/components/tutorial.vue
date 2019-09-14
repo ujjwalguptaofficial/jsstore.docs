@@ -158,7 +158,7 @@ export default class Tutorial extends VueWithRoute {
           "event"
         ];
       case 3:
-        linksToRemove = ["promise", "export-json", "v1-to-v2"];
+        linksToRemove = ["promise", "export-json", "v1-to-v2","bulk-insert"];
         break;
     }
     return this.allLinks_.filter(
