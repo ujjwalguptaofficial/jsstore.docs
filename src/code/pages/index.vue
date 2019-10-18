@@ -166,7 +166,7 @@
       <div class="text-center margin-top-20px">
         Created with
         <i class="fas fa-heart" style="color:red;"></i> by
-        <a href="https://twitter.com/ujjwal_kr_gupta">Ujjwal Gupta</a>
+        <a href="https://ujjwalguptaofficial.github.io/">Ujjwal Gupta</a>
       </div>
     </v-flex>
   </v-layout>
