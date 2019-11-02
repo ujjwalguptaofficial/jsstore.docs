@@ -175,6 +175,9 @@ export const links = [
     {
         text: "Event",
         url: "event"
+    },{
+        text: "Optimization",
+        url: "optimization"
     },
     {
         text: "SqlWeb",
