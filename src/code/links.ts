@@ -169,6 +169,10 @@ export const links = [
         url: "transaction"
     },
     {
+        text: "multiEntry",
+        url: "multi-entry"
+    },
+    {
         text: "keyPath",
         url: "keypath"
     },

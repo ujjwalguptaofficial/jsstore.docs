@@ -1,6 +1,6 @@
 ---
 Title: "Insert"
-Keywords: "insert, api, query, indexeddb, jsstore"
+Keywords: "insert, api, upsert, indexeddb, jsstore"
 Description: "insert data in indexedb"
 ---
 

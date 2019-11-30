@@ -122,10 +122,12 @@ module.exports = {
   css: [{
     src: ('~/styles/app.styl'),
     lang: 'styl'
-  }, {
-    src: ('~/styles/common.css'),
-    lang: 'css'
-  }],
+  },
+   {
+    src: ('~/styles/common.scss'),
+    lang: 'scss'
+  }
+],
   build: {
     vendor: ['vuetify']
   },
