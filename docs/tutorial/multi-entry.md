@@ -23,28 +23,26 @@ var values = [
 ];
 ```
 
-now you want to fetch records whose tags is 'jsstore'. So select query will be - 
+now you want to fetch records whose tags is 'mongo'. So a simple select query will be - 
 
 ```
 const results = await connection.select({
     from: 'people',
     where: {
-        tags: 'jsstore'
+        tags: 'mongo'
     }
 });
 ```
 
-Here results will be always zero, because indexeddb does not know anything about jsstore since it has stored an array value.
+Here results will be always empty array, because indexeddb does not know anything about 'mongo' since it has stored an array value.
 
 In order to solve this problem - IndexedDb provides an option 'multi entry'.
 
 <div class="highlight">
-MultiEntry lets you search inside a column with array values. MultiEntry basically creates index for items in that column.
+MultiEntry lets you search inside a column with array values. MultiEntry basically creates index for items in array column.
 </div>
 
-<br>In this case - you will have to enable multiEntry option for column tags.
-
-So you will have to define or change your database schema & enable `multiEntry` for column tags .
+<br>In this case - you will have to enable `multiEntry` option for column "tags".
 
 Here is an example database schema -
 
@@ -69,4 +67,4 @@ var dataBase = {
 };
 ```
 
-**Note :-** `multiEntry` will only work for plain values i.e string, number but not for compound types like json data or array. Basically indexedDb provides one level indexing not multilevel.
+**Note :-** `multiEntry` will only work for plain values i.e string, number but not for compound types like json data or array. Because indexedDb provides one level indexing not multilevel.
