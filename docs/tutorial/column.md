@@ -40,7 +40,7 @@ For more info about data type, see this link - [DataType](/tutorial/data-type/)
 
 * default: any, // Provides a default value for a column when none is specified (optional)
 
-* multiEntry: boolean, // Provides support to search inside array values (optional)
+* <a href="/tutorial/multi-entry">multiEntry</a>: boolean, // Provides support to search inside array values (optional)
 
 * enableSearch: boolean - default value is true // Turn on/off search for this column (optional)
 
