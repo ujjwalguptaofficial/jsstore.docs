@@ -44,7 +44,5 @@ For more info about data type, see this link - [DataType](/tutorial/data-type/)
 
 * enableSearch: boolean - default value is true // Turn on/off search for this column (optional)
 
-* keyPath : string[] - allows you to use multiple indexing // optional 
-
-For more info about keypath see this link - [KeyPath](/tutorial/keypath/)
+* <a href="/tutorial/keypath/">keyPath</a> : string[] - allows you to use multiple indexing // optional 
 
