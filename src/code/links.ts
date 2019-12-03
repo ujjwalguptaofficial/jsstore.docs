@@ -121,6 +121,10 @@ export const links = [
         url: "join"
     },
     {
+        text: "Union",
+        url: "union"
+    },
+    {
         text: "Clear",
         url: "clear"
     },
@@ -179,7 +183,7 @@ export const links = [
     {
         text: "Event",
         url: "event"
-    },{
+    }, {
         text: "Optimization",
         url: "optimization"
     },
