@@ -68,6 +68,7 @@
     #ulFeatureList li {
         height: 120px;
     }
+
     #divLinkGroup a:last-child {
         margin-left: 0px;
     }
@@ -79,9 +80,11 @@
     #divLogoContainer div .logo-tagline {
         display: inline-block;
     }
+
     #ulFeatureList li {
         height: 100px;
     }
+
     #divLinkGroup a:last-child {
         margin-left: 20px;
     }
@@ -100,5 +103,27 @@
 @media only screen and (min-width:993px) {
     #ulFeatureList li {
         height: 80px;
+    }
+}
+
+.used-by {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.company-using {
+    vertical-align: middle;
+    text-align: center;
+
+    .ringcentral {
+        width: 100px;
+    }
+
+    .postybirb {
+        width: 50px;
+        margin-bottom: -13px;
+        margin-left: 10px;
     }
 }
