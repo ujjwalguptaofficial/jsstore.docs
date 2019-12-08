@@ -101,3 +101,25 @@ pre code {
     height: 50px;
     text-align: center;
 }
+
+.ad-container {
+    width: 100%;
+    padding: 8px;
+    display: inline-block;
+    border: 1px solid;
+
+    div {
+        color: black;
+    }
+
+    img,
+    .ad-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.ad-container-text {
+    font-size: 50px;
+    text-align: center;
+}

@@ -29,6 +29,13 @@ export default class Tutorial extends VueWithRoute {
   searchValue = "";
   searchResult = "";
 
+  jsstoreText = [
+    "Component based framework for nodejs",
+    "Features like dependency injection, es6 & typescript approach",
+    "Easy to learn, faster to implement"
+  ];
+
+  adIndex = -1;
   get docToEdit() {
     const url = this.allLinks_[this.getCurrentUrlIndex()];
     if (url) {
@@ -58,6 +65,7 @@ export default class Tutorial extends VueWithRoute {
   }
 
   mounted() {
+    this.showAds();
     this.setVersion();
     var currentUrl: string = (this.$route as any).path;
     const activeUrl = this.links.find(
@@ -158,7 +166,7 @@ export default class Tutorial extends VueWithRoute {
           "event"
         ];
       case 3:
-        linksToRemove = ["promise", "export-json", "v1-to-v2","bulk-insert"];
+        linksToRemove = ["promise", "export-json", "v1-to-v2", "bulk-insert"];
         break;
     }
     return this.allLinks_.filter(
@@ -204,8 +212,18 @@ export default class Tutorial extends VueWithRoute {
       }
     }
   }
+  showAds() {
+    let newIndex = ++this.adIndex;
+    if (newIndex >= this.jsstoreText.length) {
+      newIndex = this.adIndex = 0;
+    }
+    this.adIndex = newIndex;
+    setTimeout(() => {
+      this.showAds();
+    }, 2000);
+  }
 }
 </script>
-<style>
-@import url("~/styles/tutorial.css");
+<style lang="scss">
+@import "~/styles/tutorial.scss";
 </style>

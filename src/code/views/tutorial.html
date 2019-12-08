@@ -20,7 +20,7 @@
     <v-flex id="divTutorialContent" xs12 md8 xl8 :class="{'padding-left-15px': $vuetify.breakpoint.mdAndUp}">
         <div v-html="tutorialHtml" class="margin-top-20px"></div>
     </v-flex>
-    <v-flex md2 class="margin-top-50px">
+    <v-flex md2 class="margin-top-20px">
         <v-btn href="/sponsor" color="success right-side-button">
             Sponsor Us &
             <br>get your logo here
@@ -31,6 +31,11 @@
             Be a backer &
             <br>get your logo on our page
         </v-btn>
+        <a target="_blank" class="ad-container" href="http://fortjs.info/">
+            <div class="ad-container-text">FortJs</div>
+            <img class="ad-image" src="http://fortjs.info/img/fort_js_logo_200_137.png" />
+            <div>{{jsstoreText[adIndex]}}</div>
+        </a>
 
         <v-btn class="margin-bottom-70px" v-if="docToEdit!=null" alt="edit this doc" target="_blank"
             href="https://gitter.im/JsStore/Lobby" color="primary" fixed bottom right fab>
