@@ -220,7 +220,7 @@ export default class Tutorial extends VueWithRoute {
     this.adIndex = newIndex;
     setTimeout(() => {
       this.showAds();
-    }, 2000);
+    }, 5000);
   }
 }
 </script>
