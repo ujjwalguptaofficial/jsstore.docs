@@ -64,20 +64,53 @@
             </svg>
           </a>
           <a target="_blank" href="http://www.postybirb.com/">
-             <img class="postybirb" src="/img/postybirb.png" alt="JsStore logo" />
+            <img class="postybirb" src="/img/postybirb.png" alt="JsStore logo" />
           </a>
         </p>
       </div>
       <div class="center-align margin-top-20px">
-        Introducing
-        <a
-          target="_blank"
-          href="https://github.com/ujjwalguptaofficial/idbstudio"
-        >IDBStudio</a>
-        - A management tool for jsstore. It helps you to observe your data, debug
-        query and much more.
+        <h2>Supported with all frameworks</h2>
+        <div class="frameworks">
+          <a
+            class="vue"
+            target="_blank"
+            href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/vue"
+          >
+            <img src="/img/vue-logo.png" />
+          </a>
+          <a
+            class="vue"
+            target="_blank"
+            href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/react"
+          >
+            <img src="/img/React.js_logo-512.png" />
+          </a>
+          <a
+            class="vue"
+            target="_blank"
+            href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/svelte"
+          >
+            <img src="/img/svelte.png" />
+          </a>
+          <a
+            class="vue"
+            target="_blank"
+            href="https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/angular"
+          >
+            <img src="/img/angular.png" />
+          </a>
+          <a
+            class="vue"
+            target="_blank"
+            href="https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/electron"
+          >
+            <img src="/img/electronjs.png" />
+          </a>
+        </div>
       </div>
-      <div class="text-center">
+
+      <div class="divOpenSource top-border">
+        <h3 class="text-center">A Big thanks to these open source tools</h3>
         <a target="_blank" title="github" href="https://github.com/ujjwalguptaofficial/JsStore">
           <img class="responsive-img" src="/img/github.svg" alt="github logo" />
         </a>
@@ -149,7 +182,7 @@
           />
         </a>
       </div>
-      <div class="margin-top-50px top-border">
+      <div class="margin-top-20px top-border">
         <h4></h4>
         <ul id="ulFeatureList">
           <li>
