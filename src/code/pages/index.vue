@@ -95,7 +95,7 @@
           <a
             class="vue"
             target="_blank"
-            href="https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/angular"
+            href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/angular"
           >
             <img src="/img/angular.png" />
           </a>
