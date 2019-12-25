@@ -17,11 +17,9 @@
     <ul id="ulLink">
       <li>
         <a title="star jsstore" href="https://github.com/ujjwalguptaofficial/JsStore">
-          <i
-            class="material-icons"
-            style="display: inline-block;vertical-align: top;font-size: 18px;"
-          >star</i>
+          <i class="fab fa-github"></i>
           Star
+          <span class="star-count" v-if="starCount">{{starCount}}</span>
         </a>
       </li>
       <li class="seperator" style="color:white;">|</li>
@@ -55,12 +53,20 @@
 <script lang="ts">
 import { Component } from "nuxt-property-decorator";
 import { vueEvent, VueWithRoute } from "../common_var";
+
 @Component
 export default class Menu extends VueWithRoute {
   activeVersion = 3;
+  starCount = null;
 
-  mounted() {
+  async mounted() {
     this.activeVersion = this.getVersion();
+    try {
+      const response = await fetch(
+        "//api.github.com/repos/ujjwalguptaofficial/jsstore"
+      );
+      this.starCount = (await response.json()).stargazers_count;
+    } catch (ex) {}
   }
 
   onMenuBtnClick() {
@@ -87,11 +93,41 @@ export default class Menu extends VueWithRoute {
   -webkit-appearance: menulist;
   background-color: white;
   margin-top: -3px;
-  margin-left: 10px;
+  margin-left: 5px;
   padding: 3px;
 }
 .height-50px {
   height: 50px;
+}
+.star-count {
+  padding: 5px;
+  color: black;
+  background: white;
+  margin-left: 6px;
+  position: relative;
+  border-radius: 4px;
+}
+.star-count:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  top: 50%;
+  border-right-color: #fafafa;
+  left: -5px;
+  margin-top: -6px;
+  border-width: 6px 6px 6px 0;
+  /* content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  right: 100%;
+  top: 0;
+  border: 20px solid transparent;
+  border-right: 20px solid red; */
 }
 </style>
 
