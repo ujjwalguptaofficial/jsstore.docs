@@ -102,7 +102,7 @@
           <a
             class="vue"
             target="_blank"
-            href="https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/electron"
+            href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/electron"
           >
             <img src="/img/electronjs.png" />
           </a>
