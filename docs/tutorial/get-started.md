@@ -4,7 +4,7 @@ Keywords: "jsstore, get started, introduction, indexeddb, tutorial"
 Description: "learn how to use indexeddb with jsstore"
 ---
 
-In this get started tutorial we will learn how to do crud operation in indexeddb using jsstore. You can download the example of this tutorial from - [Crud implementation](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/Simple%20Example)
+In this get started tutorial we will learn how to do crud operation in indexeddb using jsstore. You can download the example of this tutorial from - [Crud implementation](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/simple_example)
 
 #### Installation
 
@@ -67,7 +67,7 @@ Now we need to use the above database schema to create the database in indexeddb
 
 ```
 // executing jsstore inside a web worker
-var connection = new JsStore.Instance(new Worker('jsstore.worker.js'));
+var connection = new JsStore.Connection(new Worker('jsstore.worker.js'));
 
 async function initJsStore() {
       var database = getDbSchema();
@@ -85,7 +85,7 @@ async function initJsStore() {
 
 In the above code -
 
-* Line 1 - Storing the JsStore connection instance in a variable 'connection'.
+* Line 1 - Storing the JsStore connection in a variable 'connection'.
 * Line 2 - Declared a function initJsStore which will create the database using provided schema in IndexedDB. 
 
 <br>
@@ -175,13 +175,15 @@ We hope you have understood this article. Now lets make something awesome.
 
 #### * Check it out some tutorial & examples for more understanding -
 
-* [Crud implementation](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/Simple%20Example)
-* [Using jsstore in typescript](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/TypeScript%20Example)
+* [Vue integration](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/vue)
+* [React integration](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/react)
+* [Angular integration](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/angular)
+* [Svelte integration](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/svelte)
+* [ElectronJs integration](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/electron)
+* [JsStore without web worker](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/without_web_worker)
 * [Building an indexeddb app with webpack](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/webpack)
-* [Using react and webpack to store data in indexeddb](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/react)
-* [Using jsstore in angular](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/angular)
-* [Storing data in an electron app using JsStore](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/electron)
-* [JsStore without web worker](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/without%20web%20worker)
+* [Crud implementation](https://github.com/ujjwalguptaofficial/jsstore-examples)
+* [Using jsstore in typescript](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/typescript)
 
 
 <style>
