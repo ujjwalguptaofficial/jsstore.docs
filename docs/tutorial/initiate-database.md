@@ -15,7 +15,7 @@ For initiating database you need to perform two steps -
 
 ```
 // initiate jsstore connection
-var connection = new JsStore.Instance();
+var connection = new JsStore.Connection();
 
 // step1 - create database schema
 var tblProduct = {

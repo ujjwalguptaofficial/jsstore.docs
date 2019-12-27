@@ -4,21 +4,21 @@ Keywords: "database, connection, query, indexeddb, jsstore"
 Description: "How to create connection in jsstore"
 ---
 
-Connection in jsstore is object of class `Instance`. All apis are called using connection.
+Connection in jsstore is instance of class `Connection`. All apis are called using connection.
 
 ##### Syntax
 <br>
 ### With Web Worker
 
 ```
-var connection = new JsStore.Instance(new Worker('jsstore worker path'));
+var connection = new JsStore.Connection(new Worker('jsstore worker path'));
 
 ```
 
 ### Without web worker
 
 ```
-var connection = new JsStore.Instance();
+var connection = new JsStore.Connection();
 
 ```
 <div class="margin-top-30px top-border margin-bottom-20px"></div>
@@ -46,12 +46,12 @@ const getWorkerPath = () => {
 };
 
 const workerPath = getWorkerPath();
-export const connection = new JsStore.Instance(new Worker(workerPath));
+export const connection = new JsStore.Connection(new Worker(workerPath));
 ```
 
 5. Step 4 creates a connection and export the connection variable. You can import this connection variable to anywhere in your code.
 
-<br>If you are finding difficult to understand, please take a look at [examples](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples) or our [medium page](https://medium.com/jsstore) 
+<br>If you are finding difficult to understand, please take a look at [examples](https://github.com/ujjwalguptaofficial/jsstore-examples) or our [medium page](https://medium.com/jsstore) 
 
 <br>
 **Important points :-**  
