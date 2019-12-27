@@ -17,17 +17,13 @@ Select Distinct * From Table_Name;
 #### JsStore
 
 ```
-connection.select({
+const results = await connection.select({
     from: "Table_Name",
-    distinct: true,
-    // it is optional value which takes boolean value- true or false.
-}).then(function(results) {
-    //results will be array of objects.
-    console.log(results);
-}).catch(function(error) {
-    alert(error.value);
+    distinct: true, // optional boolean value - default false
+})
 
-});
+ //results will be array of objects.
+console.log(results);
 ```
 
 <p class="margin-top-40px center-align">

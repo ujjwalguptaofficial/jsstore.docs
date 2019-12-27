@@ -17,7 +17,7 @@ Column_Name Between value1 and value2
 #### JsStore
 
 ```
-connection.select({
+const results = await connection.select({
     from: "Table_Name",
     where: {
         Column_Name: {
@@ -27,12 +27,10 @@ connection.select({
             }
         },
     }
-}).then(function(results) {
-    //results will be array of objects.
-    console.log(results);
-}).catch(function(error) {
-     console.log(error);
 });
+
+//results will be array of objects.
+console.log(results);
 ```
 
 <p class="margin-top-40px center-align">
