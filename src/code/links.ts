@@ -125,6 +125,10 @@ export const links = [
         url: "union"
     },
     {
+        text: "Case",
+        url: "case"
+    },
+    {
         text: "Clear",
         url: "clear"
     },
