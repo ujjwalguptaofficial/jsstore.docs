@@ -19,18 +19,15 @@ and
 #### JsStore
 
 ```
-connection.count({
+const results = await connection.count({
     from: "Table_Name",
     where: {
         Column1: some_value,
         Column2: some_another_value
     }
-}).then(function(results) {
-    //results will be array of objects.
-    console.log(results);
-}).catch(function(error) {
-    console.log(error);
 });
+// results will be a number
+console.log(results);
 ```
 
 <p class="margin-top-40px center-align">
