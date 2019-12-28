@@ -31,8 +31,8 @@ export default class Tutorial extends VueWithRoute {
 
   jsstoreText = [
     "Component based framework for nodejs",
-    "Features like dependency injection, es6 & typescript approach",
-    "Easy to learn, faster to implement"
+    // "Features like dependency injection, es6 & typescript approach",
+    // "Easy to learn, faster to implement"
   ];
 
   adIndex = -1;
@@ -222,9 +222,9 @@ export default class Tutorial extends VueWithRoute {
       newIndex = this.adIndex = 0;
     }
     this.adIndex = newIndex;
-    setTimeout(() => {
-      this.showAds();
-    }, 5000);
+    // setTimeout(() => {
+    //   this.showAds();
+    // }, 5000);
   }
 }
 </script>
