@@ -22,8 +22,8 @@ const results = await connection.select({
     where: {
         Column_Name: {
             '-': {
-                Low: value1
-                High: value2
+                low: low-value,
+                high: high-value
             }
         },
     }
