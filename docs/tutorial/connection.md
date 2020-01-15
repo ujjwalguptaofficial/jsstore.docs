@@ -15,12 +15,17 @@ var connection = new JsStore.Connection(new Worker('jsstore worker path'));
 
 ```
 
+**example** - <a target="_blank" href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/without_web_worker">https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/without_web_worker</a>
+
 ### Without web worker
 
 ```
 var connection = new JsStore.Connection();
 
 ```
+
+**example** - <a target="_blank" href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/simple_example">https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/simple_example</a>
+
 <div class="margin-top-30px top-border margin-bottom-20px"></div>
 <br>
 ## How to create connection in webpack
@@ -36,12 +41,17 @@ var connection = new JsStore.Connection();
 
 ```
 const getWorkerPath = () => {
+
     // return dev build when env is development
     if (process.env.NODE_ENV === 'development') {
+        
         return require("file-loader?name=scripts/[name].[hash].js!jsstore/dist/jsstore.worker.js");
+
     }
     else { // return prod build when env is production
+        
         return require("file-loader?name=scripts/[name].[hash].js!jsstore/dist/jsstore.worker.min.js");
+        
     }
 };
 
@@ -51,7 +61,9 @@ export const connection = new JsStore.Connection(new Worker(workerPath));
 
 5. Step 4 creates a connection and export the connection variable. You can import this connection variable to anywhere in your code.
 
-<br>If you are finding difficult to understand, please take a look at [examples](https://github.com/ujjwalguptaofficial/jsstore-examples) or our [medium page](https://medium.com/jsstore) 
+<br>In the above code we are using **file-loader** to load jsstore worker file but you are free to use your own technique to load jsstore worker. The simplest approach is download jsstore.worker.js and then specify its path.  
+
+If you are finding difficult to understand, please take a look at [examples](https://github.com/ujjwalguptaofficial/jsstore-examples) or our [medium page](https://medium.com/jsstore) 
 
 <br>
 **Important points :-**  
