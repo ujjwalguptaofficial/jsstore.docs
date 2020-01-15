@@ -137,7 +137,7 @@ export const links = [
         url: "drop-db"
     },
     {
-        text: "Change Table Design",
+        text: "Change Table Schema",
         url: "change-table-design"
     },
     {
