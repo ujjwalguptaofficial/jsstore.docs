@@ -10,7 +10,7 @@ JsStore provides following data type -
 
 * Number - 'number'
 
-* Date Time - 'date_time'
+* DateTime - 'date_time' . The value should be date object i.e `value = new Date()`
 
 * Object - 'object'  
 
