@@ -13,20 +13,12 @@ Change the version in your table schema
 ```
 var table1 = {
     name: "table_name",
-    columns: [{
-            name: "column1",
-            dataType: 'datatype'
-            primaryKey: true
-        },
-        {
-            name: "column2",
-            dataType: 'datatype'
-        },
-        ..... {
-            name: "columnN",
-            dataType: 'datatype'
-        }
-    ],
+     columns: {
+        column1: { dataType: 'datatype', primaryKey: true },
+        column2 : { dataType: 'datatype'},
+        ..... ,
+        columnN: { dataType: 'datatype' }
+    },
     version: 2 //Default version is 1.
 }
 ```

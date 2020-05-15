@@ -37,6 +37,10 @@ if (noOfRowsInserted > 0) {
 
 <br>**Note :-** You can also insert data for a column, which you have not defined in db schema. JsStore preserves the NoSql functionality of IndexedDb.
 
+<p class="margin-top-40px center-align">
+    <a class="btn info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=insert(%7B%0A%20%20%20%20into%3A%20%22Customers%22%2C%0A%20%20%20%20values%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20customerName%3A%20'ujjwal%20gupta'%2C%0A%20%20%20%20%20%20%20%20contactName%3A%20'ujjwal'%2C%0A%20%20%20%20%20%20%20%20address%3A%20'bhubaneswar%20odisha'%2C%0A%20%20%20%20%20%20%20%20city%3A%20'bhubaneswar'%2C%0A%20%20%20%20%20%20%20%20postalCode%3A%20'12345'%2C%0A%20%20%20%20%20%20%20%20country%3A%20'India'%0A%20%20%20%20%7D%5D%0A%7D)%3B%0A">Example</a>
+</p>
+
 #### Upsert
 
 Upsert is used to replace the existing data otherwise insert as new record if does not exist. `upsert` is an option in jsstore insert query which is by default false.
@@ -59,6 +63,7 @@ var newData = {
     name:"some other name",
     address:"some other address"
 }
+
 var noOfRowsInserted = await connection.insert({
     into: "Customers",
     upsert:true,
@@ -88,5 +93,4 @@ Points to note :-
 
 <p class="margin-top-40px center-align">
     <a class="btn info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=insert(%7B%0A%20%20%20%20into%3A%20%22Customers%22%2C%0A%20%20%20%20values%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20customerName%3A%20'ujjwal%20gupta'%2C%0A%20%20%20%20%20%20%20%20contactName%3A%20'ujjwal'%2C%0A%20%20%20%20%20%20%20%20address%3A%20'bhubaneswar%20odisha'%2C%0A%20%20%20%20%20%20%20%20city%3A%20'bhubaneswar'%2C%0A%20%20%20%20%20%20%20%20postalCode%3A%20'12345'%2C%0A%20%20%20%20%20%20%20%20country%3A%20'India'%0A%20%20%20%20%7D%5D%0A%7D)%3B%0A">Example</a>
-    <button class="btn info btnNext">Next</button>
 </p>
