@@ -45,6 +45,9 @@
       <div>
         <p class="used-by">Used By</p>
         <p class="company-using">
+          <a target="_blank" href="https://flixlovers.com/">
+            <img class="flixlovers" src="/FLIXLOVERS_502_74.png" alt="flixlovers logo" />
+          </a>
           <a target="_blank" href="https://www.ringcentral.com/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -272,3 +275,9 @@ export default {
 </script>
 
 
+<style lang="scss" scoped>
+.flixlovers{
+  width: 150px;
+  margin-right: 10px;
+}
+</style>
