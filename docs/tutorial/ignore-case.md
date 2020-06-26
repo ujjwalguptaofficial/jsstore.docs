@@ -1,8 +1,13 @@
 ---
-Title: "Ignore Case"
+Title: "Ignore Case - (deprecated)"
 Keywords: "case sensitive, ignore case, query, indexeddb, jsstore"
 Description: "select data from indexeddb with case insensitivity"
 ---
+
+<div class="highlight">
+Ignore case is removed from v - 3.10.0. It is recommended to use regex instead.
+</div>
+<br>
 
 JavasScript is case sensitive, so is the IndexedDB. You can use option - 'IgnoreCase' to filter records with case insensitive.
 

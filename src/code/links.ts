@@ -49,7 +49,7 @@ export const links = [
         url: "where"
     },
     {
-        text: "Ignore Case",
+        text: "Ignore Case (Deprecated)",
         url: "ignore-case"
     },
     {
