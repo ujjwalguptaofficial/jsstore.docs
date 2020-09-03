@@ -20,6 +20,16 @@ const host =
   "localhost"
 module.exports = {
   srcDir: 'code/',
+  render: {
+    static: {
+      setHeaders(res) {
+        res.setHeader('X-Frame-Options', 'ALLOWALL')
+        res.setHeader('Access-Control-Allow-Origin', '*')
+        res.setHeader('Access-Control-Allow-Methods', 'GET')
+        res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+      }
+    }
+  },
   env: {
     baseUrl: process.env.BASE_URL ||
       `http://${host}:${port}`
@@ -66,10 +76,16 @@ module.exports = {
     }, {
       property: "og:description",
       content: "JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy with its SQL like apis."
-    }, {
+    }, 
+    {
       property: "og:image",
       content: "/img/JsStore_1200_630.png"
-    }, {
+    }, 
+    {
+      property: "og:image",
+      content: "/img/jsStore_500_500.png"
+    },
+    {
       name: "twitter:creator",
       content: "@ujjwal_kr_gupta"
     }, {
