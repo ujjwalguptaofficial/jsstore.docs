@@ -187,7 +187,16 @@ export const links = [
     {
         text: "Event",
         url: "event"
-    }, {
+    },
+    {
+        text: "Middleware",
+        url: "middleware"
+    },
+    {
+        text: "Plugin",
+        url: "plugin"
+    },
+    {
         text: "Optimization",
         url: "optimization"
     },
