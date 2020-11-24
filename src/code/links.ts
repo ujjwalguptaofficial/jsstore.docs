@@ -125,8 +125,12 @@ export const links = [
         url: "union"
     },
     {
-        text: "Case (beta)",
+        text: "Case",
         url: "case"
+    },
+    {
+        text: "Flatten",
+        url: "flatten"
     },
     {
         text: "Clear",
