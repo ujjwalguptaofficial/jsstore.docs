@@ -15,7 +15,8 @@ var connection = new JsStore.Connection(new Worker('jsstore worker path'));
 
 ```
 
-**example** - <a target="_blank" href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/without_web_worker">https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/without_web_worker</a>
+**example** - <a target="_blank" href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/simple_example">https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/simple_example</a>
+
 
 ### Without web worker
 
@@ -24,7 +25,7 @@ var connection = new JsStore.Connection();
 
 ```
 
-**example** - <a target="_blank" href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/simple_example">https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/simple_example</a>
+**example** - <a target="_blank" href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/without_web_worker">https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/without\_web_worker</a>
 
 <div class="margin-top-30px top-border margin-bottom-20px"></div>
 <br>
