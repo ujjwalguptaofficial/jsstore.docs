@@ -42,7 +42,7 @@
           <i class="margin-left-10px fab fa-gitter"></i>
         </v-btn>
       </div>
-      <div>
+      <!-- <div>
         <p class="used-by">Used By</p>
         <p class="company-using">
           <a target="_blank" href="https://flixlovers.com/">
@@ -70,7 +70,7 @@
             <img class="postybirb" src="/img/postybirb.png" alt="JsStore logo" />
           </a>
         </p>
-      </div>
+      </div> -->
       <div class="center-align margin-top-20px">
         <h2>Supported with all frameworks</h2>
         <div class="frameworks">
