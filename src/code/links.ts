@@ -125,6 +125,10 @@ export const links = [
         url: "union"
     },
     {
+        text: "Intersect",
+        url: "intersect"
+    },
+    {
         text: "Case",
         url: "case"
     },
@@ -175,6 +179,10 @@ export const links = [
     {
         text: "V2 To V3",
         url: "v2-to-v3"
+    },
+    {
+        text: "Import scripts",
+        url: "import-scripts"
     },
     {
         text: "Transaction",
