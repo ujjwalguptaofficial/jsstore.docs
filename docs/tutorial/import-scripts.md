@@ -11,6 +11,8 @@ importScripts can be used to add scripts inside jsstore web worker. It internall
 await connection.importScripts("file1.js","file2.js");
 ```
 
+importScripts is useful for executing transaction.
+
 <p class="margin-top-40px center-align">
     <button class="btn info btnNext">Next</button>
 </p>

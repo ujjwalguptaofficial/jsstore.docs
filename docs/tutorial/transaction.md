@@ -163,8 +163,11 @@ async function buyProducts(ctx) {
 },
 
 ```
+<div class="margin-top-30px top-border margin-bottom-20px"></div>
+## Accessibilty
+<br>
 
-## If using web worker
+### If using web worker
 
 ```
 // import scripts first, so that transaction methods becomes available
@@ -172,13 +175,13 @@ async function buyProducts(ctx) {
 await connection.importScripts("./transaction.js");
 ```
 
-## Without web worker
+### Without web worker
 
 ```
 window.buyProducts = buyProducts;
 ```
-
-
+<div class="margin-top-30px top-border margin-bottom-20px"></div>
+Now method is accessible and can be executed, let's call the transaction api -
 
 ```
 var result = await connection.transaction({
@@ -204,7 +207,7 @@ var result = await connection.transaction({
 });
 const totalPrice = result.totalPrice;
 ```
-
+<div class="margin-top-30px top-border margin-bottom-20px"></div>
 Few important things to make sure you are using transaction in right way - 
 
 * Transaction should be light weight. Dont write too many or heavy logics inside it. The reason is  - the indexeddb transaction is asyc and automatically commited and so jsstore.
