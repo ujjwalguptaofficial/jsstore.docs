@@ -26,7 +26,6 @@ var columns = {
 A column has following properties -
 
 * primaryKey: boolean, // declare this column as primary key (optional)
-    // We strongly recommend to create the primary keys (optional)
 
 * notNull: boolean, // ensure this column value should not be null (optional)
 
