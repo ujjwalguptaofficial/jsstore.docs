@@ -11,7 +11,7 @@ Plugin can be used to write common set of generic codes which can be provided to
 ## How to create a plugin
 
 ```
-export const AwesomePlugin{
+export const AwesomePlugin = {
 
     // setup is called by jsstore, so all initialization should happen here
     setup: function(connection, params){
