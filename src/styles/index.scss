@@ -87,6 +87,10 @@ ul {
     @extend .list;
     list-style-type: disc;
 }
+ol {
+    @extend .list;
+    list-style-type: decimal;
+}
 
 .top-border {
     border-top: 2px solid #e9ecef;

@@ -65,20 +65,47 @@ module.exports = [
             text: "Join",
             url: "join"
         },
-
+        {
+            text: "Flatten",
+            url: "flatten"
+        },
         ]
     },
     {
         text: "Where",
-        url: "where"
-    },
-    {
-        text: "Ignore Case (Deprecated)",
-        url: "ignore-case"
-    },
-    {
-        text: "Or",
-        url: "or"
+        url: "where",
+        children: [
+            {
+                text: "Like",
+                url: "like"
+            },
+            {
+                text: "In",
+                url: "in"
+            },
+            {
+                text: "Regex",
+                url: "regex"
+            },
+            {
+                text: "Or",
+                url: "or"
+            },
+
+
+            {
+                text: "Operators",
+                url: "operators"
+            },
+            {
+                text: "Between",
+                url: "between"
+            },
+            {
+                text: "Ignore Case (Deprecated)",
+                url: "ignore-case"
+            },
+        ]
     },
 
     {
@@ -97,26 +124,7 @@ module.exports = [
         text: "Count",
         url: "count"
     },
-    {
-        text: "Regex",
-        url: "regex"
-    },
-    {
-        text: "Like",
-        url: "like"
-    },
-    {
-        text: "In",
-        url: "in"
-    },
-    {
-        text: "Operators",
-        url: "operators"
-    },
-    {
-        text: "Between",
-        url: "between"
-    },
+
     {
         text: "Union",
         url: "union"
@@ -124,10 +132,6 @@ module.exports = [
     {
         text: "Intersect",
         url: "intersect"
-    },
-    {
-        text: "Flatten",
-        url: "flatten"
     },
     {
         text: "Clear",
@@ -140,10 +144,6 @@ module.exports = [
     {
         text: "Change Table Schema",
         url: "change-table-design"
-    },
-    {
-        text: "Export Json",
-        url: "export-json"
     },
     {
         text: "Helpers",
