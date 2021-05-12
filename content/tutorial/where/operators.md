@@ -10,7 +10,7 @@ JsStore supports following operators : -
 *   **" &lt; " :** Finds value less than supplied value.
 *   **" &gt;= " :** Finds value greater than or equal to supplied value.
 *   **" &lt;= " :** Finds value less than or equal to supplied value.
-*   **" \- " :** Finds value between two supplied value. Read <a href="/tutorial/between">between doc</a> for more info.
+*   **" \- " :** Finds value between two supplied value. Read <a href="/tutorial/where/between">between doc</a> for more info.
 *   **" != " :** Finds value not equal to supplied value. 
 
 #### Sql

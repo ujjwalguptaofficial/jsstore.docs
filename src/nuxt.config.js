@@ -21,6 +21,7 @@ const host =
     "localhost";
 // return;
 module.exports = {
+    target: 'static',
     srcDir: path.join(__dirname),
     dir: {
         static: path.join(__dirname, '../static'),
