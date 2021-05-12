@@ -30,7 +30,7 @@ You can use other operators symbol similar to '=' used above - '>', '>=, '<' ,'<
 * If you want to return stored value instead of custom value - provide null value in `then` - `{ then:null }` 
 * This is not used to filter values but to change value. To filter value `where` is used.
 
-<div class="margin-top-30px top-border margin-bottom-20px"></div>
+<div class="mt-20px top-border mb-20px"></div>
 #### Order
 <br>
 case can be also used in order query to change the ordering of result.
@@ -55,7 +55,7 @@ const results = await connection.select({
 ```
 
 **Note :-** Use same data type as column in `then` value otherwise you might get some error. In the above example - i have provided string value "a", as country data type is string.
-<p class="margin-top-40px text-center">
+<p class="text-center">
     <a class="btn info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=select(%7B%0A%20%20%20%20from%3A%20'Customers'%2C%0A%20%20%20%20limit%3A%2010%2C%0A%20%20%20%20order%3A%20%7B%0A%20%20%20%20%20%20%20%20by%3A%20'country'%2C%0A%20%20%20%20%20%20%20%20case%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20'%3D'%3A%20'Austria'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20then%3A%20%22a%22%0A%20%20%20%20%20%20%20%20%7D%2C%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20then%3A%20null%0A%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%7D%0A%7D)">Example</a>
 </p>
 

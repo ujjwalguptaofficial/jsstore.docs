@@ -12,7 +12,3 @@ await connection.importScripts("file1.js","file2.js");
 ```
 
 importScripts is useful for executing transaction.
-
-<p class="margin-top-40px text-center">
-    <button class="btn info btnNext">Next</button>
-</p>

@@ -6,8 +6,6 @@ Description: "learn how to use release the connection"
 
 Terminate close the connection and releases everything.
 
-#### JsStore
-
 ```
 await connection.terminate();
 console.log("connection terminated");

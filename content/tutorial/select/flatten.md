@@ -46,6 +46,4 @@ select({
 
 flatten is useful when you are doing join. Check this issue - [https://github.com/ujjwalguptaofficial/JsStore/issues/188](https://github.com/ujjwalguptaofficial/JsStore/issues/188)
 
-<p class="margin-top-40px text-center">
-    <button class="btn info btnNext">Next</button>
-</p>
+ 

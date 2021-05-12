@@ -22,7 +22,7 @@
   "homepage": "https://github.com/ujjwalguptaofficial/doc-template#readme",
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.4.0",
-    "flexboot": "^1.0.2",
+    "flexboot": "^1.0.3",
     "front-matter": "^4.0.2",
     "fs-extra": "^10.0.0",
     "nuxt": "^2.15.4",

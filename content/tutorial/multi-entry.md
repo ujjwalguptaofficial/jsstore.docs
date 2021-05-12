@@ -39,7 +39,7 @@ Here results will be always empty array, because indexeddb does not know anythin
 In order to solve this problem - IndexedDb provides an option 'multi entry'.
 
 <div class="highlight">
-MultiEntry lets you search inside a column with array values. MultiEntry basically creates index for items in array column.
+MultiEntry lets you search inside a column with array values. MultiEntry creates index for each item in array value.
 </div>
 
 <br>In this case - you will have to enable `multiEntry` option for column "tags".
@@ -67,4 +67,4 @@ var dataBase = {
 };
 ```
 
-**Note :-** `multiEntry` will only work for plain values i.e string, number but not for compound types like json data or array. Because indexedDb provides one level indexing not multilevel.
+**Note :-** `multiEntry` will only work for plain values i.e string, number but not for compound types like json data or array. Because indexedDb provides one level indexing only.

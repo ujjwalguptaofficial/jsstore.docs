@@ -37,7 +37,3 @@ var tblProduct = {
 **Note :-** It is mandatory to have a column with a primary key for every table. A primary key is used to uniquely identify a record or data row.
 
 For more information about column - please check [column](/tutorial/column) doc.
-
-<p class="margin-top-40px text-center">
-    <button class="btn info btnNext">Next</button>
-</p>

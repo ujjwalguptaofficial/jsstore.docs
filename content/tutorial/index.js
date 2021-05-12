@@ -62,6 +62,10 @@ module.exports = [
             url: "distinct"
         },
         {
+            text: "Case",
+            url: "case"
+        },
+        {
             text: "Join",
             url: "join"
         },

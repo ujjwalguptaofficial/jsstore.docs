@@ -4,10 +4,9 @@ Keywords: "import scripts, transaction, query, indexeddb, jsstore"
 Description: "import scripts in web worker"
 ---
 
-intersect api combine the result of two or more select query and take only common records between the queries result.
+`intersect` api combine the result of two or more select query and take only common records between the queries result.
 
 ## Use Case
-<br>
 There are times when one query is not able to fulfill the situation and so you need to use multiple query but now you are getting duplicate records. `intersect` api is useful in these situation where it combines the results of multiple select query and takes only common records between them.
 
 e.g - Consider below queries - 
@@ -40,7 +39,7 @@ connection.select({
 
 now in the above two queries - results from first query will have some records existing in results of 2nd query.
 
-so using intersect we will take common results between two results and query will be - 
+so using `intersect` we can take common results between two results
 
 ```
 var query1=  {
@@ -66,7 +65,6 @@ var results = await connection.intersect({
 
 <p class="margin-top-40px text-center">
     <a class="btn info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=var%20query1%20%3D%20%7B%0A%20%20%20%20from%3A%20'Products'%2C%0A%20%20%20%20where%3A%20%7B%0A%20%20%20%20%20%20%20%20price%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20'%3E'%3A%2010%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%3B%0Avar%20query2%20%3D%20%7B%0A%20%20%20%20from%3A%20'Products'%2C%0A%20%20%20%20where%3A%20%7B%0A%20%20%20%20%20%20%20%20price%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20'%3E'%3A%2050%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%3B%0Aintersect(%7B%0A%20%20%20%20queries%3A%20%5Bquery1%2C%20query2%5D%0A%7D)">Example</a>
-    <button class="btn info btnNext">Next</button>
 </p>
 
 

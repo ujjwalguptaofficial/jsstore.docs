@@ -5,7 +5,7 @@ Description: "Middleware can be used to modify queries"
 ---
 
 <div class="highlight">
-Middleware is a function which has access to request and next callback and are called for each request in the same order as defined.
+Middleware is a function which has access to request and next callback.They are called for each request in the same order as defined.
 </div>
 <br>
 
@@ -46,7 +46,3 @@ connection.insert({
 ```
 
 Middleware can be also created and provided as package using [plugin](/tutorial/plugin).
-
-<p class="margin-top-40px text-center">
-    <button class="btn info btnNext">Next</button>
-</p>

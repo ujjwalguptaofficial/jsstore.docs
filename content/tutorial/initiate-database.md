@@ -49,7 +49,6 @@ var isDbCreated = await connection.initDb(db);
 
 ```
 
-If you are not able to understand, please have a look at [examples](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples) provided by jsstore.
-<p class="margin-top-40px text-center">
-    <button class="btn info btnNext">Next</button>
+<p class="text-center">
+    <a target="_blank" class="btn info" href="https://github.com/ujjwalguptaofficial/jsstore-examples/blob/93a178ec8926151b144b064841c20647366d125f/simple_example/scripts/index.js#L12">Example</a>
 </p>

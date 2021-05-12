@@ -75,8 +75,3 @@ async function changeDbSchema() {
 changeDbSchema();
 
 ```
-
-
-<p class="margin-top-40px text-center">
-    <button class="btn info btnNext">Next</button>
-</p>

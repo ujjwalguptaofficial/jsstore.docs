@@ -83,5 +83,4 @@ select({
 ```
 <p class="margin-top-40px text-center">
     <a class="btn info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=select(%7B%0A%20%20%20%20from%3A%20'Orders'%2C%0A%20%20%20%20join%3A%20%7B%0A%20%20%20%20%20%20%20%20with%3A%20'OrderDetails'%2C%0A%20%20%20%20%20%20%20%20on%3A%20'Orders.orderId%3DOrderDetails.orderId'%0A%20%20%20%20%7D%2C%0A%20%20%20%20order%3A%20%7B%0A%20%20%20%20%20%20%20%20by%3A%20'OrderDetails.orderId'%0A%20%20%20%20%7D%0A%7D)">Example</a>
-     <button class="btn info btnNext">Next</button>
 </p>

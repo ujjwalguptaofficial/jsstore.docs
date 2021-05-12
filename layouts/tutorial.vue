@@ -39,7 +39,9 @@
         <i @click="goto(1)" class="fas fa-chevron-right"></i>
       </div>
     </div>
-    <div class="col-lg-2 width-full">Side bar</div>
+    <div class="col-lg-2 width-full">
+      <!-- Side bar -->
+    </div>
     <div class="b-tutorial__sticky-btn">
       <a
         class="btn rounded secondary margin-bottom-70px"
