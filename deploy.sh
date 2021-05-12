@@ -48,10 +48,10 @@ ssh-add deploy_key
 # rm -rf out/**/* || exit 0
 
 # Run our compile script
-cd src
-npm install
+# cd src
+npm ci
 npm run deploy
-cd ../
+# cd ../
 
 
 

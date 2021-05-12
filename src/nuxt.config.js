@@ -20,6 +20,9 @@ const host =
     process.env.npm_package_config_nuxt_host ||
     "localhost";
 // return;
+
+const buildDir = path.join(__dirname, '../build');
+console.log("buildDir", buildDir);
 module.exports = {
     target: 'static',
     srcDir: path.join(__dirname),
@@ -41,7 +44,7 @@ module.exports = {
             `http://${host}:${port}`
     },
     generate: {
-        dir: '../build'
+        dir: buildDir
     },
     head: {
         title: "JsStore - Think in SQL and do in JS",
