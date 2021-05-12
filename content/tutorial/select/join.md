@@ -108,5 +108,4 @@ console.log(results);
 
 <p class="margin-top-40px text-center">
     <a class="btn info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=select(%7B%0A%20%20%20%20from%3A%20'Orders'%2C%0A%20%20%20%20join%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20with%3A%20'Customers'%2C%0A%20%20%20%20%20%20%20%20on%3A%20%22Orders.customerId%3DCustomers.customerId%22%0A%20%20%20%20%7D%2C%7B%0A%20%20%20%20%20%20%20%20with%3A%22Shippers%22%2C%0A%20%20%20%20%20%20%20%20on%3A%22Orders.shipperId%3DShippers.shipperId%22%0A%20%20%20%20%7D%5D%0A%7D)%3B">Example</a>
-    <button class="btn info btnNext">Next</button>
 </p>

@@ -45,7 +45,3 @@ connection.insertIntoMyTable({
     name:'ujjwal gupta'
 })
 ```
-
-<p class="margin-top-40px text-center">
-    <button class="btn info btnNext">Next</button>
-</p>

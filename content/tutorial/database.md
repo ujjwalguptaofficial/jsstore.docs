@@ -45,6 +45,3 @@ var db = {
 
 Please read [initiate database](/tutorial/initiate-database) doc for knowing how to use database schema. 
 
-<p class="margin-top-40px text-center">
-      <button class="btn info btnNext">Next</button>
-</p>

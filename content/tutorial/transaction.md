@@ -6,7 +6,7 @@ Description: "learn how to use transaction in jsstore"
 
 IndexedDB is a pure transactional database which means all the query is executed using the transaction.
 
-JsStore provides - 'transaction' api for executing transaction. 
+JsStore provides - `transaction` api for executing transaction. 
 
 ```
 await connection.transaction({
@@ -214,6 +214,3 @@ Few important things to make sure you are using transaction in right way -
 
 * There may be situation where you have a heavy logic, in that case - calculate the result and put it in data option.
 
-<p class="margin-top-40px text-center">
-    <button class="btn info btnNext">Next</button>
-</p>

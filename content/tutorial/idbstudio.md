@@ -8,7 +8,7 @@ IDBStudio is a helper tool for jsstore development. It helps users to execute , 
 
 Imagine you are in a situation where -
 
-* You dont know what query will be used to get the perfect result.
+* You dont know what query will be used to get the desired result.
 * You have a big database & you want to work on optimization of query.
 * You are experimenting with database format.
 * You want to learn jsstore & want to experiment something.

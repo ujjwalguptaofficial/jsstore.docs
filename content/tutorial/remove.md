@@ -4,7 +4,7 @@ Keywords: "remove, delete, api, indexeddb, jsstore"
 Description: "remove data from a table in indexeddb"
 ---
 
-You can use Where to filter results.
+`remove` api can be used to remove records from a table. `where` can be used to filter target records.
 
 #### Sql
 
@@ -32,5 +32,4 @@ console.log(rowsDeleted);
 
 <p class="margin-top-40px text-center">
     <a class="btn info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=remove(%7B%0A%20%20%20%20from%3A%20%22Customers%22%2C%0A%20%20%20%20where%3A%7B%0A%20%20%20%20%20%20%20%20customerName%3A'Alfreds%20Futterkiste'%0A%20%20%20%20%7D%0A%7D)%3B%0A">Example</a>
-    <button class="btn info btnNext">Next</button>
 </p>

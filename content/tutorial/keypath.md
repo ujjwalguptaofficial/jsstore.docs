@@ -4,9 +4,9 @@ Keywords: "keypath, column, indexing, indexeddb, jsstore"
 Description: "learn how to use keypath for querying faster in indexeddb"
 ---
 
-keyPath is a option in column. It is used to add multiple index, so that query execution can be made faster. It takes an array of type string.
+`keyPath` is a option in column. It is used to add multiple index, so that query execution can be made faster. It takes an array of type string.
 
-It is helpful in case - when you have large amount of data & its taking long time.
+It can b used to increase speed of `select` query.
 
 e.g - Lets take a table name with cities having column pinCodes & name
 
@@ -58,4 +58,4 @@ connection.select({
 })
 ```
 
-Note :- Please compare between query execution time if there is no difference or very less then dont use keyPath. Adding multiple index will increase the db size which is limited for users.
+Note :- Please compare between query execution time if there is no difference or very less then don't use keyPath. Adding multiple index will increase the db size which is limited for users.

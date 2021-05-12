@@ -72,8 +72,3 @@ If you are finding difficult to understand, please take a look at [examples](htt
 *   The connection variable will be used to execute the further query.
 *   A connection will handle one db at a time.
 *   Do not create multiple connection for one db.
-
-
-<p class="margin-top-40px text-center">
-      <button class="btn info btnNext">Next</button>
-</p>

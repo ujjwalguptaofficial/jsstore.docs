@@ -4,7 +4,7 @@ Keywords: "union, api, indexeddb, jsstore"
 Description: "Union is an api which combine the result of two or more select query."
 ---
 
-union api combine the result of two or more select query and remove duplicate records. 
+`union` api combine the result of two or more select query and remove duplicate records. 
 
 ## Use Case
 <br>

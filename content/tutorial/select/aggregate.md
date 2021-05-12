@@ -34,5 +34,4 @@ console.log(results[0]);
 ```
 <p class="margin-top-40px text-center">
     <a class="btn info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=select(%7B%0A%20%20%20%20from%3A%20%22Products%22%2C%0A%20%20%20%20aggregate%3A%20%7B%0A%20%20%20%20%20%20%20%20min%3A%20%22price%22%0A%20%20%20%20%7D%0A%7D)%3B">Example</a>
-    <button class="btn info btnNext">Next</button>
 </p>
