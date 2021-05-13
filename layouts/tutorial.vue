@@ -103,10 +103,15 @@ export default {
   },
   computed: {
     currentUrl() {
-      return this.$route.path;
+      let path = this.$route.path;
+      const length = path.length;
+      if (path[length - 1] === "/") {
+        path = path.substr(0, length - 1);
+      }
+      return path;
     },
     activeUrlIndex() {
-      const splittedPath = this.$route.path.split("/");
+      const splittedPath = this.currentUrl.split("/");
       const lastPath = splittedPath[splittedPath.length - 1];
       const result = this.links.findIndex((val) => {
         if (val.url === lastPath) {
