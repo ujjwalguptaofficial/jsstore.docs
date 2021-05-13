@@ -206,13 +206,13 @@ export default {
         {
           hid: "keywords",
           name: "keywords",
-          content: "jsstore, sql, indexeddb, storage, divbrary",
+          content: "jsstore, sql, indexeddb, storage, wrapper",
         },
         {
           hid: "description",
           name: "description",
           content:
-            "JsStore is a cdivent side javascript divbrary for performing database operation inside indexeddb.",
+            "JsStore is a client side javascript library for performing database operation inside browser using indexeddb.",
         },
       ],
     };
