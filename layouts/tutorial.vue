@@ -39,8 +39,12 @@
         <i @click="goto(1)" class="fas fa-chevron-right"></i>
       </div>
     </div>
-    <div class="col-lg-2 width-full">
-      <!-- Side bar -->
+    <div class="col-lg-2 width-full pl-10px pr-5px">
+      <a class="ad-container" target="_blank"  href="http://fortjs.info/">
+        <h6>FortJs</h6>
+        <img class="mt-5px" src="//fortjs.info/img/fort_js_logo_200_137.png" />
+        <div>{{ ads[0] }}</div>
+      </a>
     </div>
     <div class="b-tutorial__sticky-btn">
       <a
@@ -70,6 +74,9 @@
 import { copyToClipboard } from "@/utils";
 
 export default {
+  created() {
+    this.ads = ["Component based framework for nodejs"];
+  },
   head() {
     return {
       title: `JsStore - ${this.title}`,
@@ -234,5 +241,13 @@ export default {
     margin-bottom: 10px;
     padding: 0;
   }
+}
+.ad-container {
+  text-align: center;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  cursor: pointer;
 }
 </style>
