@@ -3,8 +3,8 @@
     <div class="col-lg-8">
       <h4>Help Us Grow</h4>
       <div class="row">
-        <button class="btn">Sponsor Us</button>
-        <button class="btn ml-10px">Be a backer</button>
+        <a href="/sponsor" class="btn">Sponsor Us</a>
+        <a href="/sponsor" class="btn ml-10px">Be a backer</a>
       </div>
     </div>
     <div class="col-lg-4">
