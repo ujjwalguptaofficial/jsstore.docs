@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="col-lg-2 width-full pl-10px pr-5px">
-      <a class="ad-container" target="_blank"  href="http://fortjs.info/">
+      <a class="ad-container" target="_blank" href="http://fortjs.info/">
         <h6>FortJs</h6>
         <img class="mt-5px" src="//fortjs.info/img/fort_js_logo_200_137.png" />
         <div>{{ ads[0] }}</div>
@@ -138,6 +138,8 @@ export default {
     this.links = links;
   },
   mounted() {
+    console.log("comp", this);
+    window.comp = this;
     hljs.highlightAll();
     const copyHtml = `Copy <i class="margin-left-10px far fa-copy"></i>`;
     document.querySelectorAll("pre code").forEach((el) => {
