@@ -8,9 +8,11 @@ In this get started tutorial we will learn how to do crud operation in indexeddb
 
 #### Installation
 
-JsStore can be installed using npm, cdn or scripts can be also download from jsstore github page. 
+JsStore can be installed using npm, cdn or scripts can be also download from jsstore release. For more about installation check out the [installation](/tutorial/installation) page
 
-IndexedDb query can be executed inside web worker & JsStore preserve this functionality by providing way to execute query inside both web worker & without web worker. But it is highly recommended to use [web worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) because it runs scripts in background thread. So i am going to use web worker in this tutorial. 
+IndexedDb query can be executed inside web worker & JsStore preserve this functionality by providing a seperate worker file. 
+
+So query can be executed both way - inside web worker or without web worker. But it is strongly recommended to use [web worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) because it runs scripts in background thread. In this tutorial we will use web worker.
 
 Let's download the script from github. Go to this link - <a href="https://github.com/ujjwalguptaofficial/JsStore/releases/latest" target="_blank">jsstore release</a> & download files jsstore.js & jsstore.worker.js. 
 
@@ -32,8 +34,6 @@ Now create a html page & include jsstore.js -
 </html>
 
 ```
-
-For more about installation check out the [installation](/tutorial/installation) page
 
 #### Creating Database
 
@@ -61,7 +61,7 @@ function getDbSchema() {
   return db;
 }
 ```
-As written in the code you can define constraints like autoincrement, datatype, default, notnull similar to what you can do in SQL.
+As written in the code you can define constraints like autoincrement, data type, default, not null similar to what you can do in SQL.
 
 Now we need to use the above database schema to create the database in indexeddb -
 
@@ -85,11 +85,11 @@ async function initJsStore() {
 
 In the above code -
 
-* Line 1 - Storing the JsStore connection in a variable 'connection'.
-* Line 2 - Declared a function initJsStore which will create the database using provided schema in IndexedDB. 
+* Line 1 - Create a JsStore connection.
+* Line 2 - method initJsStore will create the database using provided schema in IndexedDB. 
 
 <br>
-**Note :-** The connection object will be used to execute future queries so we dont need to initiate it multiple times.
+**Note :-** The connection variable will be used to execute future queries so we don't need to initiate it multiple times.
 
 #### Inserting data
 
@@ -120,7 +120,7 @@ if (noOfDataInserted > 0) {
   
 #### Read data
 
-JsStore provides [select](/tutorial/select) API for reading data. Lets say I want to retrieve the record with Id of 5.
+JsStore provides [select](/tutorial/select) API for reading data. Let's say I want to retrieve the record with Id of 5.
 
 ```
 // results will be array of objects
@@ -132,13 +132,13 @@ var results = await connection.select({
 });
 alert(results.length + 'record found');
 ```
-You can also perform operations like- "IN", "LIKE", "BETWEEN", "LIMIT" etc.
+You can also perform operations like- "IN", "LIKE", "BETWEEN", "LIMIT" etc. For more filtering option , read [where doc](/tutorial/where).
 
 #### Updating data
 
 JsStore provides [update](/tutorial/update) API for reading data. 
 
-Lets say We want to update Quantity to 2000 on the products with Item Name containing the substring 'black'.
+Lets say We want to update Quantity to 2000 on the products with item name containing substring 'black'.
 
 ```
 var rowsUpdated = await connection.update({ 
