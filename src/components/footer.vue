@@ -13,6 +13,7 @@
       <a target="_blank" href="https://ujjwalguptaofficial.github.io/"
         >Ujjwal Gupta</a
       >
+      & awesome contributers.
     </div>
   </div>
 </template>

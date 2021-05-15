@@ -24,18 +24,10 @@ var table1 = {
 ```
 
 ## How to get current db version
-<br>
-You can get Db version by using below code.
+ 
+you can also find your current db version in indexedDb section of browser development tools.
 
-```
-connection.getDbVersion(db_name).then(function(version) {
-    console.log(version)
-})
-```
-
-The above code is for only development purpose. Dont execute this code to increase Db Version. You will have to specify the value manually.
-
-or you can also find your current db version in indexedDb section of development tools.
+<img style="max-width:100%;" src="/img/version_screenshot.png"/>
 
 ## What is the need of db version
 <br>
