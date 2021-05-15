@@ -23,7 +23,7 @@ var columns = {
 }
 ```
 
-A column has following properties -
+👉 Column has following options -
 
 * primaryKey: boolean, // declare this column as primary key (optional)
 
@@ -31,7 +31,7 @@ A column has following properties -
 
 * dataType: JsStore.DATA_TYPE, // datatype of this column (optional)
 
-For more info about data type, see this link - [DataType](/tutorial/data-type/)
+For more info about data type, see this link - [DataType](/tutorial/database/data-type/)
 
 * autoIncrement: boolean, // automatically increment value (optional)
 

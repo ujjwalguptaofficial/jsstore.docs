@@ -18,16 +18,18 @@ JsStore provides following data type -
 
 * Boolean - 'boolean'
 
-All data types are also present in jsstore member - `DATA_TYPE` , so you can also use it.
+data types are exposed as - `DATA_TYPE` , so you can also use it.
 
 Let's see how to use datatype - 
 
 ```
+import {DATA_TYPE} from 'jsstore'
+
 var columns = {
     Id:{ primaryKey: true, autoIncrement: true },
     ItemName:  { notNull: true, dataType: "string" },
     Price:  { notNull: true, dataType: "number" },
-    Quantity : { notNull: true, dataType: JsStore.DATA_TYPE.Number }
+    Quantity : { notNull: true, dataType: DATA_TYPE.Number }
 }
 ```
 

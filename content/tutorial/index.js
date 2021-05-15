@@ -11,25 +11,23 @@ module.exports = [
         text: "Connection",
         url: "connection"
     },
-    {
-        text: "Column",
-        url: "column"
-    },
-    {
-        text: "Table",
-        url: "table"
-    },
+
     {
         text: "Database",
-        url: "database"
-    },
-    {
-        text: "Initiate Database",
-        url: "initiate-database"
-    },
-    {
-        text: "Data Type",
-        url: "data-type"
+        url: "database",
+        children: [
+            {
+                text: "Table",
+                url: "table"
+            }, {
+                text: "Column",
+                url: "column"
+            },
+            {
+                text: "Data Type",
+                url: "data-type"
+            },
+        ]
     },
     {
         text: "insert",
