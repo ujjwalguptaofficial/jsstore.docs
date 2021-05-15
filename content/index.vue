@@ -17,7 +17,7 @@
         <h3>Execute Database operation in browsers with JsStore.</h3>
         <div>
           JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy with
-          its SQL divke apis.
+          its SQL like apis.
         </div>
       </div>
       <div class="row content-center mt-20px">
@@ -42,7 +42,7 @@
         </a>
       </div>
       <div class="col mt-20px content-center">
-        <h2>Supported with all frameworks</h2>
+        <h2>Open-source MIT Licensed | Supported with all frameworks</h2>
         <div class="row frameworks">
           <a
             class="vue"
@@ -188,12 +188,6 @@
           </a>
         </div>
       </div>
-
-      <div class="text-center mt-20px">
-        Created with
-        <i class="fas fa-heart" style="color: red"></i> by
-        <a href="https://ujjwalguptaofficial.github.io/">Ujjwal Gupta</a>
-      </div>
     </div>
   </div>
 </template>
@@ -230,7 +224,7 @@ export default {
       {
         title: "Cross Browsers",
         subTitle:
-          "Develop your appdivcation without worrying about cross browser compatibility.",
+          "Develop your application without worrying about cross browser compatibility.",
       },
       {
         title: "Sql support",
