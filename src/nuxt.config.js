@@ -121,6 +121,16 @@ module.exports = {
                 href: "https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap"
             },
             {
+                rel: "stylesheet",
+                href: "//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"
+            },
+            {
+                rel: "stylesheet",
+                href: "https://use.fontawesome.com/releases/v5.5.0/css/all.css",
+                integrity: "sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU",
+                crossorigin: "anonymous"
+            },
+            {
                 rel: "apple-touch-icon",
                 sizes: "180x180",
                 href: "/apple-touch-icon.png"
