@@ -1,7 +1,7 @@
 ---
-Title: "Remove record"
+Title: "Delete"
 Keywords: "remove, delete, api, indexeddb, jsstore"
-Description: "remove data from a table in indexeddb using jsstore"
+Description: "remove data from a table in indexeddb"
 ---
 
 `remove` api can be used to remove records from a table. `where` can be used to filter target records.

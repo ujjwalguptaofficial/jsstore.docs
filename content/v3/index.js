@@ -33,13 +33,7 @@ module.exports = [
     },
     {
         text: "insert",
-        url: "insert",
-        children: [
-            {
-                text: "upsert",
-                url: "upsert",
-            }
-        ]
+        url: "insert"
     },
     {
         text: "Select",
@@ -110,19 +104,21 @@ module.exports = [
             {
                 text: "Between",
                 url: "between"
-            }
+            },
+            {
+                text: "Ignore Case (Deprecated)",
+                url: "ignore-case"
+            },
         ]
     },
 
     {
         text: "Update",
-        url: "update",
-        children: [
-            {
-                text: "With operators",
-                url: "with-operators"
-            }
-        ]
+        url: "update"
+    },
+    {
+        text: "Update with operators",
+        url: "update-with-operators"
     },
     {
         text: "Remove",
@@ -170,8 +166,8 @@ module.exports = [
         url: "enums"
     },
     {
-        text: "V3 To V4",
-        url: "v3-to-v4"
+        text: "V2 To V3",
+        url: "v2-to-v3"
     },
     {
         text: "Import scripts",

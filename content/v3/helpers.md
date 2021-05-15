@@ -4,12 +4,33 @@ Keywords: "helpers, api, query, indexeddb, jsstore"
 Description: "jsstore helpers methods"
 ---
 
-#### logStatus
+#### setLogStatus
 
 It sets the status of log. When supplied true - JsStore logs query flow in console. This is helpful in debugging.
 
 ```
-connection.logStatus = true;
+connection.setLogStatus(true);
+```
+
+
+#### getDbVersion
+
+It returns the current Database version.
+
+```
+connection.getDbVersion(db_name).then(function(version) {
+    console.log(version)
+})
+```
+
+#### getDbSchema
+
+It returns the Database Schema.
+
+```
+connection.getDbSchema(db_name).then(function(schema) {
+    console.log(schema)
+});
 ```
 
 #### getDbList
