@@ -6,7 +6,9 @@
           class="row content-v-center b-tutorial__links__item ripple"
           :class="{
             'b-tutorial__links__item--active':
-              index === (!link.children && activeUrlIndex),
+              childActiveUrlIndex < 0 && index === activeUrlIndex,
+            'b-tutorial__links__item--active-with-children':
+              link.children && childActiveUrlIndex < 0,
           }"
           :href="url(link.url)"
         >
@@ -220,6 +222,9 @@ export default {
   text-align: center;
   color: var(--secondary-color);
   justify-content: center;
+}
+.b-tutorial__links__item--active-with-children {
+  justify-content: unset;
 }
 .b-tutorial__content {
   padding-left: 40px;
