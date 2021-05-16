@@ -113,6 +113,9 @@ export default {
   padding: 0 10px;
   height: 64px;
   color: var(--primary-contrast-color);
+  position: sticky;
+  z-index: 1000;
+  top: 0;
 }
 
 a {
