@@ -11,9 +11,16 @@ In order to set up jsstore - you need two files -
 * jsstore.worker.js - It contains all logic and can be used as worker or without worker.
 
 
-JsStore can be installed from multiple sources -
+### JsStore can be installed from multiple sources -
 
-##### Cdn -
+#### npm -
+
+*   **Latest** \- npm install jsstore
+*   **Version** \- npm install jsstore@version  
+    e.g - npm install jsstore@3.0.0
+
+
+#### Cdn -
 
 *   **Latest** \- https://cdn.jsdelivr.net/npm/jsstore/dist
     e.g - 
@@ -24,18 +31,7 @@ JsStore can be installed from multiple sources -
     1. jsstore - https://cdn.jsdelivr.net/npm/jsstore@3.0.0/dist/jsstore.min.js
     2. jsstore.worker - https://cdn.jsdelivr.net/npm/jsstore@3.0.0/dist/jsstore.worker.min.js
 
-##### Npm -
 
-*   **Latest** \- npm install jsstore
-*   **Version** \- npm install jsstore@version  
-    e.g - npm install jsstore@3.0.0
-
-<br>
-##### Distribution file -
+#### Distribution file -
 
 You can get the distribution file from [jsstore release](https://github.com/ujjwalguptaofficial/JsStore/releases/latest).
-
-
-<p class="margin-top-40px text-center">
-      <button class="btn info btnNext">Next</button>
-</p>
