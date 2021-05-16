@@ -37,10 +37,10 @@
     <div class="b-tutorial__content col-sm-8 col-md-9 col-lg-8">
       <slot></slot>
       <div class="b-tutorial__content__btns">
-        <a :href="getLink(-1)">
+        <a :href="prevUrl">
           <i class="fas fa-chevron-left"></i>
         </a>
-        <a :href="getLink(1)">
+        <a :href="nextUrl">
           <i class="fas fa-chevron-right"></i>
         </a>
       </div>
@@ -137,6 +137,12 @@ export default {
       // console.log("result", result, this.childActiveUrlIndex);
       return result;
     },
+    prevUrl() {
+      return this.getLink(-1);
+    },
+    nextUrl() {
+      return this.getLink(1);
+    },
   },
   data() {
     return {
@@ -186,9 +192,13 @@ export default {
         }
       }
       if (!path) {
-        path = this.links[this.activeUrlIndex + delta].url;
+        const deltaLink = this.links[this.activeUrlIndex + delta];
+        if (deltaLink) {
+          path = deltaLink.url;
+        }
       }
-      return this.url(path);
+
+      return path ? this.url(path) : "/";
     },
     goto(delta) {
       return this.$router.push({
