@@ -1,7 +1,26 @@
 <template>
   <div class="row b-tutorial">
     <div class="col-sm-4 col-md-3 col-lg-2 b-tutorial__links">
-      <div v-for="(link, index) in links" :key="link.text">
+      <input
+        class="textbox b-tutorial__links__search"
+        type="text"
+        placeholder="Search in docs"
+        v-model="searchText"
+        @input="onSearch"
+      />
+      <div
+        class="b-tutorial__links__search-result"
+        v-if="searchResults.length > 0"
+      >
+        <a
+          class="row content-v-center ripple"
+          v-for="link in searchResults"
+          :key="link.text"
+          :href="link.url"
+          >{{ link.text }}</a
+        >
+      </div>
+      <div v-else v-for="(link, index) in links" :key="link.text">
         <a
           class="row content-v-center b-tutorial__links__item ripple"
           :class="{
@@ -78,10 +97,18 @@
 </template>
 <script  >
 import { copyToClipboard } from "@/utils";
-
+import FlexSearch from "flexsearch";
 export default {
   created() {
     this.ads = ["Component based framework for nodejs"];
+    this.finder = new FlexSearch({
+      encode: "balance",
+      tokenize: "forward",
+      threshold: 0,
+      async: true,
+      worker: false,
+      cache: false,
+    });
   },
   head() {
     return {
@@ -148,6 +175,8 @@ export default {
     return {
       links: [],
       childActiveUrlIndex: -1,
+      searchResults: [],
+      searchText: "",
     };
   },
   fetch() {
@@ -155,7 +184,6 @@ export default {
     this.links = links;
   },
   mounted() {
-    console.log("comp", this);
     window.comp = this;
     hljs.highlightAll();
     const copyHtml = `Copy <i class="margin-left-10px far fa-copy"></i>`;
@@ -173,8 +201,38 @@ export default {
         }, 1000);
       };
     });
+    this.addLinksToFinder();
   },
   methods: {
+    onSearch() {
+      if (this.searchTimer) {
+        clearTimeout(this.searchTimer);
+      }
+      this.searchTimer = setTimeout(() => {
+        this.finder.search(this.searchText).then((results) => {
+          this.searchResults = results.map((item) => {
+            return { url: item, text: this.flatLinks[item] };
+          });
+          this.searchTimer = null;
+        });
+      }, 200);
+    },
+    addLinksToFinder() {
+      const flatLinks = {};
+      this.links.forEach((link) => {
+        let url = this.url(link.url);
+        flatLinks[url] = link.text;
+        this.finder.add(url, link.text);
+        if (link.children) {
+          link.children.forEach((item) => {
+            url = this.url(link.url + "/" + item.url);
+            flatLinks[url] = item.text;
+            this.finder.add(url, item.text);
+          });
+        }
+      });
+      this.flatLinks = flatLinks;
+    },
     url(value) {
       return "/tutorial/" + value;
     },
@@ -281,5 +339,15 @@ export default {
   flex-direction: column;
   padding: 5px;
   cursor: pointer;
+}
+.b-tutorial__links__search {
+  padding: 5px 5px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.b-tutorial__links__search-result {
+  a {
+    @extend .b-tutorial__links__item;
+  }
 }
 </style>
