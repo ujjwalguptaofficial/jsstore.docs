@@ -87,6 +87,7 @@ ul {
     @extend .list;
     list-style-type: disc;
 }
+
 ol {
     @extend .list;
     list-style-type: decimal;
@@ -99,4 +100,25 @@ ol {
 b,
 strong {
     font-weight: bolder;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div {
+    :hover {
+        .anchor {
+            visibility: visible;
+            text-decoration: none;
+        }
+    }
+}
+
+.anchor {
+    visibility: hidden;
+    padding-left: 0.5rem;
 }

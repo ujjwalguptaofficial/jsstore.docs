@@ -63,7 +63,9 @@ const workerPath = getWorkerPath().default;
 export const connection = new JsStore.Connection(new Worker(workerPath));
 ```
 
-👉 Without Web Worker
+<p id="webpack-without-web-worker">
+👉 Without Web Worker <a class="anchor" href="#webpack-without-web-worker">#</a>
+</p>
 
 ```
 import workerInjector from "jsstore/dist/worker_injector";
