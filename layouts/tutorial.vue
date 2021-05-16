@@ -273,6 +273,17 @@ export default {
 .b-tutorial__links {
   padding-right: 30px;
   border-right: 1px solid #e9ecef;
+  position: sticky;
+  top: 4rem;
+  z-index: 100;
+  height: calc(100vh - 4rem);
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #e4dddd;
+  }
 }
 .b-tutorial__links__item {
   cursor: pointer;
