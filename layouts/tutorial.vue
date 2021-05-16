@@ -37,8 +37,12 @@
     <div class="b-tutorial__content col-sm-8 col-md-9 col-lg-8">
       <slot></slot>
       <div class="b-tutorial__content__btns">
-        <i @click="goto(-1)" class="fas fa-chevron-left"></i>
-        <i @click="goto(1)" class="fas fa-chevron-right"></i>
+        <a :href="getLink(-1)">
+          <i class="fas fa-chevron-left"></i>
+        </a>
+        <a :href="getLink(1)">
+          <i class="fas fa-chevron-right"></i>
+        </a>
       </div>
     </div>
     <div class="col-lg-2 width-full pl-10px pr-5px">
@@ -168,21 +172,27 @@ export default {
     url(value) {
       return "/tutorial/" + value;
     },
-    goto(delta) {
+    getLink(delta) {
       const childActiveUrlIndex = this.childActiveUrlIndex;
       let path;
       let activeLink = this.links[this.activeUrlIndex];
-      if (childActiveUrlIndex >= 0) {
-        const nextChildren = activeLink.children[childActiveUrlIndex + delta];
+      const activeLinkChildren = activeLink.children;
+      if (childActiveUrlIndex >= 0 || (activeLinkChildren && delta > 0)) {
+        const nextChildren = activeLinkChildren[childActiveUrlIndex + delta];
         if (nextChildren) {
-          path = nextChildren.url;
+          path = activeLink.url + "/" + nextChildren.url;
+        } else if (delta < 0) {
+          path = activeLink.url;
         }
       }
       if (!path) {
         path = this.links[this.activeUrlIndex + delta].url;
       }
+      return this.url(path);
+    },
+    goto(delta) {
       return this.$router.push({
-        path: this.url(path),
+        path: this.getLink(delta),
       });
     },
   },
