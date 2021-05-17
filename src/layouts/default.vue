@@ -18,6 +18,7 @@ export default {
   components: { Menu, AppFooter },
   mounted() {
     document.querySelectorAll("h1,h2,h3,h4,h5,h6").forEach((el) => {
+      if (!el.id) return;
       const link = document.createElement("a");
       link.classList = "anchor";
       link.innerText = "#";

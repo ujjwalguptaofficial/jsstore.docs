@@ -25,7 +25,7 @@ var table1 = {
 
 ## How to get current db version
  
-you can also find your current db version in indexedDb section of browser development tools.
+you can find your current db version in indexedDb section of browser development tools.
 
 <img style="max-width:100%;" src="/img/version_screenshot.png"/>
 
