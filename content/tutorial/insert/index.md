@@ -6,7 +6,7 @@ Description: "insert data in indexedb"
 
 `insert` api is used to insert new records in a table.
 
-#### Sql
+### Sql
 
 ```
 INSERT INTO TABLE_NAME
@@ -15,7 +15,7 @@ VALUES
 (value1, value2, value3,...valueN);
 ```
 
-#### JsStore
+### JsStore
 
 ```
 var value = {
@@ -44,12 +44,91 @@ if (noOfRowsInserted > 0) {
 <div class="margin-top-30px top-border mb-20px"></div>
 **insert** api has following options -
 
-* into : string // table name
+#### into
 
-* values: Array // values to insert
+into is used to specify name of table
 
-* return?: Boolean // Return the inserted record. Default value is false.This is useful in case - you want the autoincrement column value.
+```
+insert({
+    into:'Products'
+})
+```
 
-* skipDataCheck?: Boolean // Whether to check or not supplied data. Default value is false. If supplied true, this will directly insert data without checking any thing like datatype, auto increment etc. This is useful in case - where you want to insert huge record at a time.
+#### values
 
-* <a href="/tutorial/insert/upsert">upsert?</a>: boolean; // Update data if exist otherwise insert . Default value is false
+values is used to specify data to insert. It takes array of data.
+
+```
+insert({
+    into:'Products',
+    values:[data1,data2]
+})
+```
+
+#### return
+
+return is a optional & type of boolean field. It is used to get the inserted data. This is useful in case - you want the autoincrement column value.
+
+```
+insert({
+    into:'Products',
+    values:[data1,data2],
+    return: true
+})
+```
+
+Default value of return is false.
+
+#### upsert
+
+Update data if exist otherwise insert . Default value is false.
+
+[Read upsert doc](/tutorial/insert/upsert).
+
+#### validation
+
+Whether to validate data or not. By default value is true. This can be used to speed up insert query.
+
+```
+insert({
+    into:'Products',
+    values:[data1,data2],
+    validation: false
+})
+```
+
+#### skipDataCheck
+
+Do not check or change anything in data. By default value is false. 
+
+If supplied true, this will directly insert data without checking any thing like datatype, auto increment etc. This is useful in case - where you want to insert huge record at a time.
+
+```
+insert({
+    into:'Products',
+    values:[data1,data2],
+    skipDataCheck: true
+})
+```
+
+<div class="highlight">
+Difference between validation & skipDataCheck is - validation generates autoIncrement field for autoIncrement column but skipDataCheck do not change anything in data.
+</div>
+
+#### ignore
+
+ignore records when error occurs. This is helpful in case when you are recieving some random data from users or any source.
+
+e.g - consider you have 5 rows and 3 of them are not valid. It can be anything like - null value, data type does not match, existing value of primary key etc.
+
+then 2 rows will be inserted & three will be ignored. So in result you will get 2.
+
+```
+insert({
+    into:'Products',
+    values:[datas],
+    ignore: true
+})
+```
+
+By default ignore value is false. So when any error occurs you will get error & whole transaction is aborted.
