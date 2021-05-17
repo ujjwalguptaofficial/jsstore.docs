@@ -16,7 +16,16 @@ Vue.filter("imgPath", (val) => {
 });
 export default {
   components: { Menu, AppFooter },
-  mounted() {},
+  mounted() {
+    document.querySelectorAll("h1,h2,h3,h4,h5,h6").forEach((el) => {
+      const link = document.createElement("a");
+      link.classList = "anchor";
+      link.innerText = "#";
+      link.href = "#" + el.id;
+      link.setAttribute("aria-hidden", "true");
+      el.appendChild(link);
+    });
+  },
 };
 </script>
  <style>

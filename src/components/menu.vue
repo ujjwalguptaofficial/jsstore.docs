@@ -114,7 +114,7 @@ export default {
   height: 64px;
   color: var(--primary-contrast-color);
   position: sticky;
-  z-index: 1000;
+  z-index: 1001;
   top: 0;
 }
 
