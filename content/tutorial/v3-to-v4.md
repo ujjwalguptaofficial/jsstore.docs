@@ -16,12 +16,12 @@ var dbSchema = {
     version: 2 // previous version was 1,
     tables:[{
         name:'Products',
-        columns:[{
+        columns:{
             id: {
                 autoIncrement:true,
                 primaryKey:true
             }
-        }]
+        }
     }]
 }
 
@@ -43,12 +43,12 @@ var dbSchema = {
     version: 1 ,
     tables:[{
         name:'Products',
-        columns:[{
+        columns:{
             id: {
                 autoIncrement:true,
                 primaryKey:true
             }
-        }]
+        }
     }]
 };
 
@@ -57,12 +57,12 @@ var newDbSchema = {
     version: 2 // previous version was 1,
     tables:[{
         name:'Products',
-        columns:[{
+        columns:{
             id: {
                 autoIncrement:true,
                 primaryKey:true
             }
-        }]
+        }
     }]
 }
 
@@ -85,7 +85,7 @@ isDbCreated = connection.initDb(newDbSchema);
 
 if(isDbCreated){
     for(const key in tablesData){
-        insert({
+        connection.insert({
             into:key,
             values: tablesData[key]
         })
@@ -93,7 +93,66 @@ if(isDbCreated){
 }
 ```
 
+<p class="top-border"></p>
 
+👉 Another simple way to upgrade db & save your data is - to keep two dbs. So you create your schema with new db name and then after new db is created, fetch data from old db.
 
+```
+var dbSchema = {
+    name:"Demo",
+    tables:[{
+        name:'Products',
+        columns:{
+            id: {
+                autoIncrement:true,
+                primaryKey:true
+            }
+        }
+    }]
+};
+
+var newDbSchema = {
+    name:"DemoV2",
+    tables:[{
+        name:'Products',
+        columns:{
+            id: {
+                autoIncrement:true,
+                primaryKey:true
+            }
+        }
+    }]
+}
+
+var connection = new JsStore.Connection();
+var isDbCreated = connection.initDb(newDbSchema);
+
+// if db is created
+if(isDbCreated){
+
+    var oldDbConnection = new JsStore.Connection();
+    var isOldDbCreated = oldDbConnection.initDb(dbSchema);
+
+    if(!isOldDbCreated){ // when db is opened
+
+      // select from old db
+        const results =  await oldDbConnection.select({
+            from:'Products'
+        });
+
+     // insert into new db
+        connection.insert({
+            into:key,
+            values: results
+        })
+
+      // now i don't need old db, so drop db
+
+       oldDbConnection.dropDb();
+
+    }    
+}
+
+```
 
 
