@@ -148,7 +148,7 @@ if(isDbCreated){
 
       // now i don't need old db, so drop db
 
-       oldDbConnection.dropDb();
+        oldDbConnection.dropDb();
 
     }    
 }
