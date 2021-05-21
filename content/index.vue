@@ -113,18 +113,6 @@
           <a
             target="_blank"
             class="ml-20px"
-            title="twitter handle"
-            href="https://twitter.com/ujjwal_kr_gupta"
-          >
-            <img
-              class="responsive-img"
-              src="/img/twitter.svg"
-              alt="twitter logo"
-            />
-          </a>
-          <a
-            target="_blank"
-            class="ml-20px"
             title="gitter"
             href="https://gitter.im/JsStore"
           >
