@@ -47,7 +47,7 @@ var db = {
 }
 ```
 
-### 2. Call `initDb` api with database schema 
+### 2. Call `initDb` 
 
 #### Example :-
 
