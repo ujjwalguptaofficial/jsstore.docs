@@ -4,11 +4,11 @@ Keywords: "installation, npm, cdn, indexeddb, jsstore"
 Description: "jsstore installation guidelines"
 ---
 
-In order to set up jsstore - you need two files - 
+There are two part of jsstore - 
 
-* jsstore - It contains all api and your code interact with this.
+* jsstore main - It contains all api and your code interact with this.
 
-* jsstore.worker.js - It contains all logic and can be used as worker or without worker.
+* jsstore worker  - It contains all logic and can be used to create connection with worker or without worker.
 
 
 ### JsStore can be installed from multiple sources -

@@ -123,3 +123,38 @@ div {
     visibility: hidden;
     padding-left: 0.5rem;
 }
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid;
+    // background: var(--secondary-color);
+    width: max-content;
+
+    .tabs__names {
+        display: flex;
+
+        .tabs__names__item {
+            padding: 5px 20px;
+            border: 1px solid;
+            cursor: pointer;
+            border: 1px solid var(--secondary-color);
+            margin-right: 5px;
+
+            &.active {
+                color: var(--primary-contrast-color);
+                border: none;
+                background: var(--primary-color);
+            }
+        }
+    }
+
+    .tabs__content {
+        margin-top: 5px;
+        // background-color: #e4dddd;
+        border-left: 1px solid;
+        border-bottom: 1px solid;
+        // border-right: 1px solid;
+        padding: 5px;
+    }
+}
