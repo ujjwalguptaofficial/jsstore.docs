@@ -65,7 +65,8 @@ async function changeDbSchema() {
     var isDbCreated = await connection.initDb(newDbSchema);
     if(isDbCreated){
         await connection.insert({
-            into:`{tableName}`
+            into:`{tableName}`,
+            values: allData
         })
     }
 }
