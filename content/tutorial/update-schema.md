@@ -1,24 +1,17 @@
 ---
-Title: "Change Table Schema"
-Keywords: "change, table, schema, database, indexeddb"
-Description: "how to change table schema after database is created"
+Title: "Update Schema"
+Keywords: "change, update, schema, database, indexeddb"
+Description: "how to update db schema after database is created"
 ---
 
-In order to change your table schema, you need to add an extra property 'version' with a value greater than current Db Version.
+database schema can be updated by incrementing the version in database object.
 
 #### Example
 
-Change the version in your table schema
-
 ```
-var table1 = {
-    name: "table_name",
-     columns: {
-        column1: { dataType: 'datatype', primaryKey: true },
-        column2 : { dataType: 'datatype'},
-        ..... ,
-        columnN: { dataType: 'datatype' }
-    },
+var db = {
+    name: "db_name",
+    tables:[],
     version: 2 //Default version is 1.
 }
 ```
@@ -36,15 +29,29 @@ IndexedDb is a database technology for browser which means if you do some change
 Browser decides to change db schema when indexedb is initiated with db version greater than current db version.
 
 ## What happens to data when schema is changed
-<br>
-All table is recreated when there is database schema change but JsStore deletes only those tables which version is changed. 
 
-<div class="highlight">
-So table which does not have schema changes will have no effect but table which have schema changes - means table will be recreated and all data inside it will be lost.
-</div>
-<br>
+All table except one with `upgrade` value false are recreated and thus all data in receated table is deleted. 
+
+So upgrade can be used to preserve the data inside table.
+
+```
+var tblProduct = {
+    name: 'Product',
+    columns: {
+        id:{ primaryKey: true, autoIncrement: true },
+    },
+    upgrade:false // do not change schema of this table
+};
+
+var db = {
+    name: "db_name",
+    tables:[],
+    version: 2 //Default version is 1.
+}
+```
+
 ### How do i preserve my data for table which has schema changes
-<br>
+
 Before calling `initDb` api with new db schema changes, select all data from a table and then insert it after the connection is initiated.
 
 e.g - 

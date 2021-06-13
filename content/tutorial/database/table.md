@@ -4,9 +4,35 @@ Keywords: "table, api, query, indexeddb, jsstore"
 Description: "learn how to create table in indexedb using jsstore"
 ---
 
-Table in JsStore is an object which contains name of table & columns schema.
+Table is like a collection where your data is stored inside a row and a field is identified by column.
 
-### Syntax :- 
+Consider you want to store a json data - 
+
+```
+var data = {
+    name:'ujjwal gupta',
+    country:'India'
+}
+```
+
+Let's store the above data into a table
+
+<table>
+<tr>
+<th>name</th>
+<th>country</th>
+</tr>
+<tr>
+<td>ujjwal gupta</td>
+<td>India</td>
+</tr>
+</table>
+
+## Schema
+
+Table Schema is an object which contains name of table & columns schema.
+
+#### Syntax :- 
 
 ```
 var table1 = {
@@ -20,20 +46,44 @@ var table1 = {
 }
 ```
 
-### Example :-
+#### Example :-
 
 ```
 var tblProduct = {
     name: 'Product',
     columns: {
         // Here "Id" is name of column 
-        Id:{ primaryKey: true, autoIncrement: true },
-        ItemName:  { notNull: true, dataType: "string" },
-        Price:  { notNull: true, dataType: "number" },
-        Quantity : { notNull: true, dataType: "number" }
+        id:{ primaryKey: true, autoIncrement: true },
+        itemName:  { notNull: true, dataType: "string" },
+        price:  { notNull: true, dataType: "number" },
+        quantity : { notNull: true, dataType: "number" }
     }
 };
 ```
 **Note :-** It is mandatory to have a column with a primary key for every table. A primary key is used to uniquely identify a record or data row.
 
 For more information about column - please check [column](/tutorial/column) doc.
+
+## Options
+
+### 1.columns
+
+collection of column to be used for the table.
+
+### 2.upgrade 
+
+upgrade is used to change the table schema. It is an optional boolean field. It is useful when changing the database schema. 
+
+```
+var tblProduct = {
+    name: 'Product',
+    columns: {
+        id:{ primaryKey: true, autoIncrement: true },
+    },
+    upgrade:false
+};
+```
+
+By default upgrade is true which means table will be created when the database is created or upgraded.
+
+So when upgrade value is false, table will not be created and all data inside it will remain.

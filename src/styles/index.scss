@@ -158,3 +158,15 @@ div {
         padding: 5px;
     }
 }
+
+
+tr,
+td,
+th {
+    border: 1px solid;
+}
+
+td,th{
+    padding: 5px;
+    text-align: center;
+}

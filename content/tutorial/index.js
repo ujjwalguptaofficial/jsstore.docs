@@ -148,8 +148,8 @@ module.exports = [
         url: "drop-db"
     },
     {
-        text: "Change Table Schema",
-        url: "change-table-design"
+        text: "Update Schema",
+        url: "update-schema"
     },
     {
         text: "Helpers",
