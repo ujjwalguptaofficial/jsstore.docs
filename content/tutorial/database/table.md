@@ -70,20 +70,39 @@ For more information about column - please check [column](/tutorial/column) doc.
 
 collection of column to be used for the table.
 
-### 2.upgrade 
+### 2.alter 
 
-upgrade is used to change the table schema. It is an optional boolean field. It is useful when changing the database schema. 
+alter is used to change the table schema. It is an optional field. It is useful when changing the database schema. 
 
 ```
 var tblProduct = {
     name: 'Product',
     columns: {
         id:{ primaryKey: true, autoIncrement: true },
+        count:{
+            dataType:'number'
+        }
     },
-    upgrade:false
-};
+    alter:{
+        // 2 is database version to target
+        2: {
+            modify: {
+                id:{
+                    notNull:true
+                }
+            },
+            add:{
+                name:{
+                    dataType:'string'
+                }
+            },
+            drop:{
+                count:{
+                    
+                }
+            }
+        }
+    }
+}
 ```
-
-By default upgrade is true which means table will be created when the database is created or upgraded.
-
-So when upgrade value is false, table will not be created and all data inside it will remain.
+For more info about updating schema, read [here](/tutorial/update-schema).
