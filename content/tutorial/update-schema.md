@@ -48,6 +48,8 @@ var db = {
 }
 ```
 
+Here is an <a href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/change-db-schema" target="_blank">example</a> project.
+
 ## How to get current db version
  
 you can find your current db version in indexedDb section of browser development tools.
