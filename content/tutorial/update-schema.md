@@ -1,5 +1,5 @@
 ---
-Title: "Update Schema"
+Title: "Update Database Schema"
 Keywords: "change, update, schema, database, indexeddb"
 Description: "how to update db schema after database is created"
 ---
@@ -112,7 +112,7 @@ var tblProduct = {
 var db = {
     name: "db_name",
     tables:[tblProduct],
-    version: 2 //Default version is 1.
+    version: 2 
 }
 ```
 
@@ -126,7 +126,7 @@ if(created){
     if(db.version===2){
         // change datatype from number to string
 
-        var existingData = await select({
+        var existingData = await connection.select({
             from: 'Product'
         });
 
@@ -135,10 +135,10 @@ if(created){
             return value;
         })
 
-        await insert({
+        await connection.insert({
             into: "Product",
             upsert:true,
-            values:[existingData]
+            values:existingData
         })
     }
 }
