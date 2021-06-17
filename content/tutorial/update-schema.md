@@ -21,7 +21,7 @@ var tblProduct = {
         }
     },
     alter:{
-        // 2 is database version to target
+        // for version 2
         2: {
             modify: {
                 id:{
@@ -38,13 +38,20 @@ var tblProduct = {
                     
                 }
             }
+        },
+        3: {
+            modify: {
+                name:{
+                    notNull:true
+                }
+            }
         }
     }
 }
 var db = {
     name: "db_name",
     tables:[tblProduct],
-    version: 2 //Default version is 1.
+    version: 2 
 }
 ```
 
