@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[148],{306:function(n,o){},422:function(n,o,i){"use strict";i.r(o);var t=i(12),u=i(306),e=i.n(u),l=Object(t.a)({},void 0,void 0,!1,null,null,null);"function"==typeof e.a&&e()(l),l.options.__file="limit.vue",o.default=l.exports}}]);
