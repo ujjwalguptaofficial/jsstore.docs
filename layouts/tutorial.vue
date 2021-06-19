@@ -76,9 +76,9 @@
         class="btn rounded secondary margin-bottom-70px"
         alt="edit this doc"
         target="_blank"
-        href="https://gitter.im/JsStore/Lobby"
+        href="https://github.com/ujjwalguptaofficial/JsStore/discussions/categories/q-a"
       >
-        <i class="fab fa-gitter"></i>
+        <i class="fas fa-question"></i>
       </a>
       <a
         alt="edit this doc"

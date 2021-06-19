@@ -35,10 +35,10 @@
         <a
           class="btn secondary outlined x-big"
           target="_blank"
-          href="https://gitter.im/JsStore/Lobby"
+          href="https://github.com/ujjwalguptaofficial/JsStore/discussions/categories/q-a"
         >
           Get Help
-          <i class="margin-left-10px fab fa-gitter"></i>
+          <i class="margin-left-10px fas fa-question"></i>
         </a>
       </div>
       <div class="col mt-20px content-center">
