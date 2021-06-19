@@ -40,12 +40,12 @@ connection.on("create",(db)=>{
 
 Called when database is upgraded. event is called with three parameter -
 
+* database
 * oldVersion
 * newVersion
-* database
 
 ```
-connection.on("upgrade",(oldVersion, newVersion, database)=>{
+connection.on("upgrade",(database, oldVersion, newVersion, )=>{
     console.log(`database is upgraded from ${oldVersion} to ${newVersion} and database looks like`, database);
 });
 ```
