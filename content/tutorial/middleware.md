@@ -1,7 +1,7 @@
 ---
 Title: "Middleware"
 Keywords: "middleware, plugin, indexeddb, jsstore"
-Description: "Middleware can be used to modify queries"
+Description: "Middleware can be used to modify queries or result"
 ---
 
 Middleware is a function which has access to request query, result.They are called for each request in the same order as defined.
@@ -14,7 +14,7 @@ e.g - Let's say i want to encode my data when being inserted to make sure its no
 
 ```
 var connection = new JsStore.Connection();
-connection.addMiddleware(function (request) {
+const encryptMiddleware = function (request) {
 
     const query = request.query
 
@@ -31,7 +31,25 @@ connection.addMiddleware(function (request) {
         })
 
     }
-});
+};
+```
+
+### Register
+
+middleware can be register both in main thread or worker.
+
+#### main
+
+```
+connection.addMiddleware(encryptMiddleware);
+
+```
+
+#### worker
+
+```
+connection.addMiddleware(encryptMiddleware, true);
+
 ```
 
 now middleware is registered and can be used. Let's call insert api

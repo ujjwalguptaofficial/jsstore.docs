@@ -45,3 +45,8 @@ connection.insertIntoMyTable({
     name:'ujjwal gupta'
 })
 ```
+
+### Available Plugins are - 
+
+* [jsstore-encrypt](https://github.com/ujjwalguptaofficial/jsstore-encrypt)
+* [sqlweb](https://github.com/ujjwalguptaofficial/sqlweb/)
