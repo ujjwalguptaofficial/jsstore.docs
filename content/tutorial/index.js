@@ -119,6 +119,10 @@ module.exports = [
             {
                 text: "With operators",
                 url: "with-operators"
+            },
+            {
+                text: "mapSet",
+                url: "map-set"
             }
         ]
     },
