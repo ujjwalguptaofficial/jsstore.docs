@@ -6,7 +6,7 @@ Description: "learn how to use keypath for querying faster in indexeddb"
 
 `keyPath` is a option in column. It is used to add multiple index, so that query execution can be made faster. It takes an array of type string.
 
-It can b used to increase speed of `select` query.
+It can be used to increase speed of `select` query.
 
 e.g - Lets take a table name with cities having column pinCodes & name
 
@@ -46,6 +46,23 @@ var table = {
 }
 
 ```
+
+### Insert Data after keypath
+
+The inserted data should contains all column mentioned in keypath i.e - `cityName` & `pinCodes` as was it before.
+
+```
+const value = {
+    cityName:'Bangalore',
+    pinCodes:'12345'
+}
+insert({
+    into:'cities',
+    values:[value]
+})
+```
+
+### Select using keypath
 
 and now new query can be written as - 
 
