@@ -65,6 +65,22 @@
       </div>
     </div>
     <div class="col-lg-2 width-full pl-10px pr-5px">
+      <a
+        class="ad-container mb-20px"
+        target="_blank"
+        href="https://mahaljs.com/"
+      >
+        <div class="flex space-between">
+          <img
+            width="100px"
+            height="auto"
+            class="mt-5px"
+            src="/img/mahal.png"
+          />
+          <h1>Mahal.js</h1>
+        </div>
+        <div class="">Simple, modern web application framework for UI development.</div>
+      </a>
       <a class="ad-container" target="_blank" href="http://fortjs.info/">
         <h6>FortJs</h6>
         <img class="mt-5px" src="//fortjs.info/img/fort_js_logo_200_137.png" />
@@ -350,6 +366,7 @@ export default {
   flex-direction: column;
   padding: 5px;
   cursor: pointer;
+  color: var(--link-color);
 }
 .b-tutorial__links__search {
   padding: 5px 5px;

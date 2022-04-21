@@ -60,6 +60,14 @@
           </a>
           <a
             class="vue"
+            style="margin-bottom:-10px"
+            target="_blank"
+            href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/mahal"
+          >
+            <img src="/img/mahal.png" />
+          </a>
+          <a
+            class="vue"
             target="_blank"
             href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/svelte"
           >

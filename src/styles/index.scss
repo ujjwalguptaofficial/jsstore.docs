@@ -166,7 +166,16 @@ th {
     border: 1px solid;
 }
 
-td,th{
+td,
+th {
     padding: 5px;
     text-align: center;
+}
+
+.flex {
+    display: flex;
+
+    &.space-between {
+        justify-content: space-between;
+    }
 }
