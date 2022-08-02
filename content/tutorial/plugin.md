@@ -18,7 +18,7 @@ export const AwesomePlugin = {
 
         connection.myApi = {
             insertIntoMyTable: function (data){
-                connetion.insert({
+                connection.insert({
                     into:"my_table",
                     values:[data]
                 })
@@ -41,7 +41,7 @@ connection.addPlugin(AwesomePlugin);
 now plugin is installed and can be used. Let's use the api added by plugin
 
 ```
-connection.insertIntoMyTable({
+connection.myApi.insertIntoMyTable({
     name:'ujjwal gupta'
 })
 ```
