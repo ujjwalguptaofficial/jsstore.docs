@@ -77,6 +77,10 @@ module.exports = [
             text: "Flatten",
             url: "flatten"
         },
+        {
+            text: "Store",
+            url: "store"
+        },
         ]
     },
     {

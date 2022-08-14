@@ -70,6 +70,12 @@ connection.select({
 });
 ```
 
+<p class="margin-top-40px text-center">
+<a class="btn info" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=select(%7B%0A%20%20%20%20from%3A%20%22Customers%22%2C%0A%20%20%20%20join%3A%20%7B%0A%20%20%20%20%20%20%20%20with%3A%20%22Orders%22%2C%0A%20%20%20%20%20%20%20%20type%3A%20%22inner%22%2C%0A%20%20%20%20%20%20%20%20on%3A%20%22Orders.customerId%3DCustomers.customerId%22%2C%0A%20%20%20%20%20%20%20%20as%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20customerId%3A%20'cId'%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D)" target="_blank">
+as example
+</a>
+<p>
+
 * where // to filter 
 
 * order // for ordering data - but unlike query without join, order here is little different. You need to provide query along with table name in the form of [tablename].[columnName] 

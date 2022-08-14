@@ -4,6 +4,8 @@ Keywords: "aggregate, count, avg, min, max, indexeddb"
 Description: "Aggreagte functions available in jsstore are count, sum, avg, max and min."
 ---
 
+An aggregate function performs a calculation on multiple values and returns a single value.
+
 JsStore supports following aggregate functions : -
 
 *   **count :** Returns the number of rows of specified column.
