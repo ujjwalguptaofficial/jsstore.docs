@@ -1,7 +1,7 @@
 ---
 Title: "Store in select"
 Keywords: "store, select, query, indexeddb"
-Description: "Aggreagte functions available in jsstore are count, sum, avg, max and min."
+Description: "store is an option in select api which allows to query on existing data from variable."
 ---
 
 `store` is an option in select api which allows to query on existing data from variable. All query options like ordering, where, group by, aggregate etc can be performed.
