@@ -21,7 +21,7 @@ connection.select({
     from: "Table_Name",
     groupBy: Column_Name,
     // You can specify multiple columns at a time by giving the columns name in an array.
-    // GroupBy:['column1','column2']
+    // groupBy:['column1','column2']
 
 }).then(function(results) {
     //results will be array of objects.
