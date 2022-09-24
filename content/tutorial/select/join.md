@@ -4,7 +4,7 @@ Keywords: "indexeddb, join, left, inner, jsstore"
 Description: "learn how to use join in indexedb using jsstore"
 ---
 
-JsStore supports two joins - Inner & Left.
+JsStore supports two joins - **inner** (by default) & **left**.
 
 #### Sql (inner join between two tables)
 
