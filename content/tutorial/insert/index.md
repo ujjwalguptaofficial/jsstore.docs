@@ -114,6 +114,9 @@ insert({
 <div class="highlight">
 Difference between validation & skipDataCheck is - validation generates autoIncrement field for autoIncrement column but skipDataCheck do not change anything in data.
 </div>
+<br>
+
+👉 Note:- Do not use `skipDataCheck` in case you have autoincrement field, otherwise your autoincrement data might not get sync with your inserted data and can create problems.
 
 #### ignore
 
