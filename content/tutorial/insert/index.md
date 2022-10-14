@@ -97,11 +97,13 @@ insert({
 })
 ```
 
+👉 when validation is false - it only checks and update : `autoincrement` and `default` value.
+
 #### skipDataCheck
 
 Do not check or change anything in data. By default value is false. 
 
-If supplied true, this will directly insert data without checking any thing like datatype, auto increment etc. This is useful in case - where you want to insert huge record at a time.
+If supplied true, this will directly insert data without checking any thing like datatype, auto increment etc. This is useful in case - where you want to insert huge record at a time and doesn't have any constraint on schema.
 
 ```
 insert({
@@ -112,7 +114,7 @@ insert({
 ```
 
 <div class="highlight">
-Difference between validation & skipDataCheck is - validation generates autoIncrement field for autoIncrement column but skipDataCheck do not change anything in data.
+Difference between validation & skipDataCheck is - validation generates autoIncrement field for autoIncrement column and default value but skipDataCheck do not change anything in data.
 </div>
 <br>
 
