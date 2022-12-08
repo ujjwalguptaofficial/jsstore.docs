@@ -13,6 +13,7 @@ JsStore supports following aggregate functions : -
 *   **avg :** Returns the average value of numeric column.
 *   **max :** Returns the maximum value of specified column.
 *   **min :** Returns the minimum value of specified column.
+*   **list :** Returns all matching value inside an array.
 
 #### Sql
 
