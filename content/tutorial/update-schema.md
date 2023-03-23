@@ -4,12 +4,88 @@ Keywords: "change, update, schema, database, indexeddb"
 Description: "how to update db schema after database is created"
 ---
 
-database schema can be updated by 
+Database schema can be updated by incrementing the version in database object. 
 
-* incrementing the version in database object 
-* defining what to change in alter field of table.
+👉 Let's see some usecases
 
-#### Example
+### Add new table
+
+Let's say your schema looks like this - 
+
+```
+var tblProduct = {
+    name: 'Product',
+        columns: {
+            id:{ primaryKey: true, autoIncrement: true },
+            price:{
+                dataType:'number'
+            },
+            name:{
+                dataType:'string'
+            }
+        }
+    }
+}
+var db = {
+    name: "db_name",
+    tables:[tblProduct],
+}
+```
+
+now you need to add another table `Customer`-
+
+```
+var tblCustomer = {
+    name: 'Customer',
+        columns: {
+            id:{ primaryKey: true, autoIncrement: true },
+            name:{
+                dataType:'string'
+            },
+            country:{
+                dataType:'string'
+            }
+        }
+    }
+}
+```
+
+You need to add the table into the tables array and update the database version -
+
+```
+var db = {
+    name: "db_name",
+    tables: [tblProduct, tblCustomer],
+    version: 2
+}
+```
+
+### Alter existing table 
+
+You can use **alter** option in the schema to `add`, `modify` and `drop` column from existing table. You need to define what to change in alter field of table.
+
+Let's say your schema looks like this - 
+
+```
+
+var tblProduct = {
+    name: 'Product',
+    columns: {
+        id:{ primaryKey: true, autoIncrement: true },
+        count:{
+            dataType:'number'
+        }
+    },
+};
+var db = {
+    name: "db_name",
+    tables: [tblProduct]
+}
+```
+
+#### Add column
+
+Let's add a column `name` for the version 2 of the database - 
 
 ```
 var tblProduct = {
@@ -23,24 +99,46 @@ var tblProduct = {
     alter:{
         // for version 2
         2: {
-            modify: {
-                id:{
-                    notNull:true
-                }
-            },
             add:{
                 name:{
                     dataType:'string'
                 }
-            },
-            drop:{
-                count:{
-                    
+            }
+        }
+    }
+}
+var db = {
+    name: "db_name",
+    tables:[tblProduct],
+    version: 2 
+}
+
+```
+
+#### Modify 
+
+Let's say we want to add `notNull` to the column `name`. 
+
+```
+var tblProduct = {
+    name: 'Product',
+    columns: {
+        id:{ primaryKey: true, autoIncrement: true },
+        count:{
+            dataType:'number'
+        }
+    },
+    alter:{
+        // for version 2
+        2: {
+            add:{
+                name:{
+                    dataType:'string'
                 }
             }
         },
-        3: {
-            modify: {
+        3:{
+            modify:{
                 name:{
                     notNull:true
                 }
@@ -51,7 +149,54 @@ var tblProduct = {
 var db = {
     name: "db_name",
     tables:[tblProduct],
-    version: 2 
+    version: 3
+}
+```
+
+#### Drop
+
+Drop can be used to drop a column from existing table.
+
+Let's say we want to drop the column `count`
+
+```
+var tblProduct = {
+    name: 'Product',
+    columns: {
+        id:{ primaryKey: true, autoIncrement: true },
+        count:{
+            dataType:'number'
+        }
+    },
+    alter:{
+        // for version 2
+        2: {
+            add:{
+                name:{
+                    dataType:'string'
+                }
+            }
+        },
+        3:{
+            modify:{
+                name:{
+                    notNull:true
+                }
+            }
+        },
+        4:{
+            drop:{
+                count:{
+
+                }
+            }
+        }
+    }
+}
+var db = {
+    name: "db_name",
+    tables:[tblProduct],
+    version: 4
 }
 ```
 
