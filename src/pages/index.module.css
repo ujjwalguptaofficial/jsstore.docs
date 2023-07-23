@@ -21,3 +21,11 @@
   align-items: center;
   justify-content: center;
 }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0 10px 0;
+}
