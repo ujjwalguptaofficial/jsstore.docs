@@ -1,5 +1,5 @@
 ---
-keywords: [advanced sql, select, example, indexeddb]
+keywords: [advanced sql, select, example, where]
 ---
 
 # Advanced Example
