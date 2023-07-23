@@ -23,7 +23,7 @@ In case of web worker, you first need to make your method accessible to jsstore 
 
 **1. Save the above code in a file and import it inside web worker**
 
-you can use <a href="/docs/import-scripts.md">importScripts</a> to import your scripts which contains your methods.
+you can use [importScripts](/docs/import-scripts.md) to import your scripts which contains your methods.
 
 ```javascript
 await connection.importSripts("update_logic.js");
