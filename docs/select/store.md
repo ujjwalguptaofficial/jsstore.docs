@@ -12,6 +12,9 @@ var customers = []; // some existing value in customers variable
 
 const results = await connection.select({
     store: customers,
+    meta: {
+        primaryKey: 'customerId'
+    },
     limit: 10,
     order: {
         by: 'country'
@@ -19,6 +22,8 @@ const results = await connection.select({
 });
 
 ```
+
+👉 `meta` option is used to pass **primaryKey field** of the data.
 
 It can be used in many cases where you have data in memory and you want to perform query on the memory data.
 
