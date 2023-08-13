@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-keywords: [regex, api, query, indexeddb, jsstore]
+keywords: [regex, where, query, indexeddb, jsstore]
 ---
 
 # Regex

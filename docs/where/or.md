@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-Keywords: [or, api, query, indexeddb, jsstore]
+Keywords: [or, where, query, indexeddb, jsstore]
 ---
 
 # Or

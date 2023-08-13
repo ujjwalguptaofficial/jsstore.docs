@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-keywords: [operators, ">", "<", indexeddb, jsstore]
+keywords: [operators, ">", "<", where, indexeddb, jsstore]
 ---
 
 # Operators

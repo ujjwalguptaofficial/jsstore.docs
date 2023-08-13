@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-keywords: [like, filter, query, indexeddb, jsstore]
+keywords: [like, filter, query, indexeddb, where]
 ---
 
 # Like
