@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'JsStore',
-  tagline: 'Think in SQL and implement in javascript',
+  tagline: 'Think in SQL and do in javascript',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -141,6 +141,12 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      metadata: [
+        { name: 'robots', content: 'index, follow' },
+        { name: 'Revisit-After', content: '1 days' },
+        { name: 'Rating', content: 'General' },
+        { name: 'author', content: 'Ujjwal Gupta' },
+      ],
     }),
 
   plugins: [
