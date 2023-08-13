@@ -146,6 +146,13 @@ const config = {
         { name: 'Revisit-After', content: '1 days' },
         { name: 'Rating', content: 'General' },
         { name: 'author', content: 'Ujjwal Gupta' },
+        { name: 'og:site_name', content: 'JsStore' },
+        { name: 'og:url', content: 'http://jsstore.net/' },
+        { name: 'og:type', content: 'IndexedDB wrapper' },
+        { name: 'og:image', content: '/img/JsStore_1200_630.png' },
+        { name: 'og:image', content: '/img/jsStore_500_500.png' },
+        { name: 'twitter:creator', content: '@ujjwal_kr_gupta' },
+        { name: 'twitter:image', content: 'http://jsstore.net/img/JsStore_1200_630.png' },
       ],
     }),
 

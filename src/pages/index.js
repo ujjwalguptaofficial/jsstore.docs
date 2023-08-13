@@ -65,7 +65,7 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`JsStore - Think in SQL and do in JS`}
+      title={`Think in SQL and do in JS`}
       // title={`Hello from ${siteConfig.title}`}
       description="JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy with its SQL like apis.">
       <HomepageHeader />
