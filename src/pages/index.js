@@ -67,7 +67,9 @@ export default function Home() {
     <Layout
       title={`Think in SQL and do in JS`}
       // title={`Hello from ${siteConfig.title}`}
-      description="JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy with its SQL like apis.">
+      description="JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy with its SQL like apis."
+      keywords="indexeddb, sql, storage, wrapper, javascript"
+    >
       <HomepageHeader />
       <main>
         <HomepageFeatures />
