@@ -26,7 +26,7 @@ In case of web worker, you first need to make your method accessible to jsstore 
 you can use [importScripts](/docs/import-scripts.md) to import your scripts which contains your methods.
 
 ```javascript
-await connection.importSripts("update_logic.js");
+await connection.importScripts("update_logic.js");
 ```
 
 **2. Use the method in query**
