@@ -1,5 +1,5 @@
 ---
-sidebar_position: 21
+sidebar_position: 22
 keywords: [import scripts, transaction, query, indexeddb, jsstore]
 ---
 

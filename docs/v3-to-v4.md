@@ -1,9 +1,9 @@
 ---
-keywords: [migrate, v2, v3, indexeddb, jsstore]
+keywords: [migrate, v3, v4, indexeddb, jsstore]
 sidebar_position: 22
 ---
 
-# Migrating from v2 to v3
+# Migrating from v3 to v4
 
 > v4 now suports multiple database feature, which was lacking in earlier version of jsstore. In order to do that some big changes has been done in v4.
 
