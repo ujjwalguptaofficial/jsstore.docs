@@ -50,7 +50,10 @@ var tblCustomer = {
 }
 ```
 
-You need to add the table into the tables array and update the database version -
+You need to :
+
+1. Add the table into the tables array
+2. Update the database version -
 
 ```javascript
 var db = {
@@ -59,6 +62,14 @@ var db = {
     version: 2
 }
 ```
+
+The call to `initDb` will be same as it was before. 
+
+```
+const isDbCreatedOrUpdated = await con.initDb(db);
+```
+
+👉 The value of `isDbCreatedOrUpdated` will be true when the database schema will be updated. This can be used to check and perform some actions like inserting some data.
 
 ## Alter existing table 
 
