@@ -3,25 +3,29 @@ sidebar_position: 1
 keywords: [jsstore, get started, introduction, indexeddb, tutorial]
 ---
 
-# Get started
+# Get Started
 
-In this get started tutorial we will learn how to do crud operation in indexeddb using jsstore. You can download the example of this tutorial from - [Crud implementation](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/simple_example)
+Welcome to the Get Started tutorial for using JsStore to perform CRUD operations in IndexedDB. 
+
+To follow along with this tutorial, you can download the example code from the [Crud implementation](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/simple_example) repository.
+
+Let's dive in and learn how to leverage the power of JsStore to work with IndexedDB!
 
 ## Introduction
 
-JsStore is a wrapper for [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API). It provides simple SQL like api which is easy to learn & use.
+JsStore is a wrapper for [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) that provides a simple SQL-like API, making it easy to learn and use.
 
-IndexedDb query can be executed inside web worker & JsStore preserve this functionality by providing a seperate worker file. 
+IndexedDB queries can be executed inside a web worker, and JsStore preserves this functionality by providing a separate worker file. 
 
-So query can be executed both way - inside web worker or without web worker. But it is strongly recommended to use [web worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) because it runs scripts in background thread.
+You can choose to execute queries either inside a web worker or without one. However, it is strongly recommended to use a [web worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) because it runs scripts in a background thread, improving performance and responsiveness.
 
 ## Installation
 
-There are various ways to install JsStore. For more about installation check out the [installation](/docs/installation.md) page
+There are various ways to install JsStore. For detailed instructions, please refer to the [installation guide](/docs/installation.md).
 
-Let's download the script from github. Go to this link - <a href="https://github.com/ujjwalguptaofficial/JsStore/releases/latest" target="_blank">jsstore release</a> & download files jsstore.js & jsstore.worker.js. 
+To get started, you can download the necessary files from the latest [JsStore release](https://github.com/ujjwalguptaofficial/JsStore/releases/latest). Make sure to download both `jsstore.js` and `jsstore.worker.js`.
 
-Now create a html page & include jsstore.js - 
+Next, create an HTML page and include `jsstore.js` using the following code:
 
 ```html
 <!DOCTYPE html>
@@ -37,24 +41,23 @@ Now create a html page & include jsstore.js -
 <h4>We have included JsStore in this html code.</h4>
 </body>
 </html>
-
 ```
 
 ## Connection
 
-A connection allow you to query database. It can be initialized with web worker file or without web worker file. 
+A connection allows you to query the database. It can be initialized with or without a web worker file.
 
-When initialized with worker file - jsstore create a web worker and query is executed inside web worker. For more info, check out the [Connection](/docs/connection.md) page
+When initialized with a worker file, JsStore creates a web worker and executes the query inside it. This provides better performance and responsiveness. For more information, refer to the [Connection](/docs/connection.md) page.
 
-```javascript
+```js
 var connection = new JsStore.Connection(new Worker('jsstore.worker.js'));
 ```
 
 ## Creating Database
 
-JsStore follows SQL approach to create database - A database is consist of tables and a table is consist of columns.
+JsStore follows SQL approach to create a database - A database consists of tables and a table consists of columns.
 
-Lets see an example - 
+Let's see an example - 
 
 ```javascript
 var dbName ='JsStore_Demo';
@@ -73,17 +76,20 @@ var database = {
     tables: [tblProduct]
 }
 ```
-As written in the code you can define constraints like autoincrement, data type, default, not null similar to what you can do in SQL. Read more about column [here](/docs/database/column.md)
+
+
+As written in the code, you can define constraints like autoincrement, data type, default, not null, similar to what you can do in SQL. Read more about columns [here](/docs/database/column.md).
 
 Now we need to use the above database schema to create the database in indexeddb.
 
+
 ## initDb
 
-[initDb](/docs/database#2callinitdb) api is used to initiate the database. It accepts database schema & creates or open database. 
+[initDb](/docs/database#2callinitdb) API is used to initiate the database. It accepts the database schema and creates or opens the database.
 
-It returns boolean value which can be used to know if db is created or opened.
+It returns a boolean value which can be used to know if the database is created or opened.
 
-```javascript
+```js
 const isDbCreated = await connection.initDb(database);
 if(isDbCreated === true){
     console.log("db created");
@@ -114,7 +120,7 @@ var value = {
 
 Now, let's insert this value into db -  
 
-```javascript
+```js
 var insertCount = await connection.insert({
     into: 'Product',
     values: [value]
@@ -127,7 +133,7 @@ console.log(`${insertCount} rows inserted`);
 
 JsStore provides [select](/docs/select/index.md) API for reading data. Let's say I want to retrieve the record with Id of 5.
 
-```javascript
+```js
 // results will be array of objects
 var results = await connection.select({
     from: 'Product',
@@ -146,7 +152,7 @@ JsStore provides [update](/docs/update/index.md) API for reading data.
 
 Consider we want to update Quantity to 2000 on the products with item name containing substring 'black'.
 
-```javascript
+```js
 var rowsUpdated = await connection.update({ 
     in: 'Product',
     where: {
@@ -167,7 +173,7 @@ JsStore provides [remove](/docs/remove.md) API for reading data.
 
 Consider we want to delete the product with Id of 10.
 
-```javascript
+```js
 var rowsDeleted = await connection.remove({
     from: 'Product',
     where: {
@@ -177,13 +183,25 @@ var rowsDeleted = await connection.remove({
 alert(rowsDeleted + ' record deleted');
 ```
     
-We hope you have understood this article. Now let's make something awesome.
+Congratulations on completing this article! Now it's time to put your knowledge into action and create something amazing.
+
 
 ---
 
 ## Tutorial and examples
 
-Check it out some tutorial & examples for more understanding -
+For a better understanding, check out the following tutorials and examples:
+
+- [Vue integration](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/vue)
+- [React integration](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/react)
+- [Angular integration](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/angular)
+- [Svelte integration](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/svelte)
+- [ElectronJs integration](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/electron)
+- [JsStore without web worker](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/without_web_worker)
+- [Building an indexeddb app with webpack](https://github.com/ujjwalguptaofficial/JsStore/tree/master/examples/webpack)
+- [Crud implementation](https://github.com/ujjwalguptaofficial/jsstore-examples)
+- [Using jsstore in typescript](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/typescript)
+
 
 * [Vue integration](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/vue)
 * [React integration](https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/react)
