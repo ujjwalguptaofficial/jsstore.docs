@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-Keywords: [database, connection, query, indexeddb, jsstore]
+keywords: [database, connection, query, indexeddb, jsstore, web worker, import, bundler, webpack, vite]
 ---
 
 # Connection
