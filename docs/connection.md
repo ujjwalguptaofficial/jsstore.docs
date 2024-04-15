@@ -5,13 +5,13 @@ Keywords: [database, connection, query, indexeddb, jsstore]
 
 # Connection
 
-Connection is a Class which contains all apis like `select`, `count` etc. Under the hood it talks with indexeddb and return results.
+The `Connection` class is the main interface for interacting with the indexeddb database and provides various APIs such as `select`, `count`, etc. to perform operations on the database.
 
 > Connection can be initialize with web worker or without web worker. If initialized with web worker, then all logic will be executed inside web worker. It is strongly recommended to use web worker.
 
 ## With Web Worker
 
-```javascript
+```js
 var connection = new JsStore.Connection(new Worker('jsstore worker path'));
 ```
 
@@ -20,25 +20,44 @@ var connection = new JsStore.Connection(new Worker('jsstore worker path'));
 
 ## Without web worker
 
-```javascript
+```js
 var connection = new JsStore.Connection();
 ```
 
+When initializing without a web worker, ensure that you include the jsstore worker file.
+
 **example** - <a target="_blank" href="https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/without_web_worker">https://github.com/ujjwalguptaofficial/jsstore-examples/tree/master/without\_web_worker</a>
 
----
-## Connection in webpack
+### Using import
 
+```javascript
+import workerInjector from "jsstore/dist/worker_injector";
+export const connection = new Connection();
 
-1. Install jsstore using npm or yarn - `npm i jsstore`
+connection.addPlugin(workerInjector);
+```
 
-2. Install file-loader -  `npm i file-loader -D`
+To use the `connection` variable in your project, simply import it wherever it is required.
 
-3. Create a file jsstore\_con.js or jsstore\_con.ts (for typescript). This file will be used to create the jsstore connection. You can choose any file name.
+## Using bundler
 
-4. Inside the file jsstore\_con.js, write below code - 
+To use bundlers like webpack and vite with `jsstore`, follow these steps:
 
-### With Web Worker
+1. Install `jsstore` by running the following command:
+
+```bash
+npm i jsstore
+```
+
+### Webpack
+
+Install the required plugins:
+
+```
+npm i file-loader -D
+```
+
+Create a file `jsstore_con.js` or `jsstore_con.ts` (for TypeScript). This file will be used to create the JsStore connection. You can choose any file name. Inside the file `jsstore_con.js`, write the following code:
 
 ```javascript
 const getWorkerPath = () => {
@@ -60,26 +79,70 @@ const workerPath = getWorkerPath().default;
 export const connection = new JsStore.Connection(new Worker(workerPath));
 ```
 
-👉 In the above code we are using **file-loader** to load jsstore worker file but you are free to use your own technique to load jsstore worker. The simplest approach is download jsstore.worker.js and then specify its path. 
+The code above creates a `connection` object and exports it. You can import this `connection` object wherever it is needed in your code.
 
-### Without Web Worker
+:::info
+In the above code, we are using **file-loader** to load the jsstore worker file. However, you are free to use your own technique to load the jsstore worker. One simple approach is to download `jsstore.worker.js` and specify its path.
+:::
 
-```javascript
-import workerInjector from "jsstore/dist/worker_injector";
-const connection = new Connection();
+## Connection in vite
 
-connection.addPlugin(workerInjector);
+First, install the required Vite plugins:
+
+```bash
+npm install vite-plugin-externals vite-plugin-file --save-dev
 ```
 
-5. Step 4 creates a connection and export the connection variable. You can import this connection variable to anywhere in your code.
- 
+Then, configure your `vite.config.js` file:
+
+```javascript
+import { defineConfig } from 'vite';
+import externals from 'vite-plugin-externals';
+import file from 'vite-plugin-file';
+
+export default defineConfig({
+  plugins: [
+    externals({
+      jsstore: 'jsstore',
+    }),
+    file({
+      assetsDir: 'scripts',
+      outputDir: 'dist',
+      assetsInlineLimit: 0,
+      esModule: false,
+    }),
+  ],
+});
+```
+
+After configuring Vite, update your `getWorkerPath` function:
+
+```javascript
+const getWorkerPath = () => {
+  if (import.meta.env.MODE === 'development') {
+    return import.meta.ROLLUP_FILE_URL_jsstore_dist_jsstore_worker_js;
+  } else {
+    return import.meta.ROLLUP_FILE_URL_jsstore_dist_jsstore_worker_min_js;
+  }
+}; 
+const workerPath = getWorkerPath();
+export const connection = new JsStore.Connection(new Worker(workerPath));
+```
+
+Make sure you adjust the import URLs (`ROLLUP_FILE_URL`) according to your project structure and the output directory configured in the Vite configuration.
+
+This setup will handle loading the appropriate worker file based on the environment (development or production) when using Vite for your project.
+
+---
 
 If you are finding difficult to understand, please take a look at [examples](https://github.com/ujjwalguptaofficial/jsstore-examples) or our [medium page](https://medium.com/jsstore)
 
 ## Important points 
 
-*   The connection variable will be used to execute the all query for a single database.
-*   A connection will handle one db at a time.
-*   You can create mutiple connection for multiple database but do not create multiple connection for one database as it will lead you to some data stale issue. A single connection can handle all the query and it executes query one by one, so you have always latest data.
+Here are some important points to keep in mind when working with the `Connection` class:
+
+* The `connection` variable represents the connection to a single database and is used to execute all queries for that database.
+* Each connection can handle one database at a time.
+* It is possible to create multiple connections for multiple databases, but avoid creating multiple connections for a single database as it can lead to data staleness issues. A single connection can handle all queries and executes them one by one, ensuring that you always have the latest data.
 
 
