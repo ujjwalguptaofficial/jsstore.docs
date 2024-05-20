@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-keywords: [where, filter, query, indexeddb, jsstore]
+keywords: [AND operator, WHERE clause, SQL, JsStore, filtering records, multiple conditions, indexeddb]
 ---
 
 # And

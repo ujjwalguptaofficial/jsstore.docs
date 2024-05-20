@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 keywords: [like, filter, query, indexeddb, where]
 ---
 
