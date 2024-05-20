@@ -5,16 +5,14 @@ keywords: [where, filter, query, indexeddb, jsstore]
 
 # Where
 
-Where can be used to filter records same as Sql Where clause.
+The `where` clause can be used to filter records, similar to the SQL `WHERE` clause.
 
-## Sql
+## SQL
 
 ```sql
 Select * From Table_Name
 Where
 Column1=some_value
-and
-Column2=some_another_value;
 ```
 
 ## JsStore
@@ -23,11 +21,9 @@ Column2=some_another_value;
 var results = await connection.select({
     from: "Table_Name",
     where: {
-        column1: some_value,
-        column2: some_another_value
+        column1: some_value
     }
 });
-//results will contains no of rows deleted.
 console.log(results);
 ```
 
