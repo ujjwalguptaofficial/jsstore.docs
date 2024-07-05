@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jsstore.net/blog</id>
-    <title>JsStore Blog</title>
+    <title>JsStore - IndexedDB Blog</title>
     <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jsstore.net/blog"/>
-    <subtitle>JsStore Blog</subtitle>
+    <subtitle>JsStore - IndexedDB Blog</subtitle>
     <icon>https://jsstore.net/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
