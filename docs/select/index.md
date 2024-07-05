@@ -1,13 +1,13 @@
 ---
 sidebar_position: 6
-Keywords: [select, api, query, indexeddb, jsstore]
+Keywords: [select, retrieve data, query, indexeddb]
 ---
 
 # Select
 
-The Select api is used to select data from a database.
+The `select` API allows you to retrieve data from a database. It allows you to fetch specific information based on your query criteria. With its intuitive syntax and flexibility, the `Select` API makes it easy to retrieve the data you need.
 
-## Sql
+## SQL
 
 ```sql
 Select * from Table_Name;
@@ -15,7 +15,7 @@ Select * from Table_Name;
 
 ## JsStore
 
-```javascript
+```js
 var results = await connection.select({
     from: "Table_Name"
 });

@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'JsStore',
+  title: 'JsStore - IndexedDB',
   tagline: 'Think in SQL and do in javascript',
   favicon: 'favicon.ico',
 
