@@ -5,7 +5,7 @@ keywords: [where clause, filtering records, SQL, JsStore, indexedDB, query]
 
 # Where
 
-The `where` clause can be used to filter records, similar to the SQL `WHERE` clause.
+The `where` option can be used to filter records, similar to the SQL `WHERE` clause.
 
 ## SQL
 
@@ -17,7 +17,7 @@ Column1=some_value
 
 ## JsStore
 
-```javascript
+```js
 var results = await connection.select({
     from: "Table_Name",
     where: {

@@ -19,7 +19,7 @@ Column2=some_another_value;
 
 ## JsStore
 
-```javascript
+```js
 var results = await connection.select({
     from: "Table_Name",
     where: {
