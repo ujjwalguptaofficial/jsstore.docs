@@ -170,6 +170,7 @@ const config = {
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
         // Options here
+        indexBlog:false
       },
     ],
   ],
