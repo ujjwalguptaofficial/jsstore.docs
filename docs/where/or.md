@@ -75,7 +75,7 @@ connection.select({
                     Column3: value3
                 }
             }
-        }
+        ]
     }
 });
 ```
