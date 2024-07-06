@@ -5,40 +5,7 @@ keywords: [advanced sql, select, example, where]
 # Advanced Example
 
 These are some examples of common use cases -
-
-## Select * from Table_Name where Column1=value1 or Column2=value2 or Column3=value3
-
-```javascript
-connection.select({
-    from: "Table_Name",
-    where: {
-        Column1: value1,
-        or: {
-            Column2: value2,
-            Column3: value3
-        }
-    }
-});
-```
-    
-## Select * from Table_Name where Column1=value1 and (Column2=value2 or Column3=value3)
-
-```javascript
-connection.select({
-    from: "Table_Name",
-    where: [{
-            Column1: value1
-        },
-        {
-            Column2: value2,
-            or: {
-                Column3: value3
-            }
-        }
-    ]
-});
-```
-    
+        
 ## Select * from Table_Name where Column1=value1 or (Column2=value2 and Column3=value3)
 
 ```javascript
