@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-keywords: [order by, sort by, select, indexeddb, jsstore]
+keywords: [order by, sort by, select, indexeddb, jsstore, sql]
 ---
 
 # Order By

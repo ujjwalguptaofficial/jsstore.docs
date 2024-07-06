@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-keywords: [insert, api, upsert, indexeddb, jsstore]
+keywords: [insert, api, upsert, indexeddb, jsstore, sql, query]
 ---
 
 # Insert

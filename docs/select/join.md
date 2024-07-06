@@ -1,5 +1,5 @@
 ---
-keywords: [indexeddb, join, left, inner, jsstore]
+keywords: [indexeddb, join, left, inner, jsstore, sql]
 sidebar_position: 8
 ---
 

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-keywords: [aggregate, count, avg, min, max, indexeddb]
+keywords: [aggregate, count, avg, min, max, indexeddb, sql]
 ---
 
 # Aggregate Functions

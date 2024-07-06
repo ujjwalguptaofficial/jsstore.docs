@@ -1,6 +1,6 @@
 ---
 sidebar_position: 6
-keywords: [select, retrieve data, query, indexeddb]
+keywords: [select, retrieve data, query, api, sql, indexeddb]
 ---
 
 # Select

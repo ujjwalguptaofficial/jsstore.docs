@@ -1,6 +1,6 @@
 ---
 sidebar_position: 9
-keywords: [flatten, select, multientry, indexeddb, jsstore]
+keywords: [flatten, select, multientry, indexeddb, jsstore,sql]
 ---
 
 # Flatten

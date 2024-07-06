@@ -1,6 +1,6 @@
 ---
 sidebar_position: 7
-keywords: [case, query, indexeddb, jsstore]
+keywords: [case, query, indexeddb, jsstore, sql]
 ---
 
 # Case

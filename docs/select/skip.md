@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-keywords: [skip, offset, select, query, indexeddb]
+keywords: [skip, offset, select, query, sql, indexeddb]
 ---
 
 # Skip

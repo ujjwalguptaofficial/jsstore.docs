@@ -1,5 +1,5 @@
 ---
-keywords: [upsert, api, insert, indexeddb, jsstore]
+keywords: [upsert, api, insert, indexeddb, jsstore, sql, query]
 ---
 
 # Upsert

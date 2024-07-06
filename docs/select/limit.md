@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-keywords: [limit, select, query, indexeddb, jsstore]
+keywords: [limit, select, query, indexeddb, sql, jsstore]
 ---
 
 # Limit

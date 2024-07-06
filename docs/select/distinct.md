@@ -1,6 +1,6 @@
 ---
 sidebar_position: 6
-keywords: [distinct, select, query, indexeddb, jsstore]
+keywords: [distinct, select, query, indexeddb, jsstor,sql]
 ---
 
 # Distinct

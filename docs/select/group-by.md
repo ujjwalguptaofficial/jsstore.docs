@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-keywords: [group, by, select, indexeddb, jsstore]
+keywords: [group, by, select, indexeddb, jsstore, sql]
 ---
 
 # Group By

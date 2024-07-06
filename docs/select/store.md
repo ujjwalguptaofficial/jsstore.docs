@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-keywords: [store, select, query, indexeddb]
+keywords: [store, select, query, indexeddb, sql]
 ---
 
 # Store
