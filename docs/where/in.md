@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-keywords: [in, sql, query, where, indexeddb]
+keywords: [in, sql, query, where, indexeddb, select]
 ---
 
 # In

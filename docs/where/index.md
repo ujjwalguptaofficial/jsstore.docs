@@ -1,6 +1,6 @@
 ---
 sidebar_position: 7
-keywords: [where clause, filtering records, SQL, JsStore, indexedDB, query]
+keywords: [where clause, where query, filtering records, SQL, JsStore, indexedDB, query]
 ---
 
 # Where

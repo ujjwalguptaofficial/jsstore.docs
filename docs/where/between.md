@@ -1,6 +1,6 @@
 ---
 sidebar_position: 6
-keywords: [between, operator, where, indexeddb, query]
+keywords: [between, operator, where, indexeddb, query, sql, select]
 ---
 
 # Between

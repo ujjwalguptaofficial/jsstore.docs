@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-keywords: [like, filter, query, indexeddb, where]
+keywords: [like, filter, query, indexeddb, where, select, update, remove, count, sql]
 ---
 
 # Like

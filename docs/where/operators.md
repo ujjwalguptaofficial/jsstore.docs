@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-keywords: [indexeddb, operators, greater than, less than, not equal, between, query]
+keywords: [indexeddb, operators, greater than, less than, not equal, between, query, filter, sql]
 ---
 
 # Operators
