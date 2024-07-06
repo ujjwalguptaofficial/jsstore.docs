@@ -1,7 +1,7 @@
 ---
 sidebar_position: 21
-keywords: "enums, datatype, query, indexeddb, jsstore"
-Description: "enums available in jsstore"
+keywords: [enums, datatype, query, indexeddb, jsstore]
+description: enums available in jsstore
 ---
 
 # Enums

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-keywords: [or query, where clause, query filtering, indexedDB, JsStore]
+keywords: [or query, or condition, where, query, filter, indexedDB, sql]
 ---
 
 # Or
@@ -44,14 +44,37 @@ Let's understand some more examples query, which will help us to write any kinda
 
 #### Select * from Table_Name where Column1=value1 or Column2=value2 or Column3=value3
 
-```javascript
+```js
 connection.select({
     from: "Table_Name",
     where: {
         Column1: value1,
         or: {
             Column2: value2,
-            Column3: value3
+            or:{
+                Column3: value3
+            }
+        }
+    }
+});
+```
+
+The above syntax can be also written as -
+
+```
+connection.select({
+    from: "Table_Name",
+    where: {
+        Column1: value1,
+        or: [
+            {
+                Column2: value2
+            },
+            {
+                or:{
+                    Column3: value3
+                }
+            }
         }
     }
 });
@@ -59,7 +82,7 @@ connection.select({
 
 #### Select * from Table_Name where Column1=value1 and (Column2=value2 or Column3=value3)
 
-```javascript
+```js
 connection.select({
     from: "Table_Name",
     where: [{
@@ -72,6 +95,43 @@ connection.select({
             }
         }
     ]
+});
+```
+
+#### Select * from Table_Name where Column1=value1 or (Column2=value2 and Column3=value3)
+
+```js
+connection.select({
+    from: "Table_Name",
+    where: [{
+            Column1: value1
+        },
+        {
+            or: {
+                Column2: value2,
+                Column3: value3
+            }
+        }
+    ]
+});
+```
+
+#### Select * from Products where supplierId = 1 and (categoryId = 1 and price = 18) or(categoryId = 2 and price = 39)
+
+```js
+select({
+    from: "Products",
+    where: [{
+        supplierId: 1,
+    }, {
+        categoryId: 1,
+        price: 18,
+    }, {
+        or: {
+            categoryId: 2,
+            price: 39,
+        }
+    }]
 });
 ```
 
