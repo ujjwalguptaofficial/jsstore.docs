@@ -1,6 +1,6 @@
 ---
 sidebar_position: 24
-Keywords: [middleware, plugin, indexeddb, jsstore]
+keywords: [middleware, plugin, indexeddb, jsstore]
 ---
 
 # Middleware

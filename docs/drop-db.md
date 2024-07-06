@@ -1,6 +1,6 @@
 ---
 sidebar_position: 16
-Keywords: [drop, database, remove, indexeddb, jsstore]
+keywords: [drop, database, remove, indexeddb, jsstore]
 ---
 
 # Drop Database

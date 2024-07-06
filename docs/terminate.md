@@ -1,6 +1,6 @@
 ---
 sidebar_position: 18
-Keywords: [terminate, api, query, indexeddb, jsstore]
+keywords: [terminate, api, query, indexeddb, jsstore]
 ---
 
 # Terminate

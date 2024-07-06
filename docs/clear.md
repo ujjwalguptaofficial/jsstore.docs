@@ -1,6 +1,6 @@
 ---
 sidebar_position: 12
-Keywords: [clear, table, api, indexeddb, jsstore]
+keywords: [clear, table, api, indexeddb, jsstore]
 ---
 
 # Clear

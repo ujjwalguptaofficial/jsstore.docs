@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-Keywords: [or operator, where clause, query filtering, indexedDB, JsStore]
+keywords: [or query, where clause, query filtering, indexedDB, JsStore]
 ---
 
 # Or

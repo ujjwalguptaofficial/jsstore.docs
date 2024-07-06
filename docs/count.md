@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-Keywords: [count, api, query, indexeddb, jsstore]
+keywords: [count, api, query, indexeddb, jsstore]
 ---
 
 # Count
