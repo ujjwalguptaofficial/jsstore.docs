@@ -11,6 +11,8 @@ To follow along with this tutorial, you can download the example code from the [
 
 Let's dive in and learn how to leverage the power of JsStore to work with IndexedDB!
 
+In this tutorial, we will be using vanilla JavaScript for simplicity. However, you are free to use any framework such as React, Vue, etc.
+
 ## Introduction
 
 JsStore is a wrapper for [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) that provides a simple SQL-like API, making it easy to learn and use.
@@ -59,7 +61,7 @@ JsStore follows SQL approach to create a database - A database consists of table
 
 Let's see an example - 
 
-```javascript
+```js
 var dbName ='JsStore_Demo';
 var tblProduct = {
     name: 'Product',
@@ -108,7 +110,7 @@ JsStore provides [insert](/docs/insert/index.md) API for inserting data.
 
 Let's say we have below value -
 
-```javascript
+```js
 var value = {
     itemName: 'Blue Jeans',
     price: 2000,
@@ -116,7 +118,9 @@ var value = {
 }
 ```
 
->value does not contains id property because it is an autoincrement column. It will be automatically generated before storing data. 
+:::info
+value does not contains id property because it is an autoincrement column. It will be automatically generated before storing data. 
+:::
 
 Now, let's insert this value into db -  
 
@@ -129,9 +133,9 @@ var insertCount = await connection.insert({
 console.log(`${insertCount} rows inserted`);
 ```
   
-## Read data
+## Fetch data
 
-JsStore provides [select](/docs/select/index.md) API for reading data. Let's say I want to retrieve the record with Id of 5.
+JsStore provides [select](/docs/select/index.md) API for fetching data. Let's say I want to retrieve the record with Id of 5.
 
 ```js
 // results will be array of objects
@@ -148,7 +152,7 @@ You can also perform operations like- "IN", "LIKE", "BETWEEN", "LIMIT" etc. For 
 
 ## Updating data
 
-JsStore provides [update](/docs/update/index.md) API for reading data. 
+JsStore provides [update](/docs/update/index.md) API for updating data. 
 
 Consider we want to update Quantity to 2000 on the products with item name containing substring 'black'.
 
@@ -169,9 +173,9 @@ alert(rowsUpdated + ' rows updated');
 
 ## Remove data
 
-JsStore provides [remove](/docs/remove.md) API for reading data. 
+JsStore provides [remove](/docs/remove.md) API for removing data. 
 
-Consider we want to delete the product with Id of 10.
+Consider we want to delete the product with id of 10.
 
 ```js
 var rowsDeleted = await connection.remove({
