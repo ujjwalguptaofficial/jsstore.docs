@@ -38,3 +38,7 @@ console.log(results);
 <p class="text--center">
     <a class="button button--info" target="_blank" href="https://ujjwalguptaofficial.github.io/idbstudio/?db=Demo&query=select(%7B%0A%20%20%20%20from%3A%20%22Customers%22%2C%0A%20%20%20%20where%3A%20%7B%0A%20%20%20%20%20%20%20%20customerName%3A%7B%20like%3A'%25or%25'%7D%0A%20%20%20%20%7D%0A%7D)%3B%0A">Example</a>
 </p>
+
+:::tip
+If like does not fulfill your requirements, then you can use [regex](/docs/where/regex.md). Under the hood like also uses regex which allows you to search for any kind of pattern.
+:::
