@@ -182,7 +182,7 @@ const config = {
         src: 'https://www.googletagmanager.com/gtag/js?id=AW-940326991',
         async: true,
       }
-    }
+    },
     {
       tagName: 'script',
       innerHTML: `
