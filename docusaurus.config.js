@@ -180,7 +180,7 @@ const config = {
       attributes: {
         type: 'text/javascript',
         src: 'https://www.googletagmanager.com/gtag/js?id=AW-940326991',
-        async: true,
+        async: "true",
       }
     },
     {
