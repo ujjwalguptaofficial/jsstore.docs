@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-keywords: [jsstore, get started, introduction, indexeddb, tutorial]
+keywords: [jsstore, get started, introduction, indexeddb, tutorial, sql, documentation, indexeddb demo]
 ---
 
 # Get Started
