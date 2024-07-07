@@ -170,10 +170,22 @@ const config = {
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
         // Options here
-        indexBlog:false
+        indexBlog: false
       },
     ],
   ],
+  scripts: [
+    {
+      src: 'https://www.googletagmanager.com/gtag/js?id=AW-940326991',
+      async: true,
+    }, {
+      innerHTML: `
+      window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-940326991');
+      <!-- Event snippet for Page view conversion page -->  
+      gtag('event', 'conversion', {'send_to': 'AW-940326991/9xLtCMLc0MAZEM-AscAD'});
+      `
+    }
+  ]
 };
 
 module.exports = config;
