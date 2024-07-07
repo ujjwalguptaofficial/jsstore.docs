@@ -180,14 +180,17 @@ const config = {
       async: true,
     }
   ],
-  headTags:[
+  headTags: [
     {
-      tagName:'script',
+      tagName: 'script',
       innerHTML: `
       window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-940326991');
       <!-- Event snippet for Page view conversion page -->  
       gtag('event', 'conversion', {'send_to': 'AW-940326991/9xLtCMLc0MAZEM-AscAD'});
-      `
+      `,
+      attributes: {
+        type: 'text/javascript'
+      }
     }
   ]
 };
