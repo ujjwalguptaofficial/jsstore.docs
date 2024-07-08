@@ -7,6 +7,10 @@ keywords: [or query, or condition, where, query, filter, indexedDB, sql]
 
 `or` can be used with `where` to filter records to include records where any of the condition is true.
 
+:::note
+Primary key is required for **or query** to work properly.
+:::
+
 ## Sql
 
 ```
