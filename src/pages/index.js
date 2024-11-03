@@ -65,10 +65,10 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Think in SQL and do in JS`}
+      title={`Simplifying IndexedDB with SQL APIs and promise.`}
       // title={`Hello from ${siteConfig.title}`}
-      description="JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy with its SQL like apis."
-      keywords="indexeddb, sql, storage, wrapper, javascript"
+      description="Harness the power of JsStore to streamline database operations in your web applications. With its SQL-like API, JsStore simplifies IndexedDB interactions, enabling developers to easily query, filter, and manipulate data with familiar syntax and efficiency."
+      keywords="indexeddb, sql, storage, promise, javascript"
     >
       <HomepageHeader />
       <main>
