@@ -59,7 +59,9 @@ const getWorkerPath = () => {
 };
 
 const workerPath = getWorkerPath().default;
-var connection = new JsStore.Connection(new Worker("jsstore.worker.js"));
+
+// The connection will be used to execute indexedb queries
+const connection = new JsStore.Connection(new Worker(workerPath));
 ```
 
 :::info
